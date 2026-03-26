@@ -138,6 +138,6 @@ Build Graph → Run Dijkstra per apartment → Compute weighted commute score �
 
 | Member | Responsibilities |
 |--------|-----------------|
-| Member A | Data collection, graph construction (`graph.py`) |
-| Member B | Dijkstra implementation, testing (`dijkstra.py`, `tests/`) |
-| Member C | Report writing, GitHub management, presentation |
+| Jiaxin Liu | Data collection, graph construction (`graph.py`) |
+| Fanchao Yu & Xujing Hui | Dijkstra implementation, testing (`dijkstra.py`, `tests/`) |
+| All of the Members | Report writing, GitHub management, presentation |
