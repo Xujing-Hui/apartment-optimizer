@@ -1,0 +1,63 @@
+=================================================================
+  Bay Area APARTMENT OPTIMIZER RESULTS
+=================================================================
+
+FILTERED OUT (constraints not met):
+  1. A1 Downtown (San Carlos St): Rent $2200 exceeds budget $1700
+  2. A2 Japantown (N 6th St): Rent $1800 exceeds budget $1700
+
+RANKED FEASIBLE APARTMENTS (best to worst):
+-----------------------------------------------------------------
+
+  #1  A3 — Tamien Area
+       Rent: $1500/month
+       Total weekly commute: 126.0 minutes
+
+       → NEU Campus
+         Shortest time: 12.7 min × 5 visits/week = 63.5 min
+         Path: A3 -> S5 -> S4 -> S3 -> S2 -> D1
+       → Walmart Neighborhood Market
+         Shortest time: 9.5 min × 2 visits/week = 19.0 min
+         Path: A3 -> S5 -> S6 -> D2
+       → Planet Fitness
+         Shortest time: 14.5 min × 3 visits/week = 43.5 min
+         Path: A3 -> S5 -> S6 -> S7 -> S8 -> D3
+
+
+  #2  A4 — Capitol Area
+       Rent: $1400/month
+       Total weekly commute: 139.0 minutes
+
+       → NEU Campus
+         Shortest time: 18.8 min × 5 visits/week = 94.0 min
+         Path: A4 -> S7 -> S6 -> S5 -> S4 -> S3 -> S2 -> D1
+       → Walmart Neighborhood Market
+         Shortest time: 9.6 min × 2 visits/week = 19.2 min
+         Path: A4 -> S7 -> S6 -> D2
+       → Planet Fitness
+         Shortest time: 8.6 min × 3 visits/week = 25.8 min
+         Path: A4 -> S7 -> S8 -> D3
+
+
+  #3  A5 — Branham Area
+       Rent: $1350/month
+       Total weekly commute: 149.2 minutes
+
+       → NEU Campus
+         Shortest time: 22.1 min × 5 visits/week = 110.5 min
+         Path: A5 -> S8 -> S7 -> S6 -> S5 -> S4 -> S3 -> S2 -> D1
+       → Walmart Neighborhood Market
+         Shortest time: 12.9 min × 2 visits/week = 25.8 min
+         Path: A5 -> S8 -> S7 -> S6 -> D2
+       → Planet Fitness
+         Shortest time: 4.3 min × 3 visits/week = 12.9 min
+         Path: A5 -> D3
+
+-----------------------------------------------------------------
+PERFORMANCE COMPARISON:
+  Graph size: 16 nodes, 25 edges
+  Apartments tested: 3
+  Dijkstra total:     0.000079 seconds
+  Bellman-Ford total:  0.000218 seconds
+  Dijkstra is 2.8x faster
+、
