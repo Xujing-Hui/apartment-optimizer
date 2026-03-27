@@ -1,0 +1,520 @@
+{
+  "stations": [
+
+    {
+      "id": "CT_SUNNYVALE",
+      "name": "Sunnyvale Caltrain Station",
+      "type": "caltrain",
+      "address": "150 W Evelyn Avenue, Sunnyvale, CA 94086",
+      "lat": 37.3785,
+      "lng": -122.0306,
+      "served_by": ["Caltrain Local", "Caltrain Limited", "Caltrain Express"],
+      "neighbors": [
+        { "id": "CT_LAWRENCE",      "travel_min": 4,  "mode": "caltrain" },
+        { "id": "CT_MOUNTAIN_VIEW", "travel_min": 5,  "mode": "caltrain" },
+        { "id": "VTA_SUNNYVALE_TC", "travel_min": 3,  "mode": "walk"     }
+      ]
+    },
+    {
+      "id": "CT_LAWRENCE",
+      "name": "Lawrence Caltrain Station",
+      "type": "caltrain",
+      "address": "137 San Zeno Way, Sunnyvale, CA 94086",
+      "lat": 37.3705,
+      "lng": -121.9971,
+      "served_by": ["Caltrain Local"],
+      "neighbors": [
+        { "id": "CT_SUNNYVALE",   "travel_min": 4,  "mode": "caltrain" },
+        { "id": "CT_SANTA_CLARA", "travel_min": 4,  "mode": "caltrain" }
+      ]
+    },
+    {
+      "id": "CT_SANTA_CLARA",
+      "name": "Santa Clara Caltrain Station",
+      "type": "caltrain",
+      "address": "1001 Railroad Avenue, Santa Clara, CA 95050",
+      "lat": 37.3527,
+      "lng": -121.9366,
+      "served_by": ["Caltrain Local", "Caltrain Limited"],
+      "neighbors": [
+        { "id": "CT_LAWRENCE",    "travel_min": 4,  "mode": "caltrain" },
+        { "id": "CT_SJ_DIRIDON",  "travel_min": 5,  "mode": "caltrain" },
+        { "id": "VTA_SC_TC",      "travel_min": 5,  "mode": "walk"     }
+      ]
+    },
+    {
+      "id": "CT_SJ_DIRIDON",
+      "name": "San Jose Diridon Caltrain Station",
+      "type": "caltrain",
+      "address": "65 Cahill Street, San Jose, CA 95110",
+      "lat": 37.3297,
+      "lng": -121.9022,
+      "served_by": ["Caltrain Local", "Caltrain Limited", "Caltrain Express", "ACE", "Amtrak Capitol Corridor"],
+      "neighbors": [
+        { "id": "CT_SANTA_CLARA",  "travel_min": 5,  "mode": "caltrain" },
+        { "id": "VTA_DIRIDON_BUS", "travel_min": 2,  "mode": "walk"     },
+        { "id": "BUS_SANTACLARA_5TH", "travel_min": 12, "mode": "walk"  }
+      ]
+    },
+    {
+      "id": "CT_MOUNTAIN_VIEW",
+      "name": "Mountain View Caltrain Station",
+      "type": "caltrain",
+      "address": "600 W Evelyn Avenue, Mountain View, CA 94041",
+      "lat": 37.3942,
+      "lng": -122.0748,
+      "served_by": ["Caltrain Local", "Caltrain Limited", "Caltrain Express"],
+      "neighbors": [
+        { "id": "CT_SUNNYVALE",    "travel_min": 5,  "mode": "caltrain" },
+        { "id": "CT_SAN_ANTONIO",  "travel_min": 4,  "mode": "caltrain" }
+      ]
+    },
+    {
+      "id": "CT_SAN_ANTONIO",
+      "name": "San Antonio Caltrain Station",
+      "type": "caltrain",
+      "address": "San Antonio Road, Mountain View, CA 94040",
+      "lat": 37.4072,
+      "lng": -122.1078,
+      "served_by": ["Caltrain Local"],
+      "neighbors": [
+        { "id": "CT_MOUNTAIN_VIEW","travel_min": 4,  "mode": "caltrain" },
+        { "id": "CT_CALIFORNIA_AVE","travel_min": 4, "mode": "caltrain" }
+      ]
+    },
+    {
+      "id": "CT_CALIFORNIA_AVE",
+      "name": "California Avenue Caltrain Station",
+      "type": "caltrain",
+      "address": "625 Alma Street, Palo Alto, CA 94301",
+      "lat": 37.4291,
+      "lng": -122.1429,
+      "served_by": ["Caltrain Local"],
+      "neighbors": [
+        { "id": "CT_SAN_ANTONIO",  "travel_min": 4,  "mode": "caltrain" },
+        { "id": "CT_PALO_ALTO",    "travel_min": 4,  "mode": "caltrain" }
+      ]
+    },
+    {
+      "id": "CT_PALO_ALTO",
+      "name": "Palo Alto Caltrain Station",
+      "type": "caltrain",
+      "address": "95 University Avenue, Palo Alto, CA 94301",
+      "lat": 37.4435,
+      "lng": -122.1651,
+      "served_by": ["Caltrain Local", "Caltrain Limited", "Caltrain Express"],
+      "neighbors": [
+        { "id": "CT_CALIFORNIA_AVE","travel_min": 4, "mode": "caltrain" }
+      ]
+    },
+
+    {
+      "id": "VTA_SUNNYVALE_TC",
+      "name": "Sunnyvale Transit Center (VTA Hub)",
+      "type": "bus_hub",
+      "address": "Frances Street at Murphy Avenue, Sunnyvale, CA 94086",
+      "lat": 37.3784,
+      "lng": -122.0302,
+      "served_by": ["VTA 20", "VTA 53", "VTA 57"],
+      "neighbors": [
+        { "id": "CT_SUNNYVALE",    "travel_min": 3,  "mode": "walk"  },
+        { "id": "VTA_SC_TC",       "travel_min": 18, "mode": "bus",  "route": "VTA 53" },
+        { "id": "BUS_MILPITAS_BART","travel_min": 25,"mode": "bus",  "route": "VTA 20" }
+      ]
+    },
+    {
+      "id": "VTA_SC_TC",
+      "name": "Santa Clara Transit Center (VTA Hub)",
+      "type": "bus_hub",
+      "address": "1001 Airport Boulevard, Santa Clara, CA 95050",
+      "lat": 37.3529,
+      "lng": -121.9368,
+      "served_by": ["VTA 21", "VTA 22", "VTA 53", "VTA 60", "VTA Rapid 522"],
+      "neighbors": [
+        { "id": "CT_SANTA_CLARA",  "travel_min": 5,  "mode": "walk"  },
+        { "id": "VTA_SUNNYVALE_TC","travel_min": 18, "mode": "bus",  "route": "VTA 53" },
+        { "id": "VTA_DIRIDON_BUS", "travel_min": 10, "mode": "bus",  "route": "VTA 22" },
+        { "id": "BUS_MILPITAS_BART","travel_min": 30,"mode": "bus",  "route": "VTA 60" }
+      ]
+    },
+    {
+      "id": "VTA_DIRIDON_BUS",
+      "name": "Diridon Station Bus Hub",
+      "type": "bus_hub",
+      "address": "65 Cahill Street, San Jose, CA 95110",
+      "lat": 37.3298,
+      "lng": -121.9020,
+      "served_by": ["VTA 22", "VTA 60", "VTA 64A", "VTA 64B", "VTA Rapid 500", "VTA Rapid 522"],
+      "neighbors": [
+        { "id": "CT_SJ_DIRIDON",   "travel_min": 2,  "mode": "walk"  },
+        { "id": "VTA_SC_TC",       "travel_min": 10, "mode": "bus",  "route": "VTA 22" },
+        { "id": "BUS_MILPITAS_BART","travel_min": 22,"mode": "bus",  "route": "VTA Rapid 500" },
+        { "id": "BUS_SANTACLARA_5TH","travel_min": 12,"mode": "walk" }
+      ]
+    },
+    {
+      "id": "BUS_MILPITAS_BART",
+      "name": "Milpitas BART Station",
+      "type": "bart",
+      "address": "1615 N Milpitas Boulevard, Milpitas, CA 95035",
+      "lat": 37.4160,
+      "lng": -121.8905,
+      "served_by": ["BART Green Line", "BART Orange Line", "VTA 20", "VTA 60"],
+      "neighbors": [
+        { "id": "VTA_SUNNYVALE_TC","travel_min": 25, "mode": "bus",  "route": "VTA 20" },
+        { "id": "VTA_SC_TC",       "travel_min": 30, "mode": "bus",  "route": "VTA 60" },
+        { "id": "VTA_DIRIDON_BUS", "travel_min": 22, "mode": "bus",  "route": "VTA Rapid 500" },
+        { "id": "BUS_CAPITOL_MILPITAS","travel_min": 8,"mode": "bus","route": "VTA 20" }
+      ]
+    },
+
+    {
+      "id": "BUS_ECR_SCOTT",
+      "name": "El Camino Real & Scott Blvd (VTA Bus Stop)",
+      "type": "bus_stop",
+      "address": "El Camino Real & Scott Boulevard, Santa Clara, CA 95051",
+      "lat": 37.3513,
+      "lng": -121.9820,
+      "served_by": ["VTA 22", "VTA Rapid 522"],
+      "neighbors": [
+        { "id": "BUS_ECR_BENTON",  "travel_min": 4,  "mode": "bus",  "route": "VTA 522 Rapid" },
+        { "id": "BUS_ECR_LAWRENCE","travel_min": 6,  "mode": "bus",  "route": "VTA 522 Rapid" },
+        { "id": "VTA_SC_TC",       "travel_min": 10, "mode": "bus",  "route": "VTA 22"        }
+      ]
+    },
+    {
+      "id": "BUS_ECR_BENTON",
+      "name": "El Camino Real & Benton St (VTA Bus Stop)",
+      "type": "bus_stop",
+      "address": "El Camino Real & Benton Street, Santa Clara, CA 95050",
+      "lat": 37.3506,
+      "lng": -121.9558,
+      "served_by": ["VTA 22", "VTA Rapid 522"],
+      "neighbors": [
+        { "id": "BUS_ECR_SCOTT",   "travel_min": 4,  "mode": "bus",  "route": "VTA 522 Rapid" },
+        { "id": "VTA_SC_TC",       "travel_min": 8,  "mode": "bus",  "route": "VTA 22"        },
+        { "id": "BUS_ECR_MATHILDA","travel_min": 12, "mode": "bus",  "route": "VTA 522 Rapid" }
+      ]
+    },
+    {
+      "id": "BUS_ECR_LAWRENCE",
+      "name": "El Camino Real & Lawrence Expy (VTA Bus Stop)",
+      "type": "bus_stop",
+      "address": "El Camino Real & Lawrence Expressway, Santa Clara, CA 95051",
+      "lat": 37.3531,
+      "lng": -121.9841,
+      "served_by": ["VTA 22", "VTA Rapid 522", "VTA 57"],
+      "neighbors": [
+        { "id": "BUS_ECR_SCOTT",   "travel_min": 6,  "mode": "bus",  "route": "VTA 522 Rapid" },
+        { "id": "BUS_ECR_MATHILDA","travel_min": 8,  "mode": "bus",  "route": "VTA 522 Rapid" },
+        { "id": "BUS_SUNNYVALE_SARATOGA","travel_min": 5,"mode":"bus","route":"VTA 57"         }
+      ]
+    },
+    {
+      "id": "BUS_ECR_MATHILDA",
+      "name": "El Camino Real & Mathilda Ave (VTA Bus Stop)",
+      "type": "bus_stop",
+      "address": "El Camino Real & Mathilda Avenue, Sunnyvale, CA 94087",
+      "lat": 37.3778,
+      "lng": -122.0336,
+      "served_by": ["VTA 22", "VTA Rapid 522", "VTA 53"],
+      "neighbors": [
+        { "id": "VTA_SUNNYVALE_TC","travel_min": 5,  "mode": "bus",  "route": "VTA 53"        },
+        { "id": "BUS_ECR_LAWRENCE","travel_min": 8,  "mode": "bus",  "route": "VTA 522 Rapid" },
+        { "id": "BUS_ECR_BENTON",  "travel_min": 12, "mode": "bus",  "route": "VTA 522 Rapid" }
+      ]
+    },
+    {
+      "id": "BUS_SUNNYVALE_SARATOGA",
+      "name": "Sunnyvale-Saratoga Rd & Fremont Ave (VTA Bus Stop)",
+      "type": "bus_stop",
+      "address": "Sunnyvale-Saratoga Road & Fremont Avenue, Sunnyvale, CA 94087",
+      "lat": 37.3588,
+      "lng": -122.0110,
+      "served_by": ["VTA 57"],
+      "neighbors": [
+        { "id": "BUS_ECR_LAWRENCE","travel_min": 5,  "mode": "bus",  "route": "VTA 57" },
+        { "id": "VTA_SUNNYVALE_TC","travel_min": 7,  "mode": "bus",  "route": "VTA 57" }
+      ]
+    },
+
+    {
+      "id": "BUS_TAYLOR_N1ST",
+      "name": "E Taylor St & N 1st St (VTA Bus Stop)",
+      "type": "bus_stop",
+      "address": "E Taylor Street & N 1st Street, San Jose, CA 95112",
+      "lat": 37.3525,
+      "lng": -121.8962,
+      "served_by": ["VTA 72", "VTA 73"],
+      "neighbors": [
+        { "id": "BUS_N1ST_CRANECT","travel_min": 12, "mode": "bus",  "route": "VTA 72" },
+        { "id": "BUS_COLEMAN_TAYLOR","travel_min": 8,"mode": "bus",  "route": "VTA 72" },
+        { "id": "BUS_SENTER_TULLY","travel_min": 18, "mode": "bus",  "route": "VTA 73" },
+        { "id": "BUS_SANTACLARA_5TH","travel_min": 10,"mode":"walk"                    }
+      ]
+    },
+    {
+      "id": "BUS_COLEMAN_TAYLOR",
+      "name": "Coleman Ave & E Taylor St (VTA Bus Stop)",
+      "type": "bus_stop",
+      "address": "Coleman Avenue & E Taylor Street, San Jose, CA 95110",
+      "lat": 37.3469,
+      "lng": -121.9085,
+      "served_by": ["VTA 72", "VTA 60"],
+      "neighbors": [
+        { "id": "BUS_TAYLOR_N1ST", "travel_min": 8,  "mode": "bus",  "route": "VTA 72" },
+        { "id": "VTA_DIRIDON_BUS", "travel_min": 6,  "mode": "bus",  "route": "VTA 60" },
+        { "id": "BUS_AUTOMATION_N1ST","travel_min": 15,"mode":"bus", "route": "VTA 72" }
+      ]
+    },
+    {
+      "id": "BUS_COLEMAN_BROKAW",
+      "name": "Coleman Ave & Brokaw Rd (VTA Bus Stop)",
+      "type": "bus_stop",
+      "address": "Coleman Avenue & Brokaw Road, Santa Clara, CA 95050",
+      "lat": 37.3718,
+      "lng": -121.9245,
+      "served_by": ["VTA 22", "VTA 60"],
+      "neighbors": [
+        { "id": "VTA_SC_TC",       "travel_min": 12, "mode": "bus",  "route": "VTA 22" },
+        { "id": "VTA_DIRIDON_BUS", "travel_min": 10, "mode": "bus",  "route": "VTA 60" }
+      ]
+    },
+    {
+      "id": "BUS_AUTOMATION_N1ST",
+      "name": "Automation Pkwy & N 1st St (VTA Bus Stop)",
+      "type": "bus_stop",
+      "address": "Automation Parkway & N 1st Street, San Jose, CA 95131",
+      "lat": 37.3885,
+      "lng": -121.8980,
+      "served_by": ["VTA 72"],
+      "neighbors": [
+        { "id": "BUS_COLEMAN_TAYLOR","travel_min": 15,"mode": "bus", "route": "VTA 72" },
+        { "id": "BUS_N1ST_CRANECT","travel_min": 8,  "mode": "bus",  "route": "VTA 72" },
+        { "id": "BUS_CASAVERDE_ORCHARD","travel_min": 10,"mode":"bus","route":"VTA 72" }
+      ]
+    },
+    {
+      "id": "BUS_N1ST_CRANECT",
+      "name": "N 1st St & Crane Ct (VTA Bus Stop)",
+      "type": "bus_stop",
+      "address": "N 1st Street & Crane Court, San Jose, CA 95112",
+      "lat": 37.3830,
+      "lng": -121.9105,
+      "served_by": ["VTA 72"],
+      "neighbors": [
+        { "id": "BUS_AUTOMATION_N1ST","travel_min": 8,"mode": "bus", "route": "VTA 72" },
+        { "id": "BUS_TAYLOR_N1ST", "travel_min": 12, "mode": "bus",  "route": "VTA 72" },
+        { "id": "BUS_CASAVERDE_ORCHARD","travel_min": 8,"mode":"bus","route":"VTA 72"  }
+      ]
+    },
+    {
+      "id": "BUS_CASAVERDE_ORCHARD",
+      "name": "Casa Verde St & Orchard Pkwy (VTA Bus Stop)",
+      "type": "bus_stop",
+      "address": "Casa Verde Street & Orchard Parkway, San Jose, CA 95134",
+      "lat": 37.3978,
+      "lng": -121.9292,
+      "served_by": ["VTA 72"],
+      "neighbors": [
+        { "id": "BUS_AUTOMATION_N1ST","travel_min": 10,"mode":"bus", "route": "VTA 72" },
+        { "id": "BUS_N1ST_CRANECT","travel_min": 8,  "mode": "bus",  "route": "VTA 72" },
+        { "id": "BUS_ZANKER_MONTAGUE","travel_min": 5,"mode":"walk"                     },
+        { "id": "BUS_MILPITAS_BART","travel_min": 12, "mode": "bus",  "route": "VTA 72" }
+      ]
+    },
+    {
+      "id": "BUS_ZANKER_MONTAGUE",
+      "name": "River Oaks Pkwy & Montague Expy (VTA Bus Stop)",
+      "type": "bus_stop",
+      "address": "River Oaks Parkway & Montague Expressway, San Jose, CA 95134",
+      "lat": 37.3984,
+      "lng": -121.9236,
+      "served_by": ["VTA Rapid 500"],
+      "neighbors": [
+        { "id": "BUS_CASAVERDE_ORCHARD","travel_min": 5,"mode":"walk"                    },
+        { "id": "VTA_DIRIDON_BUS", "travel_min": 18, "mode": "bus",  "route": "VTA Rapid 500" },
+        { "id": "BUS_MILPITAS_BART","travel_min": 12, "mode": "bus",  "route": "VTA Rapid 500" }
+      ]
+    },
+    {
+      "id": "BUS_CAPITOL_MILPITAS",
+      "name": "E Capitol Ave & S Milpitas Blvd (VTA Bus Stop)",
+      "type": "bus_stop",
+      "address": "E Capitol Avenue & S Milpitas Boulevard, Milpitas, CA 95035",
+      "lat": 37.4089,
+      "lng": -121.8942,
+      "served_by": ["VTA 20", "VTA 77", "VTA Rapid 500"],
+      "neighbors": [
+        { "id": "BUS_MILPITAS_BART","travel_min": 8,  "mode": "bus",  "route": "VTA 20"        },
+        { "id": "BUS_GREATMALL_CAPITOL","travel_min": 8,"mode":"bus", "route": "VTA 20"        },
+        { "id": "VTA_DIRIDON_BUS", "travel_min": 22, "mode": "bus",  "route": "VTA Rapid 500" },
+        { "id": "BUS_CALAVERAS_MILPITAS","travel_min": 5,"mode":"bus","route": "VTA 20"        },
+        { "id": "BUS_LUNDY_HOSTETTER","travel_min": 15,"mode":"bus",  "route": "VTA 77"        }
+      ]
+    },
+    {
+      "id": "BUS_CALAVERAS_MILPITAS",
+      "name": "E Calaveras Blvd & Milpitas Blvd (VTA Bus Stop)",
+      "type": "bus_stop",
+      "address": "E Calaveras Boulevard & Milpitas Boulevard, Milpitas, CA 95035",
+      "lat": 37.4295,
+      "lng": -121.8965,
+      "served_by": ["VTA 20"],
+      "neighbors": [
+        { "id": "BUS_CAPITOL_MILPITAS","travel_min": 5,"mode": "bus", "route": "VTA 20" },
+        { "id": "BUS_MILPITAS_BART","travel_min": 10, "mode": "bus",  "route": "VTA 20" },
+        { "id": "BUS_RANCH_CALAVERAS","travel_min": 4,"mode": "bus",  "route": "VTA 20" }
+      ]
+    },
+    {
+      "id": "BUS_GREATMALL_CAPITOL",
+      "name": "Great Mall Pkwy & Capitol Ave (VTA Bus Stop)",
+      "type": "bus_stop",
+      "address": "Great Mall Parkway & Capitol Avenue, Milpitas, CA 95035",
+      "lat": 37.4155,
+      "lng": -121.8987,
+      "served_by": ["VTA 20"],
+      "neighbors": [
+        { "id": "BUS_CAPITOL_MILPITAS","travel_min": 8,"mode": "bus", "route": "VTA 20" },
+        { "id": "BUS_CALAVERAS_MILPITAS","travel_min": 8,"mode":"bus","route": "VTA 20" }
+      ]
+    },
+    {
+      "id": "BUS_RANCH_CALAVERAS",
+      "name": "Ranch Dr & Calaveras Blvd (VTA Bus Stop)",
+      "type": "bus_stop",
+      "address": "Ranch Drive & Calaveras Boulevard, Milpitas, CA 95035",
+      "lat": 37.4180,
+      "lng": -121.9026,
+      "served_by": ["VTA 20"],
+      "neighbors": [
+        { "id": "BUS_CALAVERAS_MILPITAS","travel_min": 4,"mode":"bus","route": "VTA 20" },
+        { "id": "BUS_CAPITOL_MILPITAS","travel_min": 9,"mode": "bus", "route": "VTA 20" }
+      ]
+    },
+    {
+      "id": "BUS_LUNDY_HOSTETTER",
+      "name": "Lundy Ave & Hostetter Rd (VTA Bus Stop)",
+      "type": "bus_stop",
+      "address": "Lundy Avenue & Hostetter Road, San Jose, CA 95131",
+      "lat": 37.3895,
+      "lng": -121.8760,
+      "served_by": ["VTA 77"],
+      "neighbors": [
+        { "id": "BUS_CAPITOL_MILPITAS","travel_min": 15,"mode":"bus", "route": "VTA 77" },
+        { "id": "BUS_MCKEE_N13TH",  "travel_min": 10, "mode": "bus",  "route": "VTA 77" }
+      ]
+    },
+    {
+      "id": "BUS_SENTER_TULLY",
+      "name": "Senter Rd & Tully Rd (VTA Bus Stop)",
+      "type": "bus_stop",
+      "address": "Senter Road & Tully Road, San Jose, CA 95112",
+      "lat": 37.2973,
+      "lng": -121.8520,
+      "served_by": ["VTA 73"],
+      "neighbors": [
+        { "id": "BUS_TAYLOR_N1ST", "travel_min": 18, "mode": "bus",  "route": "VTA 73" }
+      ]
+    },
+    {
+      "id": "BUS_SANTACLARA_5TH",
+      "name": "E Santa Clara St & 5th St (VTA Bus Stop)",
+      "type": "bus_stop",
+      "address": "181 E Santa Clara Street, San Jose, CA 95112",
+      "lat": 37.3363,
+      "lng": -121.8868,
+      "served_by": ["VTA 22", "VTA 64B", "VTA 66", "VTA 72"],
+      "neighbors": [
+        { "id": "VTA_DIRIDON_BUS", "travel_min": 12, "mode": "walk"                     },
+        { "id": "BUS_TAYLOR_N1ST", "travel_min": 10, "mode": "walk"                     },
+        { "id": "CT_SJ_DIRIDON",   "travel_min": 14, "mode": "walk"                     }
+      ]
+    },
+    {
+      "id": "BUS_PARKMOOR_MERIDIAN",
+      "name": "Parkmoor Ave & Meridian Ave (VTA Bus Stop)",
+      "type": "bus_stop",
+      "address": "Parkmoor Avenue & Meridian Avenue, San Jose, CA 95128",
+      "lat": 37.3151,
+      "lng": -121.9080,
+      "served_by": ["VTA 60"],
+      "neighbors": [
+        { "id": "VTA_DIRIDON_BUS", "travel_min": 8,  "mode": "bus",  "route": "VTA 60" }
+      ]
+    },
+    {
+      "id": "BUS_MCKEE_N13TH",
+      "name": "McKee Rd & N 13th St (VTA Bus Stop)",
+      "type": "bus_stop",
+      "address": "McKee Road & N 13th Street, San Jose, CA 95116",
+      "lat": 37.3685,
+      "lng": -121.8490,
+      "served_by": ["VTA 72"],
+      "neighbors": [
+        { "id": "BUS_LUNDY_HOSTETTER","travel_min": 10,"mode":"bus",  "route": "VTA 77" },
+        { "id": "BUS_N1ST_CRANECT", "travel_min": 15, "mode": "bus",  "route": "VTA 72" }
+      ]
+    },
+    {
+      "id": "BUS_ALMADEN_FOXCHASE",
+      "name": "Almaden Expy & Foxchase Dr (VTA Bus Stop)",
+      "type": "bus_stop",
+      "address": "Almaden Expressway & Foxchase Drive, San Jose, CA 95118",
+      "lat": 37.2648,
+      "lng": -121.8820,
+      "served_by": ["VTA 64A"],
+      "neighbors": [
+        { "id": "VTA_DIRIDON_BUS", "travel_min": 25, "mode": "bus",  "route": "VTA 64A" }
+      ]
+    },
+    {
+      "id": "BUS_HOMESTEAD_FOOTHILL",
+      "name": "Homestead Rd & Foothill Expy (VTA Bus Stop)",
+      "type": "bus_stop",
+      "address": "Homestead Road & Foothill Expressway, Los Altos, CA 94024",
+      "lat": 37.3373,
+      "lng": -122.0672,
+      "served_by": ["VTA 51"],
+      "neighbors": [
+        { "id": "CT_LAWRENCE",     "travel_min": 12, "mode": "bus",  "route": "VTA 51"  },
+        { "id": "BUS_ECR_MATHILDA","travel_min": 15, "mode": "bus",  "route": "VTA 53"  }
+      ]
+    },
+    {
+      "id": "BUS_BASCOM_CAMPBELL",
+      "name": "Bascom Ave & Hamilton Ave, Campbell (VTA Bus Stop)",
+      "type": "bus_stop",
+      "address": "Bascom Avenue & Hamilton Avenue, Campbell, CA 95008",
+      "lat": 37.2863,
+      "lng": -121.9380,
+      "served_by": ["VTA 57", "VTA 17"],
+      "neighbors": [
+        { "id": "VTA_DIRIDON_BUS", "travel_min": 22, "mode": "bus",  "route": "VTA 57"  }
+      ]
+    }
+  ],
+
+  "metadata": {
+    "total_stations": 32,
+    "caltrain_count": 7,
+    "bus_hub_count": 3,
+    "bart_count": 1,
+    "bus_stop_count": 21,
+    "travel_time_unit": "minutes",
+    "graph_type": "undirected weighted — each neighbor edge implies reverse edge with same travel_min",
+    "data_sources": [
+      "Caltrain schedule effective Jan 31 2026",
+      "VTA route map 2025",
+      "Google Maps transit estimates",
+      "Moovit stop-to-stop data"
+    ],
+    "notes": [
+      "travel_min = in-vehicle time only, excludes waiting time",
+      "Average headway: Caltrain ~15-30 min off-peak; VTA bus ~15-30 min",
+      "walk mode edges indicate pedestrian transfer between co-located nodes",
+      "For Dijkstra: edge weight = travel_min; source = apartment node; sinks = all destination nodes"
+    ]
+  }
+}
