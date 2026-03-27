@@ -101,9 +101,6 @@ Performance test result (from `test_scale.py`):
 
 **Shared** — Report writing, presentation, GitHub management
 
-### Shared
-- Report writing and presentation preparation (all members)
-- GitHub repository management (Xujing + Fanchao)
 
 ## Repository
 
