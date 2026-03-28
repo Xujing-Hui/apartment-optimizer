@@ -3,27 +3,6 @@ Hui, Liu, Yu
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 Apartment Commute Optimizer
 Report 1
 
@@ -33,20 +12,19 @@ CS5800 Spring 2026 Group Project
 
 
 
-
-
-
-
-
-
-
-
-
-
 Xujing Hui ( #002339163) 
 Fanchao Yu ( #001601606)
 Jiaxin Liu ( #003169274)
 ________________
+
+
+
+
+
+
+
+
+
 1. Executive Summary
 Our project is on track. We have completed the problem formulation, designed the full graph model using real San Jose locations, implemented all core algorithms (Dijkstra with min-heap and Bellman-Ford for comparison), and produced a working end-to-end prototype that outputs ranked apartment results. The GitHub repository contains all source code, test data, and 15 passing test cases across three test files. Our primary remaining work is expanding the dataset and refining the report and presentation materials.
 2. Problem Statement
