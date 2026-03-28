@@ -1,74 +1,42 @@
-{
-  "apartments": [
-    {
-      "id": "murphy_station",
-      "name": "Murphy Station",
-      "address": "1008 East El Camino Real, Sunnyvale, CA 94087",
-      "lat": 37.3784,
-      "lng": -122.0297,
-      "monthly_rent": 3817,
-      "area": "Sunnyvale",
-      "nearest_station_id": "CT_SUNNYVALE",
-      "walk_min_to_station": 8,
-      "transit_accessibility_note": "Direct walk to Sunnyvale Caltrain; VTA 22/522/53 on El Camino Real"
-    },
-    {
-      "id": "villas_on_the_blvd",
-      "name": "Villas on the Boulevard",
-      "address": "2615 El Camino Real, Santa Clara, CA 95051",
-      "lat": 37.3513,
-      "lng": -121.9817,
-      "monthly_rent": 3465,
-      "area": "Santa Clara",
-      "nearest_station_id": "BUS_ECR_SCOTT",
-      "walk_min_to_station": 4,
-      "transit_accessibility_note": "VTA 22/522 Rapid on El Camino Real; 1 mile to Santa Clara Caltrain"
-    },
-    {
-      "id": "cannery_park",
-      "name": "Cannery Park by Windsor",
-      "address": "415 East Taylor Street, San Jose, CA 95112",
-      "lat": 37.3525,
-      "lng": -121.8963,
-      "monthly_rent": 3359,
-      "area": "Downtown San Jose",
-      "nearest_station_id": "BUS_TAYLOR_N1ST",
-      "walk_min_to_station": 5,
-      "transit_accessibility_note": "VTA 72/73 on N 1st St; 14-min walk to NEU; 0.9 mi to Diridon Caltrain"
-    },
-    {
-      "id": "the_verdant",
-      "name": "The Verdant Apartments",
-      "address": "3700 Casa Verde Street, San Jose, CA 95134",
-      "lat": 37.3975,
-      "lng": -121.9290,
-      "monthly_rent": 3292,
-      "area": "North San Jose",
-      "nearest_station_id": "BUS_CASAVERDE_ORCHARD",
-      "walk_min_to_station": 5,
-      "transit_accessibility_note": "VTA 72 on Orchard Pkwy; VTA Rapid 500 on Montague Expy; Starbucks Zanker walkable"
-    },
-    {
-      "id": "the_harlowe",
-      "name": "The Harlowe",
-      "address": "730-750 East Capitol Avenue, Milpitas, CA 95035",
-      "lat": 37.4089,
-      "lng": -121.8945,
-      "monthly_rent": 3300,
-      "area": "Milpitas",
-      "nearest_station_id": "BUS_CAPITOL_MILPITAS",
-      "walk_min_to_station": 7,
-      "transit_accessibility_note": "VTA 20/R500 on Capitol Ave; 24HF Milpitas nearby; farthest from NEU"
-    }
-  ],
-  "constraints": {
-    "max_monthly_rent": 4000,
-    "max_walk_min_to_station": 15
+[
+  {
+    "id": "A1",
+    "name": "Downtown (San Carlos St)",
+    "lat": 37.3333,
+    "lng": -121.8907,
+    "rent": 2200,
+    "nearest_station": "San Carlos"
   },
-  "metadata": {
-    "total_apartments": 5,
-    "rent_unit": "USD/month",
-    "coordinates_system": "WGS84 decimal degrees",
-    "data_source": "Zillow / Apartments.com / direct address lookup, March 2026"
+  {
+    "id": "A2",
+    "name": "Japantown (N 6th St)",
+    "lat": 37.3490,
+    "lng": -121.8863,
+    "rent": 1800,
+    "nearest_station": "Japantown/Ayer"
+  },
+  {
+    "id": "A3",
+    "name": "Tamien Area",
+    "lat": 37.3120,
+    "lng": -121.8830,
+    "rent": 1500,
+    "nearest_station": "Tamien"
+  },
+  {
+    "id": "A4",
+    "name": "Capitol Area",
+    "lat": 37.2882,
+    "lng": -121.8568,
+    "rent": 1400,
+    "nearest_station": "Capitol"
+  },
+  {
+    "id": "A5",
+    "name": "Branham Area",
+    "lat": 37.2720,
+    "lng": -121.8445,
+    "rent": 1350,
+    "nearest_station": "Branham"
   }
-}
+]
