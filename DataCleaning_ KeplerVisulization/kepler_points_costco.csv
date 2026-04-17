@@ -1,0 +1,7 @@
+id,name,lat,lng,category,category_label,weekly_visits,monthly_rent,note
+C1,Costco Sunnyvale,37.3706,-121.9965,costco,Costco,1,,Adjacent to Lawrence Caltrain station — best transit access of all Costcos
+C2,Costco Santa Clara,37.3529,-121.9368,costco,Costco,1,,Near Santa Clara Caltrain; served by VTA 22/60
+C3,Costco San Jose (Automation Pkwy),37.3882,-121.8978,costco,Costco,1,,North San Jose; served by VTA 72/77; closest Costco for Verdant/Harlowe
+C4,Costco Mountain View,37.4055,-122.093,costco,Costco,1,,Mountain View Caltrain accessible; best option for Sunnyvale-side apartments via Caltrain
+C5,Costco San Jose (Senter Rd),37.2973,-121.8519,costco,Costco,1,,South San Jose; VTA 73; closest to Cannery Park via bus
+C6,Costco San Jose (Almaden Expy),37.2647,-121.8818,costco,Costco,1,,South San Jose; VTA 64A; generally farthest from all 5 apartments

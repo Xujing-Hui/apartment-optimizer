@@ -1,0 +1,9 @@
+id,name,lat,lng,category,category_label,weekly_visits,monthly_rent,note
+CT_SUNNYVALE,Sunnyvale Caltrain Station,37.3785,-122.0306,caltrain,Caltrain Station,,,"Caltrain Local, Caltrain Limited, Caltrain Express"
+CT_LAWRENCE,Lawrence Caltrain Station,37.3705,-121.9971,caltrain,Caltrain Station,,,Caltrain Local
+CT_SANTA_CLARA,Santa Clara Caltrain Station,37.3527,-121.9366,caltrain,Caltrain Station,,,"Caltrain Local, Caltrain Limited"
+CT_SJ_DIRIDON,San Jose Diridon Caltrain Station,37.3297,-121.9022,caltrain,Caltrain Station,,,"Caltrain Local, Caltrain Limited, Caltrain Express, ACE, Amtrak Capitol Corridor"
+CT_MOUNTAIN_VIEW,Mountain View Caltrain Station,37.3942,-122.0748,caltrain,Caltrain Station,,,"Caltrain Local, Caltrain Limited, Caltrain Express"
+CT_SAN_ANTONIO,San Antonio Caltrain Station,37.4072,-122.1078,caltrain,Caltrain Station,,,Caltrain Local
+CT_CALIFORNIA_AVE,California Avenue Caltrain Station,37.4291,-122.1429,caltrain,Caltrain Station,,,Caltrain Local
+CT_PALO_ALTO,Palo Alto Caltrain Station,37.4435,-122.1651,caltrain,Caltrain Station,,,"Caltrain Local, Caltrain Limited, Caltrain Express"

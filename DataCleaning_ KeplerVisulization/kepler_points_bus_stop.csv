@@ -1,0 +1,25 @@
+id,name,lat,lng,category,category_label,weekly_visits,monthly_rent,note
+BUS_ECR_SCOTT,El Camino Real & Scott Blvd (VTA Bus Stop),37.3513,-121.982,bus_stop,Bus Stop,,,"VTA 22, VTA Rapid 522"
+BUS_ECR_BENTON,El Camino Real & Benton St (VTA Bus Stop),37.3506,-121.9558,bus_stop,Bus Stop,,,"VTA 22, VTA Rapid 522"
+BUS_ECR_LAWRENCE,El Camino Real & Lawrence Expy (VTA Bus Stop),37.3531,-121.9841,bus_stop,Bus Stop,,,"VTA 22, VTA Rapid 522, VTA 57"
+BUS_ECR_MATHILDA,El Camino Real & Mathilda Ave (VTA Bus Stop),37.3778,-122.0336,bus_stop,Bus Stop,,,"VTA 22, VTA Rapid 522, VTA 53"
+BUS_SUNNYVALE_SARATOGA,Sunnyvale-Saratoga Rd & Fremont Ave (VTA Bus Stop),37.3588,-122.011,bus_stop,Bus Stop,,,VTA 57
+BUS_TAYLOR_N1ST,E Taylor St & N 1st St (VTA Bus Stop),37.3525,-121.8962,bus_stop,Bus Stop,,,"VTA 72, VTA 73"
+BUS_COLEMAN_TAYLOR,Coleman Ave & E Taylor St (VTA Bus Stop),37.3469,-121.9085,bus_stop,Bus Stop,,,"VTA 72, VTA 60"
+BUS_COLEMAN_BROKAW,Coleman Ave & Brokaw Rd (VTA Bus Stop),37.3718,-121.9245,bus_stop,Bus Stop,,,"VTA 22, VTA 60"
+BUS_AUTOMATION_N1ST,Automation Pkwy & N 1st St (VTA Bus Stop),37.3885,-121.898,bus_stop,Bus Stop,,,VTA 72
+BUS_N1ST_CRANECT,N 1st St & Crane Ct (VTA Bus Stop),37.383,-121.9105,bus_stop,Bus Stop,,,VTA 72
+BUS_CASAVERDE_ORCHARD,Casa Verde St & Orchard Pkwy (VTA Bus Stop),37.3978,-121.9292,bus_stop,Bus Stop,,,VTA 72
+BUS_ZANKER_MONTAGUE,River Oaks Pkwy & Montague Expy (VTA Bus Stop),37.3984,-121.9236,bus_stop,Bus Stop,,,VTA Rapid 500
+BUS_CAPITOL_MILPITAS,E Capitol Ave & S Milpitas Blvd (VTA Bus Stop),37.4089,-121.8942,bus_stop,Bus Stop,,,"VTA 20, VTA 77, VTA Rapid 500"
+BUS_CALAVERAS_MILPITAS,E Calaveras Blvd & Milpitas Blvd (VTA Bus Stop),37.4295,-121.8965,bus_stop,Bus Stop,,,VTA 20
+BUS_GREATMALL_CAPITOL,Great Mall Pkwy & Capitol Ave (VTA Bus Stop),37.4155,-121.8987,bus_stop,Bus Stop,,,VTA 20
+BUS_RANCH_CALAVERAS,Ranch Dr & Calaveras Blvd (VTA Bus Stop),37.418,-121.9026,bus_stop,Bus Stop,,,VTA 20
+BUS_LUNDY_HOSTETTER,Lundy Ave & Hostetter Rd (VTA Bus Stop),37.3895,-121.876,bus_stop,Bus Stop,,,VTA 77
+BUS_SENTER_TULLY,Senter Rd & Tully Rd (VTA Bus Stop),37.2973,-121.852,bus_stop,Bus Stop,,,VTA 73
+BUS_SANTACLARA_5TH,E Santa Clara St & 5th St (VTA Bus Stop),37.3363,-121.8868,bus_stop,Bus Stop,,,"VTA 22, VTA 64B, VTA 66, VTA 72"
+BUS_PARKMOOR_MERIDIAN,Parkmoor Ave & Meridian Ave (VTA Bus Stop),37.3151,-121.908,bus_stop,Bus Stop,,,VTA 60
+BUS_MCKEE_N13TH,McKee Rd & N 13th St (VTA Bus Stop),37.3685,-121.849,bus_stop,Bus Stop,,,VTA 72
+BUS_ALMADEN_FOXCHASE,Almaden Expy & Foxchase Dr (VTA Bus Stop),37.2648,-121.882,bus_stop,Bus Stop,,,VTA 64A
+BUS_HOMESTEAD_FOOTHILL,Homestead Rd & Foothill Expy (VTA Bus Stop),37.3373,-122.0672,bus_stop,Bus Stop,,,VTA 51
+BUS_BASCOM_CAMPBELL,"Bascom Ave & Hamilton Ave, Campbell (VTA Bus Stop)",37.2863,-121.938,bus_stop,Bus Stop,,,"VTA 57, VTA 17"

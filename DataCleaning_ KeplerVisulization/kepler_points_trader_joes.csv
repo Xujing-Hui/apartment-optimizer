@@ -1,0 +1,7 @@
+id,name,lat,lng,category,category_label,weekly_visits,monthly_rent,note
+T1,Trader Joe's Sunnyvale (El Camino Real),37.3784,-122.0344,trader_joes,Trader Joe's,2,,Walkable from Murphy Station; on VTA 22/522 corridor
+T2,Trader Joe's San Jose (Coleman Ave),37.3467,-121.9082,trader_joes,Trader Joe's,2,,Near Diridon area; VTA 60/72; closest TJ for Cannery Park
+T3,Trader Joe's Milpitas (Great Mall Pkwy),37.4155,-121.8985,trader_joes,Trader Joe's,2,,Near Great Mall; VTA 20; closest TJ for Harlowe
+T4,Trader Joe's Mountain View (Showers Dr),37.3947,-122.0785,trader_joes,Trader Joe's,2,,Mountain View Caltrain area; accessible by Caltrain from Sunnyvale
+T5,Trader Joe's Los Altos (Homestead Rd),37.3372,-122.0674,trader_joes,Trader Joe's,2,,VTA 51/57; walkable from Lorien Ivy/Murphy Station area via Homestead Rd
+T6,Trader Joe's Campbell (Bascom Ave),37.2863,-121.9381,trader_joes,Trader Joe's,2,,VTA 57/17; generally farthest from North SJ and Milpitas apartments

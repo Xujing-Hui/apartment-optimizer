@@ -1,0 +1,7 @@
+id,name,lat,lng,category,category_label,weekly_visits,monthly_rent,note
+G1,24 Hour Fitness Sunnyvale (Sunnyvale Saratoga Super-Sport),37.3588,-122.0116,gym_24hf,24 Hour Fitness,4,,Open 24/7; Super-Sport; VTA 57; closest gym for Murphy Station
+G2,24 Hour Fitness Santa Clara (El Camino Real Super-Sport),37.3531,-121.984,gym_24hf,24 Hour Fitness,4,,Open 24/7; Super-Sport; same stop as Starbucks S2; best for Villas
+G3,24 Hour Fitness San Jose (Crane Ct Super-Sport),37.3832,-121.9104,gym_24hf,24 Hour Fitness,4,,Tue-Thu 24hrs; Super-Sport; VTA 72; closest gym for Cannery Park
+G4,24 Hour Fitness San Jose (Parkmoor),37.315,-121.9082,gym_24hf,24 Hour Fitness,4,,Active-tier gym; Mon-Fri 5am-10pm; VTA 60; near Hanover Winchester area
+G5,24 Hour Fitness Milpitas (E Calaveras Blvd),37.4296,-121.8964,gym_24hf,24 Hour Fitness,4,,Mon-Sun 5am-11pm; closest gym for Harlowe; VTA 20
+G6,24 Hour Fitness San Jose (McKee Rd),37.3685,-121.8487,gym_24hf,24 Hour Fitness,4,,Tue-Thu 24hrs; East San Jose; VTA 72; backup option for North SJ apartments

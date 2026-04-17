@@ -1,0 +1,7 @@
+id,name,lat,lng,category,category_label,weekly_visits,monthly_rent,note
+S1,Starbucks Sunnyvale (W El Camino Real),37.3778,-122.0339,starbucks_neu_chain,Starbucks (chain),3,,Chain waypoint: Apt → S1 → NEU_SV; scored as dist(Apt→S1) + dist(S1→NEU_SV); walkable from Murphy Station
+S2,Starbucks Santa Clara (3605 El Camino Real),37.353,-121.9841,starbucks_neu_chain,Starbucks (chain),3,,Chain waypoint: Apt → S2 → NEU_SV; drive-thru; open until 10pm; same stop as 24HF G2
+S3,Starbucks Santa Clara (495 El Camino Real),37.3506,-121.9556,starbucks_neu_chain,Starbucks (chain),3,,Chain waypoint: Apt → S3 → NEU_SV; near Santa Clara University and Caltrain; VTA 22 corridor
+S4,Starbucks San Jose (Zanker Rd),37.3978,-121.9301,starbucks_neu_chain,Starbucks (chain),3,,Chain waypoint: Apt → S4 → NEU_SV; North SJ River Oaks area; walkable from Verdant; VTA 72
+S5,Starbucks San Jose (Downtown — 181 E Santa Clara St),37.3363,-121.887,starbucks_neu_chain,Starbucks (chain),3,,Chain waypoint: Apt → S5 → NEU_SV; Downtown SJ; near City Hall and NEU — likely lowest S→NEU leg
+S6,Starbucks Milpitas (127 Ranch Dr),37.418,-121.9025,starbucks_neu_chain,Starbucks (chain),3,,Chain waypoint: Apt → S6 → NEU_SV; closest Starbucks for Harlowe; VTA 20 stop nearby

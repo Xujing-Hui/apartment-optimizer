@@ -1,0 +1,6 @@
+id,name,lat,lng,category,category_label,weekly_visits,monthly_rent,note
+murphy_station,Murphy Station,37.3784,-122.0297,apartment,Apartment,,3817,Direct walk to Sunnyvale Caltrain; VTA 22/522/53 on El Camino Real
+villas_on_the_blvd,Villas on the Boulevard,37.3513,-121.9817,apartment,Apartment,,3465,VTA 22/522 Rapid on El Camino Real; 1 mile to Santa Clara Caltrain
+cannery_park,Cannery Park by Windsor,37.3525,-121.8963,apartment,Apartment,,3359,VTA 72/73 on N 1st St; 14-min walk to NEU (chain endpoint); 0.9 mi to Diridon Caltrain
+the_verdant,The Verdant Apartments,37.3975,-121.929,apartment,Apartment,,3292,VTA 72 on Orchard Pkwy; VTA Rapid 500 on Montague Expy; Starbucks Zanker (S4) walkable — good chain waypoint candidate
+the_harlowe,The Harlowe,37.4089,-121.8945,apartment,Apartment,,3300,VTA 20/R500 on Capitol Ave; 24HF Milpitas nearby; farthest from NEU chain endpoint

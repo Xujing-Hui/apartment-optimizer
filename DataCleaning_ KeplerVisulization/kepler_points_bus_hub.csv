@@ -1,0 +1,4 @@
+id,name,lat,lng,category,category_label,weekly_visits,monthly_rent,note
+VTA_SUNNYVALE_TC,Sunnyvale Transit Center (VTA Hub),37.3784,-122.0302,bus_hub,Bus Hub,,,"VTA 20, VTA 53, VTA 57"
+VTA_SC_TC,Santa Clara Transit Center (VTA Hub),37.3529,-121.9368,bus_hub,Bus Hub,,,"VTA 21, VTA 22, VTA 53, VTA 60, VTA Rapid 522"
+VTA_DIRIDON_BUS,Diridon Station Bus Hub,37.3298,-121.902,bus_hub,Bus Hub,,,"VTA 22, VTA 60, VTA 64A, VTA 64B, VTA Rapid 500, VTA Rapid 522"

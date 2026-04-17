@@ -1,0 +1,3935 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "apartment_id": "villas_on_the_blvd",
+        "apartment_name": "Villas on the Boulevard",
+        "destination_id": "NEU_SV",
+        "destination_name": "Northeastern University Silicon Valley",
+        "destination_category": "NEU Campus",
+        "total_travel_min": 36,
+        "segment_from": "villas_on_the_blvd",
+        "segment_to": "BUS_ECR_SCOTT",
+        "segment_min": 4,
+        "segment_mode": "walk",
+        "segment_from_type": "Apartment",
+        "segment_to_type": "bus_stop"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -121.9817,
+            37.3513
+          ],
+          [
+            -121.982,
+            37.3513
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "apartment_id": "villas_on_the_blvd",
+        "apartment_name": "Villas on the Boulevard",
+        "destination_id": "NEU_SV",
+        "destination_name": "Northeastern University Silicon Valley",
+        "destination_category": "NEU Campus",
+        "total_travel_min": 36,
+        "segment_from": "BUS_ECR_SCOTT",
+        "segment_to": "VTA_SC_TC",
+        "segment_min": 10,
+        "segment_mode": "bus",
+        "segment_from_type": "bus_stop",
+        "segment_to_type": "bus_hub"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -121.982,
+            37.3513
+          ],
+          [
+            -121.9368,
+            37.3529
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "apartment_id": "villas_on_the_blvd",
+        "apartment_name": "Villas on the Boulevard",
+        "destination_id": "NEU_SV",
+        "destination_name": "Northeastern University Silicon Valley",
+        "destination_category": "NEU Campus",
+        "total_travel_min": 36,
+        "segment_from": "VTA_SC_TC",
+        "segment_to": "CT_SANTA_CLARA",
+        "segment_min": 5,
+        "segment_mode": "walk",
+        "segment_from_type": "bus_hub",
+        "segment_to_type": "caltrain"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -121.9368,
+            37.3529
+          ],
+          [
+            -121.9366,
+            37.3527
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "apartment_id": "villas_on_the_blvd",
+        "apartment_name": "Villas on the Boulevard",
+        "destination_id": "NEU_SV",
+        "destination_name": "Northeastern University Silicon Valley",
+        "destination_category": "NEU Campus",
+        "total_travel_min": 36,
+        "segment_from": "CT_SANTA_CLARA",
+        "segment_to": "CT_SJ_DIRIDON",
+        "segment_min": 5,
+        "segment_mode": "caltrain",
+        "segment_from_type": "caltrain",
+        "segment_to_type": "caltrain"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -121.9366,
+            37.3527
+          ],
+          [
+            -121.9022,
+            37.3297
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "apartment_id": "villas_on_the_blvd",
+        "apartment_name": "Villas on the Boulevard",
+        "destination_id": "NEU_SV",
+        "destination_name": "Northeastern University Silicon Valley",
+        "destination_category": "NEU Campus",
+        "total_travel_min": 36,
+        "segment_from": "CT_SJ_DIRIDON",
+        "segment_to": "NEU_SV",
+        "segment_min": 12,
+        "segment_mode": "walk",
+        "segment_from_type": "caltrain",
+        "segment_to_type": "NEU Campus"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -121.9022,
+            37.3297
+          ],
+          [
+            -121.8902,
+            37.3367
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "apartment_id": "villas_on_the_blvd",
+        "apartment_name": "Villas on the Boulevard",
+        "destination_id": "C1",
+        "destination_name": "Costco Sunnyvale",
+        "destination_category": "Costco",
+        "total_travel_min": 29,
+        "segment_from": "villas_on_the_blvd",
+        "segment_to": "BUS_ECR_SCOTT",
+        "segment_min": 4,
+        "segment_mode": "walk",
+        "segment_from_type": "Apartment",
+        "segment_to_type": "bus_stop"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -121.9817,
+            37.3513
+          ],
+          [
+            -121.982,
+            37.3513
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "apartment_id": "villas_on_the_blvd",
+        "apartment_name": "Villas on the Boulevard",
+        "destination_id": "C1",
+        "destination_name": "Costco Sunnyvale",
+        "destination_category": "Costco",
+        "total_travel_min": 29,
+        "segment_from": "BUS_ECR_SCOTT",
+        "segment_to": "VTA_SC_TC",
+        "segment_min": 10,
+        "segment_mode": "bus",
+        "segment_from_type": "bus_stop",
+        "segment_to_type": "bus_hub"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -121.982,
+            37.3513
+          ],
+          [
+            -121.9368,
+            37.3529
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "apartment_id": "villas_on_the_blvd",
+        "apartment_name": "Villas on the Boulevard",
+        "destination_id": "C1",
+        "destination_name": "Costco Sunnyvale",
+        "destination_category": "Costco",
+        "total_travel_min": 29,
+        "segment_from": "VTA_SC_TC",
+        "segment_to": "CT_SANTA_CLARA",
+        "segment_min": 5,
+        "segment_mode": "walk",
+        "segment_from_type": "bus_hub",
+        "segment_to_type": "caltrain"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -121.9368,
+            37.3529
+          ],
+          [
+            -121.9366,
+            37.3527
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "apartment_id": "villas_on_the_blvd",
+        "apartment_name": "Villas on the Boulevard",
+        "destination_id": "C1",
+        "destination_name": "Costco Sunnyvale",
+        "destination_category": "Costco",
+        "total_travel_min": 29,
+        "segment_from": "CT_SANTA_CLARA",
+        "segment_to": "CT_LAWRENCE",
+        "segment_min": 4,
+        "segment_mode": "caltrain",
+        "segment_from_type": "caltrain",
+        "segment_to_type": "caltrain"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -121.9366,
+            37.3527
+          ],
+          [
+            -121.9971,
+            37.3705
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "apartment_id": "villas_on_the_blvd",
+        "apartment_name": "Villas on the Boulevard",
+        "destination_id": "C1",
+        "destination_name": "Costco Sunnyvale",
+        "destination_category": "Costco",
+        "total_travel_min": 29,
+        "segment_from": "CT_LAWRENCE",
+        "segment_to": "C1",
+        "segment_min": 6,
+        "segment_mode": "walk",
+        "segment_from_type": "caltrain",
+        "segment_to_type": "Costco"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -121.9971,
+            37.3705
+          ],
+          [
+            -121.9965,
+            37.3706
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "apartment_id": "villas_on_the_blvd",
+        "apartment_name": "Villas on the Boulevard",
+        "destination_id": "C2",
+        "destination_name": "Costco Santa Clara",
+        "destination_category": "Costco",
+        "total_travel_min": 33,
+        "segment_from": "villas_on_the_blvd",
+        "segment_to": "BUS_ECR_SCOTT",
+        "segment_min": 4,
+        "segment_mode": "walk",
+        "segment_from_type": "Apartment",
+        "segment_to_type": "bus_stop"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -121.9817,
+            37.3513
+          ],
+          [
+            -121.982,
+            37.3513
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "apartment_id": "villas_on_the_blvd",
+        "apartment_name": "Villas on the Boulevard",
+        "destination_id": "C2",
+        "destination_name": "Costco Santa Clara",
+        "destination_category": "Costco",
+        "total_travel_min": 33,
+        "segment_from": "BUS_ECR_SCOTT",
+        "segment_to": "VTA_SC_TC",
+        "segment_min": 10,
+        "segment_mode": "bus",
+        "segment_from_type": "bus_stop",
+        "segment_to_type": "bus_hub"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -121.982,
+            37.3513
+          ],
+          [
+            -121.9368,
+            37.3529
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "apartment_id": "villas_on_the_blvd",
+        "apartment_name": "Villas on the Boulevard",
+        "destination_id": "C2",
+        "destination_name": "Costco Santa Clara",
+        "destination_category": "Costco",
+        "total_travel_min": 33,
+        "segment_from": "VTA_SC_TC",
+        "segment_to": "BUS_COLEMAN_BROKAW",
+        "segment_min": 12,
+        "segment_mode": "bus",
+        "segment_from_type": "bus_hub",
+        "segment_to_type": "bus_stop"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -121.9368,
+            37.3529
+          ],
+          [
+            -121.9245,
+            37.3718
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "apartment_id": "villas_on_the_blvd",
+        "apartment_name": "Villas on the Boulevard",
+        "destination_id": "C2",
+        "destination_name": "Costco Santa Clara",
+        "destination_category": "Costco",
+        "total_travel_min": 33,
+        "segment_from": "BUS_COLEMAN_BROKAW",
+        "segment_to": "C2",
+        "segment_min": 7,
+        "segment_mode": "walk",
+        "segment_from_type": "bus_stop",
+        "segment_to_type": "Costco"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -121.9245,
+            37.3718
+          ],
+          [
+            -121.9368,
+            37.3529
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "apartment_id": "villas_on_the_blvd",
+        "apartment_name": "Villas on the Boulevard",
+        "destination_id": "C3",
+        "destination_name": "Costco San Jose (Automation Pkwy)",
+        "destination_category": "Costco",
+        "total_travel_min": 53,
+        "segment_from": "villas_on_the_blvd",
+        "segment_to": "BUS_ECR_SCOTT",
+        "segment_min": 4,
+        "segment_mode": "walk",
+        "segment_from_type": "Apartment",
+        "segment_to_type": "bus_stop"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -121.9817,
+            37.3513
+          ],
+          [
+            -121.982,
+            37.3513
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "apartment_id": "villas_on_the_blvd",
+        "apartment_name": "Villas on the Boulevard",
+        "destination_id": "C3",
+        "destination_name": "Costco San Jose (Automation Pkwy)",
+        "destination_category": "Costco",
+        "total_travel_min": 53,
+        "segment_from": "BUS_ECR_SCOTT",
+        "segment_to": "VTA_SC_TC",
+        "segment_min": 10,
+        "segment_mode": "bus",
+        "segment_from_type": "bus_stop",
+        "segment_to_type": "bus_hub"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -121.982,
+            37.3513
+          ],
+          [
+            -121.9368,
+            37.3529
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "apartment_id": "villas_on_the_blvd",
+        "apartment_name": "Villas on the Boulevard",
+        "destination_id": "C3",
+        "destination_name": "Costco San Jose (Automation Pkwy)",
+        "destination_category": "Costco",
+        "total_travel_min": 53,
+        "segment_from": "VTA_SC_TC",
+        "segment_to": "VTA_DIRIDON_BUS",
+        "segment_min": 10,
+        "segment_mode": "bus",
+        "segment_from_type": "bus_hub",
+        "segment_to_type": "bus_hub"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -121.9368,
+            37.3529
+          ],
+          [
+            -121.902,
+            37.3298
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "apartment_id": "villas_on_the_blvd",
+        "apartment_name": "Villas on the Boulevard",
+        "destination_id": "C3",
+        "destination_name": "Costco San Jose (Automation Pkwy)",
+        "destination_category": "Costco",
+        "total_travel_min": 53,
+        "segment_from": "VTA_DIRIDON_BUS",
+        "segment_to": "BUS_COLEMAN_TAYLOR",
+        "segment_min": 6,
+        "segment_mode": "bus",
+        "segment_from_type": "bus_hub",
+        "segment_to_type": "bus_stop"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -121.902,
+            37.3298
+          ],
+          [
+            -121.9085,
+            37.3469
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "apartment_id": "villas_on_the_blvd",
+        "apartment_name": "Villas on the Boulevard",
+        "destination_id": "C3",
+        "destination_name": "Costco San Jose (Automation Pkwy)",
+        "destination_category": "Costco",
+        "total_travel_min": 53,
+        "segment_from": "BUS_COLEMAN_TAYLOR",
+        "segment_to": "BUS_AUTOMATION_N1ST",
+        "segment_min": 15,
+        "segment_mode": "bus",
+        "segment_from_type": "bus_stop",
+        "segment_to_type": "bus_stop"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -121.9085,
+            37.3469
+          ],
+          [
+            -121.898,
+            37.3885
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "apartment_id": "villas_on_the_blvd",
+        "apartment_name": "Villas on the Boulevard",
+        "destination_id": "C3",
+        "destination_name": "Costco San Jose (Automation Pkwy)",
+        "destination_category": "Costco",
+        "total_travel_min": 53,
+        "segment_from": "BUS_AUTOMATION_N1ST",
+        "segment_to": "C3",
+        "segment_min": 8,
+        "segment_mode": "walk",
+        "segment_from_type": "bus_stop",
+        "segment_to_type": "Costco"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -121.898,
+            37.3885
+          ],
+          [
+            -121.8978,
+            37.3882
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "apartment_id": "villas_on_the_blvd",
+        "apartment_name": "Villas on the Boulevard",
+        "destination_id": "C4",
+        "destination_name": "Costco Mountain View",
+        "destination_category": "Costco",
+        "total_travel_min": 42,
+        "segment_from": "villas_on_the_blvd",
+        "segment_to": "BUS_ECR_SCOTT",
+        "segment_min": 4,
+        "segment_mode": "walk",
+        "segment_from_type": "Apartment",
+        "segment_to_type": "bus_stop"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -121.9817,
+            37.3513
+          ],
+          [
+            -121.982,
+            37.3513
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "apartment_id": "villas_on_the_blvd",
+        "apartment_name": "Villas on the Boulevard",
+        "destination_id": "C4",
+        "destination_name": "Costco Mountain View",
+        "destination_category": "Costco",
+        "total_travel_min": 42,
+        "segment_from": "BUS_ECR_SCOTT",
+        "segment_to": "BUS_ECR_LAWRENCE",
+        "segment_min": 6,
+        "segment_mode": "bus",
+        "segment_from_type": "bus_stop",
+        "segment_to_type": "bus_stop"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -121.982,
+            37.3513
+          ],
+          [
+            -121.9841,
+            37.3531
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "apartment_id": "villas_on_the_blvd",
+        "apartment_name": "Villas on the Boulevard",
+        "destination_id": "C4",
+        "destination_name": "Costco Mountain View",
+        "destination_category": "Costco",
+        "total_travel_min": 42,
+        "segment_from": "BUS_ECR_LAWRENCE",
+        "segment_to": "BUS_SUNNYVALE_SARATOGA",
+        "segment_min": 5,
+        "segment_mode": "bus",
+        "segment_from_type": "bus_stop",
+        "segment_to_type": "bus_stop"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -121.9841,
+            37.3531
+          ],
+          [
+            -122.011,
+            37.3588
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "apartment_id": "villas_on_the_blvd",
+        "apartment_name": "Villas on the Boulevard",
+        "destination_id": "C4",
+        "destination_name": "Costco Mountain View",
+        "destination_category": "Costco",
+        "total_travel_min": 42,
+        "segment_from": "BUS_SUNNYVALE_SARATOGA",
+        "segment_to": "VTA_SUNNYVALE_TC",
+        "segment_min": 7,
+        "segment_mode": "bus",
+        "segment_from_type": "bus_stop",
+        "segment_to_type": "bus_hub"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -122.011,
+            37.3588
+          ],
+          [
+            -122.0302,
+            37.3784
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "apartment_id": "villas_on_the_blvd",
+        "apartment_name": "Villas on the Boulevard",
+        "destination_id": "C4",
+        "destination_name": "Costco Mountain View",
+        "destination_category": "Costco",
+        "total_travel_min": 42,
+        "segment_from": "VTA_SUNNYVALE_TC",
+        "segment_to": "CT_SUNNYVALE",
+        "segment_min": 3,
+        "segment_mode": "walk",
+        "segment_from_type": "bus_hub",
+        "segment_to_type": "caltrain"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -122.0302,
+            37.3784
+          ],
+          [
+            -122.0306,
+            37.3785
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "apartment_id": "villas_on_the_blvd",
+        "apartment_name": "Villas on the Boulevard",
+        "destination_id": "C4",
+        "destination_name": "Costco Mountain View",
+        "destination_category": "Costco",
+        "total_travel_min": 42,
+        "segment_from": "CT_SUNNYVALE",
+        "segment_to": "CT_MOUNTAIN_VIEW",
+        "segment_min": 5,
+        "segment_mode": "caltrain",
+        "segment_from_type": "caltrain",
+        "segment_to_type": "caltrain"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -122.0306,
+            37.3785
+          ],
+          [
+            -122.0748,
+            37.3942
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "apartment_id": "villas_on_the_blvd",
+        "apartment_name": "Villas on the Boulevard",
+        "destination_id": "C4",
+        "destination_name": "Costco Mountain View",
+        "destination_category": "Costco",
+        "total_travel_min": 42,
+        "segment_from": "CT_MOUNTAIN_VIEW",
+        "segment_to": "C4",
+        "segment_min": 12,
+        "segment_mode": "walk",
+        "segment_from_type": "caltrain",
+        "segment_to_type": "Costco"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -122.0748,
+            37.3942
+          ],
+          [
+            -122.093,
+            37.4055
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "apartment_id": "villas_on_the_blvd",
+        "apartment_name": "Villas on the Boulevard",
+        "destination_id": "C5",
+        "destination_name": "Costco San Jose (Senter Rd)",
+        "destination_category": "Costco",
+        "total_travel_min": 62,
+        "segment_from": "villas_on_the_blvd",
+        "segment_to": "BUS_ECR_SCOTT",
+        "segment_min": 4,
+        "segment_mode": "walk",
+        "segment_from_type": "Apartment",
+        "segment_to_type": "bus_stop"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -121.9817,
+            37.3513
+          ],
+          [
+            -121.982,
+            37.3513
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "apartment_id": "villas_on_the_blvd",
+        "apartment_name": "Villas on the Boulevard",
+        "destination_id": "C5",
+        "destination_name": "Costco San Jose (Senter Rd)",
+        "destination_category": "Costco",
+        "total_travel_min": 62,
+        "segment_from": "BUS_ECR_SCOTT",
+        "segment_to": "VTA_SC_TC",
+        "segment_min": 10,
+        "segment_mode": "bus",
+        "segment_from_type": "bus_stop",
+        "segment_to_type": "bus_hub"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -121.982,
+            37.3513
+          ],
+          [
+            -121.9368,
+            37.3529
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "apartment_id": "villas_on_the_blvd",
+        "apartment_name": "Villas on the Boulevard",
+        "destination_id": "C5",
+        "destination_name": "Costco San Jose (Senter Rd)",
+        "destination_category": "Costco",
+        "total_travel_min": 62,
+        "segment_from": "VTA_SC_TC",
+        "segment_to": "VTA_DIRIDON_BUS",
+        "segment_min": 10,
+        "segment_mode": "bus",
+        "segment_from_type": "bus_hub",
+        "segment_to_type": "bus_hub"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -121.9368,
+            37.3529
+          ],
+          [
+            -121.902,
+            37.3298
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "apartment_id": "villas_on_the_blvd",
+        "apartment_name": "Villas on the Boulevard",
+        "destination_id": "C5",
+        "destination_name": "Costco San Jose (Senter Rd)",
+        "destination_category": "Costco",
+        "total_travel_min": 62,
+        "segment_from": "VTA_DIRIDON_BUS",
+        "segment_to": "BUS_COLEMAN_TAYLOR",
+        "segment_min": 6,
+        "segment_mode": "bus",
+        "segment_from_type": "bus_hub",
+        "segment_to_type": "bus_stop"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -121.902,
+            37.3298
+          ],
+          [
+            -121.9085,
+            37.3469
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "apartment_id": "villas_on_the_blvd",
+        "apartment_name": "Villas on the Boulevard",
+        "destination_id": "C5",
+        "destination_name": "Costco San Jose (Senter Rd)",
+        "destination_category": "Costco",
+        "total_travel_min": 62,
+        "segment_from": "BUS_COLEMAN_TAYLOR",
+        "segment_to": "BUS_TAYLOR_N1ST",
+        "segment_min": 8,
+        "segment_mode": "bus",
+        "segment_from_type": "bus_stop",
+        "segment_to_type": "bus_stop"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -121.9085,
+            37.3469
+          ],
+          [
+            -121.8962,
+            37.3525
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "apartment_id": "villas_on_the_blvd",
+        "apartment_name": "Villas on the Boulevard",
+        "destination_id": "C5",
+        "destination_name": "Costco San Jose (Senter Rd)",
+        "destination_category": "Costco",
+        "total_travel_min": 62,
+        "segment_from": "BUS_TAYLOR_N1ST",
+        "segment_to": "BUS_SENTER_TULLY",
+        "segment_min": 18,
+        "segment_mode": "bus",
+        "segment_from_type": "bus_stop",
+        "segment_to_type": "bus_stop"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -121.8962,
+            37.3525
+          ],
+          [
+            -121.852,
+            37.2973
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "apartment_id": "villas_on_the_blvd",
+        "apartment_name": "Villas on the Boulevard",
+        "destination_id": "C5",
+        "destination_name": "Costco San Jose (Senter Rd)",
+        "destination_category": "Costco",
+        "total_travel_min": 62,
+        "segment_from": "BUS_SENTER_TULLY",
+        "segment_to": "C5",
+        "segment_min": 6,
+        "segment_mode": "walk",
+        "segment_from_type": "bus_stop",
+        "segment_to_type": "Costco"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -121.852,
+            37.2973
+          ],
+          [
+            -121.8519,
+            37.2973
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "apartment_id": "villas_on_the_blvd",
+        "apartment_name": "Villas on the Boulevard",
+        "destination_id": "C6",
+        "destination_name": "Costco San Jose (Almaden Expy)",
+        "destination_category": "Costco",
+        "total_travel_min": 57,
+        "segment_from": "villas_on_the_blvd",
+        "segment_to": "BUS_ECR_SCOTT",
+        "segment_min": 4,
+        "segment_mode": "walk",
+        "segment_from_type": "Apartment",
+        "segment_to_type": "bus_stop"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -121.9817,
+            37.3513
+          ],
+          [
+            -121.982,
+            37.3513
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "apartment_id": "villas_on_the_blvd",
+        "apartment_name": "Villas on the Boulevard",
+        "destination_id": "C6",
+        "destination_name": "Costco San Jose (Almaden Expy)",
+        "destination_category": "Costco",
+        "total_travel_min": 57,
+        "segment_from": "BUS_ECR_SCOTT",
+        "segment_to": "VTA_SC_TC",
+        "segment_min": 10,
+        "segment_mode": "bus",
+        "segment_from_type": "bus_stop",
+        "segment_to_type": "bus_hub"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -121.982,
+            37.3513
+          ],
+          [
+            -121.9368,
+            37.3529
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "apartment_id": "villas_on_the_blvd",
+        "apartment_name": "Villas on the Boulevard",
+        "destination_id": "C6",
+        "destination_name": "Costco San Jose (Almaden Expy)",
+        "destination_category": "Costco",
+        "total_travel_min": 57,
+        "segment_from": "VTA_SC_TC",
+        "segment_to": "VTA_DIRIDON_BUS",
+        "segment_min": 10,
+        "segment_mode": "bus",
+        "segment_from_type": "bus_hub",
+        "segment_to_type": "bus_hub"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -121.9368,
+            37.3529
+          ],
+          [
+            -121.902,
+            37.3298
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "apartment_id": "villas_on_the_blvd",
+        "apartment_name": "Villas on the Boulevard",
+        "destination_id": "C6",
+        "destination_name": "Costco San Jose (Almaden Expy)",
+        "destination_category": "Costco",
+        "total_travel_min": 57,
+        "segment_from": "VTA_DIRIDON_BUS",
+        "segment_to": "BUS_ALMADEN_FOXCHASE",
+        "segment_min": 25,
+        "segment_mode": "bus",
+        "segment_from_type": "bus_hub",
+        "segment_to_type": "bus_stop"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -121.902,
+            37.3298
+          ],
+          [
+            -121.882,
+            37.2648
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "apartment_id": "villas_on_the_blvd",
+        "apartment_name": "Villas on the Boulevard",
+        "destination_id": "C6",
+        "destination_name": "Costco San Jose (Almaden Expy)",
+        "destination_category": "Costco",
+        "total_travel_min": 57,
+        "segment_from": "BUS_ALMADEN_FOXCHASE",
+        "segment_to": "C6",
+        "segment_min": 8,
+        "segment_mode": "walk",
+        "segment_from_type": "bus_stop",
+        "segment_to_type": "Costco"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -121.882,
+            37.2648
+          ],
+          [
+            -121.8818,
+            37.2647
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "apartment_id": "villas_on_the_blvd",
+        "apartment_name": "Villas on the Boulevard",
+        "destination_id": "T1",
+        "destination_name": "Trader Joe's Sunnyvale (El Camino Real)",
+        "destination_category": "Trader Joe's",
+        "total_travel_min": 22,
+        "segment_from": "villas_on_the_blvd",
+        "segment_to": "BUS_ECR_SCOTT",
+        "segment_min": 4,
+        "segment_mode": "walk",
+        "segment_from_type": "Apartment",
+        "segment_to_type": "bus_stop"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -121.9817,
+            37.3513
+          ],
+          [
+            -121.982,
+            37.3513
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "apartment_id": "villas_on_the_blvd",
+        "apartment_name": "Villas on the Boulevard",
+        "destination_id": "T1",
+        "destination_name": "Trader Joe's Sunnyvale (El Camino Real)",
+        "destination_category": "Trader Joe's",
+        "total_travel_min": 22,
+        "segment_from": "BUS_ECR_SCOTT",
+        "segment_to": "BUS_ECR_LAWRENCE",
+        "segment_min": 6,
+        "segment_mode": "bus",
+        "segment_from_type": "bus_stop",
+        "segment_to_type": "bus_stop"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -121.982,
+            37.3513
+          ],
+          [
+            -121.9841,
+            37.3531
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "apartment_id": "villas_on_the_blvd",
+        "apartment_name": "Villas on the Boulevard",
+        "destination_id": "T1",
+        "destination_name": "Trader Joe's Sunnyvale (El Camino Real)",
+        "destination_category": "Trader Joe's",
+        "total_travel_min": 22,
+        "segment_from": "BUS_ECR_LAWRENCE",
+        "segment_to": "BUS_ECR_MATHILDA",
+        "segment_min": 8,
+        "segment_mode": "bus",
+        "segment_from_type": "bus_stop",
+        "segment_to_type": "bus_stop"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -121.9841,
+            37.3531
+          ],
+          [
+            -122.0336,
+            37.3778
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "apartment_id": "villas_on_the_blvd",
+        "apartment_name": "Villas on the Boulevard",
+        "destination_id": "T1",
+        "destination_name": "Trader Joe's Sunnyvale (El Camino Real)",
+        "destination_category": "Trader Joe's",
+        "total_travel_min": 22,
+        "segment_from": "BUS_ECR_MATHILDA",
+        "segment_to": "T1",
+        "segment_min": 4,
+        "segment_mode": "walk",
+        "segment_from_type": "bus_stop",
+        "segment_to_type": "Trader Joe's"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -122.0336,
+            37.3778
+          ],
+          [
+            -122.0344,
+            37.3784
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "apartment_id": "villas_on_the_blvd",
+        "apartment_name": "Villas on the Boulevard",
+        "destination_id": "T2",
+        "destination_name": "Trader Joe's San Jose (Coleman Ave)",
+        "destination_category": "Trader Joe's",
+        "total_travel_min": 35,
+        "segment_from": "villas_on_the_blvd",
+        "segment_to": "BUS_ECR_SCOTT",
+        "segment_min": 4,
+        "segment_mode": "walk",
+        "segment_from_type": "Apartment",
+        "segment_to_type": "bus_stop"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -121.9817,
+            37.3513
+          ],
+          [
+            -121.982,
+            37.3513
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "apartment_id": "villas_on_the_blvd",
+        "apartment_name": "Villas on the Boulevard",
+        "destination_id": "T2",
+        "destination_name": "Trader Joe's San Jose (Coleman Ave)",
+        "destination_category": "Trader Joe's",
+        "total_travel_min": 35,
+        "segment_from": "BUS_ECR_SCOTT",
+        "segment_to": "VTA_SC_TC",
+        "segment_min": 10,
+        "segment_mode": "bus",
+        "segment_from_type": "bus_stop",
+        "segment_to_type": "bus_hub"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -121.982,
+            37.3513
+          ],
+          [
+            -121.9368,
+            37.3529
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "apartment_id": "villas_on_the_blvd",
+        "apartment_name": "Villas on the Boulevard",
+        "destination_id": "T2",
+        "destination_name": "Trader Joe's San Jose (Coleman Ave)",
+        "destination_category": "Trader Joe's",
+        "total_travel_min": 35,
+        "segment_from": "VTA_SC_TC",
+        "segment_to": "VTA_DIRIDON_BUS",
+        "segment_min": 10,
+        "segment_mode": "bus",
+        "segment_from_type": "bus_hub",
+        "segment_to_type": "bus_hub"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -121.9368,
+            37.3529
+          ],
+          [
+            -121.902,
+            37.3298
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "apartment_id": "villas_on_the_blvd",
+        "apartment_name": "Villas on the Boulevard",
+        "destination_id": "T2",
+        "destination_name": "Trader Joe's San Jose (Coleman Ave)",
+        "destination_category": "Trader Joe's",
+        "total_travel_min": 35,
+        "segment_from": "VTA_DIRIDON_BUS",
+        "segment_to": "BUS_COLEMAN_TAYLOR",
+        "segment_min": 6,
+        "segment_mode": "bus",
+        "segment_from_type": "bus_hub",
+        "segment_to_type": "bus_stop"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -121.902,
+            37.3298
+          ],
+          [
+            -121.9085,
+            37.3469
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "apartment_id": "villas_on_the_blvd",
+        "apartment_name": "Villas on the Boulevard",
+        "destination_id": "T2",
+        "destination_name": "Trader Joe's San Jose (Coleman Ave)",
+        "destination_category": "Trader Joe's",
+        "total_travel_min": 35,
+        "segment_from": "BUS_COLEMAN_TAYLOR",
+        "segment_to": "T2",
+        "segment_min": 5,
+        "segment_mode": "walk",
+        "segment_from_type": "bus_stop",
+        "segment_to_type": "Trader Joe's"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -121.9085,
+            37.3469
+          ],
+          [
+            -121.9082,
+            37.3467
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "apartment_id": "villas_on_the_blvd",
+        "apartment_name": "Villas on the Boulevard",
+        "destination_id": "T3",
+        "destination_name": "Trader Joe's Milpitas (Great Mall Pkwy)",
+        "destination_category": "Trader Joe's",
+        "total_travel_min": 59,
+        "segment_from": "villas_on_the_blvd",
+        "segment_to": "BUS_ECR_SCOTT",
+        "segment_min": 4,
+        "segment_mode": "walk",
+        "segment_from_type": "Apartment",
+        "segment_to_type": "bus_stop"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -121.9817,
+            37.3513
+          ],
+          [
+            -121.982,
+            37.3513
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "apartment_id": "villas_on_the_blvd",
+        "apartment_name": "Villas on the Boulevard",
+        "destination_id": "T3",
+        "destination_name": "Trader Joe's Milpitas (Great Mall Pkwy)",
+        "destination_category": "Trader Joe's",
+        "total_travel_min": 59,
+        "segment_from": "BUS_ECR_SCOTT",
+        "segment_to": "VTA_SC_TC",
+        "segment_min": 10,
+        "segment_mode": "bus",
+        "segment_from_type": "bus_stop",
+        "segment_to_type": "bus_hub"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -121.982,
+            37.3513
+          ],
+          [
+            -121.9368,
+            37.3529
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "apartment_id": "villas_on_the_blvd",
+        "apartment_name": "Villas on the Boulevard",
+        "destination_id": "T3",
+        "destination_name": "Trader Joe's Milpitas (Great Mall Pkwy)",
+        "destination_category": "Trader Joe's",
+        "total_travel_min": 59,
+        "segment_from": "VTA_SC_TC",
+        "segment_to": "VTA_DIRIDON_BUS",
+        "segment_min": 10,
+        "segment_mode": "bus",
+        "segment_from_type": "bus_hub",
+        "segment_to_type": "bus_hub"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -121.9368,
+            37.3529
+          ],
+          [
+            -121.902,
+            37.3298
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "apartment_id": "villas_on_the_blvd",
+        "apartment_name": "Villas on the Boulevard",
+        "destination_id": "T3",
+        "destination_name": "Trader Joe's Milpitas (Great Mall Pkwy)",
+        "destination_category": "Trader Joe's",
+        "total_travel_min": 59,
+        "segment_from": "VTA_DIRIDON_BUS",
+        "segment_to": "BUS_CAPITOL_MILPITAS",
+        "segment_min": 22,
+        "segment_mode": "bus",
+        "segment_from_type": "bus_hub",
+        "segment_to_type": "bus_stop"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -121.902,
+            37.3298
+          ],
+          [
+            -121.8942,
+            37.4089
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "apartment_id": "villas_on_the_blvd",
+        "apartment_name": "Villas on the Boulevard",
+        "destination_id": "T3",
+        "destination_name": "Trader Joe's Milpitas (Great Mall Pkwy)",
+        "destination_category": "Trader Joe's",
+        "total_travel_min": 59,
+        "segment_from": "BUS_CAPITOL_MILPITAS",
+        "segment_to": "BUS_GREATMALL_CAPITOL",
+        "segment_min": 8,
+        "segment_mode": "bus",
+        "segment_from_type": "bus_stop",
+        "segment_to_type": "bus_stop"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -121.8942,
+            37.4089
+          ],
+          [
+            -121.8987,
+            37.4155
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "apartment_id": "villas_on_the_blvd",
+        "apartment_name": "Villas on the Boulevard",
+        "destination_id": "T3",
+        "destination_name": "Trader Joe's Milpitas (Great Mall Pkwy)",
+        "destination_category": "Trader Joe's",
+        "total_travel_min": 59,
+        "segment_from": "BUS_GREATMALL_CAPITOL",
+        "segment_to": "T3",
+        "segment_min": 5,
+        "segment_mode": "walk",
+        "segment_from_type": "bus_stop",
+        "segment_to_type": "Trader Joe's"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -121.8987,
+            37.4155
+          ],
+          [
+            -121.8985,
+            37.4155
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "apartment_id": "villas_on_the_blvd",
+        "apartment_name": "Villas on the Boulevard",
+        "destination_id": "T4",
+        "destination_name": "Trader Joe's Mountain View (Showers Dr)",
+        "destination_category": "Trader Joe's",
+        "total_travel_min": 38,
+        "segment_from": "villas_on_the_blvd",
+        "segment_to": "BUS_ECR_SCOTT",
+        "segment_min": 4,
+        "segment_mode": "walk",
+        "segment_from_type": "Apartment",
+        "segment_to_type": "bus_stop"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -121.9817,
+            37.3513
+          ],
+          [
+            -121.982,
+            37.3513
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "apartment_id": "villas_on_the_blvd",
+        "apartment_name": "Villas on the Boulevard",
+        "destination_id": "T4",
+        "destination_name": "Trader Joe's Mountain View (Showers Dr)",
+        "destination_category": "Trader Joe's",
+        "total_travel_min": 38,
+        "segment_from": "BUS_ECR_SCOTT",
+        "segment_to": "BUS_ECR_LAWRENCE",
+        "segment_min": 6,
+        "segment_mode": "bus",
+        "segment_from_type": "bus_stop",
+        "segment_to_type": "bus_stop"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -121.982,
+            37.3513
+          ],
+          [
+            -121.9841,
+            37.3531
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "apartment_id": "villas_on_the_blvd",
+        "apartment_name": "Villas on the Boulevard",
+        "destination_id": "T4",
+        "destination_name": "Trader Joe's Mountain View (Showers Dr)",
+        "destination_category": "Trader Joe's",
+        "total_travel_min": 38,
+        "segment_from": "BUS_ECR_LAWRENCE",
+        "segment_to": "BUS_SUNNYVALE_SARATOGA",
+        "segment_min": 5,
+        "segment_mode": "bus",
+        "segment_from_type": "bus_stop",
+        "segment_to_type": "bus_stop"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -121.9841,
+            37.3531
+          ],
+          [
+            -122.011,
+            37.3588
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "apartment_id": "villas_on_the_blvd",
+        "apartment_name": "Villas on the Boulevard",
+        "destination_id": "T4",
+        "destination_name": "Trader Joe's Mountain View (Showers Dr)",
+        "destination_category": "Trader Joe's",
+        "total_travel_min": 38,
+        "segment_from": "BUS_SUNNYVALE_SARATOGA",
+        "segment_to": "VTA_SUNNYVALE_TC",
+        "segment_min": 7,
+        "segment_mode": "bus",
+        "segment_from_type": "bus_stop",
+        "segment_to_type": "bus_hub"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -122.011,
+            37.3588
+          ],
+          [
+            -122.0302,
+            37.3784
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "apartment_id": "villas_on_the_blvd",
+        "apartment_name": "Villas on the Boulevard",
+        "destination_id": "T4",
+        "destination_name": "Trader Joe's Mountain View (Showers Dr)",
+        "destination_category": "Trader Joe's",
+        "total_travel_min": 38,
+        "segment_from": "VTA_SUNNYVALE_TC",
+        "segment_to": "CT_SUNNYVALE",
+        "segment_min": 3,
+        "segment_mode": "walk",
+        "segment_from_type": "bus_hub",
+        "segment_to_type": "caltrain"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -122.0302,
+            37.3784
+          ],
+          [
+            -122.0306,
+            37.3785
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "apartment_id": "villas_on_the_blvd",
+        "apartment_name": "Villas on the Boulevard",
+        "destination_id": "T4",
+        "destination_name": "Trader Joe's Mountain View (Showers Dr)",
+        "destination_category": "Trader Joe's",
+        "total_travel_min": 38,
+        "segment_from": "CT_SUNNYVALE",
+        "segment_to": "CT_MOUNTAIN_VIEW",
+        "segment_min": 5,
+        "segment_mode": "caltrain",
+        "segment_from_type": "caltrain",
+        "segment_to_type": "caltrain"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -122.0306,
+            37.3785
+          ],
+          [
+            -122.0748,
+            37.3942
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "apartment_id": "villas_on_the_blvd",
+        "apartment_name": "Villas on the Boulevard",
+        "destination_id": "T4",
+        "destination_name": "Trader Joe's Mountain View (Showers Dr)",
+        "destination_category": "Trader Joe's",
+        "total_travel_min": 38,
+        "segment_from": "CT_MOUNTAIN_VIEW",
+        "segment_to": "T4",
+        "segment_min": 8,
+        "segment_mode": "walk",
+        "segment_from_type": "caltrain",
+        "segment_to_type": "Trader Joe's"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -122.0748,
+            37.3942
+          ],
+          [
+            -122.0785,
+            37.3947
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "apartment_id": "villas_on_the_blvd",
+        "apartment_name": "Villas on the Boulevard",
+        "destination_id": "T5",
+        "destination_name": "Trader Joe's Los Altos (Homestead Rd)",
+        "destination_category": "Trader Joe's",
+        "total_travel_min": 38,
+        "segment_from": "villas_on_the_blvd",
+        "segment_to": "BUS_ECR_SCOTT",
+        "segment_min": 4,
+        "segment_mode": "walk",
+        "segment_from_type": "Apartment",
+        "segment_to_type": "bus_stop"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -121.9817,
+            37.3513
+          ],
+          [
+            -121.982,
+            37.3513
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "apartment_id": "villas_on_the_blvd",
+        "apartment_name": "Villas on the Boulevard",
+        "destination_id": "T5",
+        "destination_name": "Trader Joe's Los Altos (Homestead Rd)",
+        "destination_category": "Trader Joe's",
+        "total_travel_min": 38,
+        "segment_from": "BUS_ECR_SCOTT",
+        "segment_to": "BUS_ECR_LAWRENCE",
+        "segment_min": 6,
+        "segment_mode": "bus",
+        "segment_from_type": "bus_stop",
+        "segment_to_type": "bus_stop"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -121.982,
+            37.3513
+          ],
+          [
+            -121.9841,
+            37.3531
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "apartment_id": "villas_on_the_blvd",
+        "apartment_name": "Villas on the Boulevard",
+        "destination_id": "T5",
+        "destination_name": "Trader Joe's Los Altos (Homestead Rd)",
+        "destination_category": "Trader Joe's",
+        "total_travel_min": 38,
+        "segment_from": "BUS_ECR_LAWRENCE",
+        "segment_to": "BUS_ECR_MATHILDA",
+        "segment_min": 8,
+        "segment_mode": "bus",
+        "segment_from_type": "bus_stop",
+        "segment_to_type": "bus_stop"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -121.9841,
+            37.3531
+          ],
+          [
+            -122.0336,
+            37.3778
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "apartment_id": "villas_on_the_blvd",
+        "apartment_name": "Villas on the Boulevard",
+        "destination_id": "T5",
+        "destination_name": "Trader Joe's Los Altos (Homestead Rd)",
+        "destination_category": "Trader Joe's",
+        "total_travel_min": 38,
+        "segment_from": "BUS_ECR_MATHILDA",
+        "segment_to": "BUS_HOMESTEAD_FOOTHILL",
+        "segment_min": 15,
+        "segment_mode": "bus",
+        "segment_from_type": "bus_stop",
+        "segment_to_type": "bus_stop"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -122.0336,
+            37.3778
+          ],
+          [
+            -122.0672,
+            37.3373
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "apartment_id": "villas_on_the_blvd",
+        "apartment_name": "Villas on the Boulevard",
+        "destination_id": "T5",
+        "destination_name": "Trader Joe's Los Altos (Homestead Rd)",
+        "destination_category": "Trader Joe's",
+        "total_travel_min": 38,
+        "segment_from": "BUS_HOMESTEAD_FOOTHILL",
+        "segment_to": "T5",
+        "segment_min": 5,
+        "segment_mode": "walk",
+        "segment_from_type": "bus_stop",
+        "segment_to_type": "Trader Joe's"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -122.0672,
+            37.3373
+          ],
+          [
+            -122.0674,
+            37.3372
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "apartment_id": "villas_on_the_blvd",
+        "apartment_name": "Villas on the Boulevard",
+        "destination_id": "T6",
+        "destination_name": "Trader Joe's Campbell (Bascom Ave)",
+        "destination_category": "Trader Joe's",
+        "total_travel_min": 52,
+        "segment_from": "villas_on_the_blvd",
+        "segment_to": "BUS_ECR_SCOTT",
+        "segment_min": 4,
+        "segment_mode": "walk",
+        "segment_from_type": "Apartment",
+        "segment_to_type": "bus_stop"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -121.9817,
+            37.3513
+          ],
+          [
+            -121.982,
+            37.3513
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "apartment_id": "villas_on_the_blvd",
+        "apartment_name": "Villas on the Boulevard",
+        "destination_id": "T6",
+        "destination_name": "Trader Joe's Campbell (Bascom Ave)",
+        "destination_category": "Trader Joe's",
+        "total_travel_min": 52,
+        "segment_from": "BUS_ECR_SCOTT",
+        "segment_to": "VTA_SC_TC",
+        "segment_min": 10,
+        "segment_mode": "bus",
+        "segment_from_type": "bus_stop",
+        "segment_to_type": "bus_hub"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -121.982,
+            37.3513
+          ],
+          [
+            -121.9368,
+            37.3529
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "apartment_id": "villas_on_the_blvd",
+        "apartment_name": "Villas on the Boulevard",
+        "destination_id": "T6",
+        "destination_name": "Trader Joe's Campbell (Bascom Ave)",
+        "destination_category": "Trader Joe's",
+        "total_travel_min": 52,
+        "segment_from": "VTA_SC_TC",
+        "segment_to": "VTA_DIRIDON_BUS",
+        "segment_min": 10,
+        "segment_mode": "bus",
+        "segment_from_type": "bus_hub",
+        "segment_to_type": "bus_hub"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -121.9368,
+            37.3529
+          ],
+          [
+            -121.902,
+            37.3298
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "apartment_id": "villas_on_the_blvd",
+        "apartment_name": "Villas on the Boulevard",
+        "destination_id": "T6",
+        "destination_name": "Trader Joe's Campbell (Bascom Ave)",
+        "destination_category": "Trader Joe's",
+        "total_travel_min": 52,
+        "segment_from": "VTA_DIRIDON_BUS",
+        "segment_to": "BUS_BASCOM_CAMPBELL",
+        "segment_min": 22,
+        "segment_mode": "bus",
+        "segment_from_type": "bus_hub",
+        "segment_to_type": "bus_stop"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -121.902,
+            37.3298
+          ],
+          [
+            -121.938,
+            37.2863
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "apartment_id": "villas_on_the_blvd",
+        "apartment_name": "Villas on the Boulevard",
+        "destination_id": "T6",
+        "destination_name": "Trader Joe's Campbell (Bascom Ave)",
+        "destination_category": "Trader Joe's",
+        "total_travel_min": 52,
+        "segment_from": "BUS_BASCOM_CAMPBELL",
+        "segment_to": "T6",
+        "segment_min": 6,
+        "segment_mode": "walk",
+        "segment_from_type": "bus_stop",
+        "segment_to_type": "Trader Joe's"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -121.938,
+            37.2863
+          ],
+          [
+            -121.9381,
+            37.2863
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "apartment_id": "villas_on_the_blvd",
+        "apartment_name": "Villas on the Boulevard",
+        "destination_id": "S1",
+        "destination_name": "Starbucks Sunnyvale (W El Camino Real)",
+        "destination_category": "Starbucks (chain)",
+        "total_travel_min": 21,
+        "segment_from": "villas_on_the_blvd",
+        "segment_to": "BUS_ECR_SCOTT",
+        "segment_min": 4,
+        "segment_mode": "walk",
+        "segment_from_type": "Apartment",
+        "segment_to_type": "bus_stop"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -121.9817,
+            37.3513
+          ],
+          [
+            -121.982,
+            37.3513
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "apartment_id": "villas_on_the_blvd",
+        "apartment_name": "Villas on the Boulevard",
+        "destination_id": "S1",
+        "destination_name": "Starbucks Sunnyvale (W El Camino Real)",
+        "destination_category": "Starbucks (chain)",
+        "total_travel_min": 21,
+        "segment_from": "BUS_ECR_SCOTT",
+        "segment_to": "BUS_ECR_LAWRENCE",
+        "segment_min": 6,
+        "segment_mode": "bus",
+        "segment_from_type": "bus_stop",
+        "segment_to_type": "bus_stop"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -121.982,
+            37.3513
+          ],
+          [
+            -121.9841,
+            37.3531
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "apartment_id": "villas_on_the_blvd",
+        "apartment_name": "Villas on the Boulevard",
+        "destination_id": "S1",
+        "destination_name": "Starbucks Sunnyvale (W El Camino Real)",
+        "destination_category": "Starbucks (chain)",
+        "total_travel_min": 21,
+        "segment_from": "BUS_ECR_LAWRENCE",
+        "segment_to": "BUS_ECR_MATHILDA",
+        "segment_min": 8,
+        "segment_mode": "bus",
+        "segment_from_type": "bus_stop",
+        "segment_to_type": "bus_stop"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -121.9841,
+            37.3531
+          ],
+          [
+            -122.0336,
+            37.3778
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "apartment_id": "villas_on_the_blvd",
+        "apartment_name": "Villas on the Boulevard",
+        "destination_id": "S1",
+        "destination_name": "Starbucks Sunnyvale (W El Camino Real)",
+        "destination_category": "Starbucks (chain)",
+        "total_travel_min": 21,
+        "segment_from": "BUS_ECR_MATHILDA",
+        "segment_to": "S1",
+        "segment_min": 3,
+        "segment_mode": "walk",
+        "segment_from_type": "bus_stop",
+        "segment_to_type": "Starbucks (chain)"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -122.0336,
+            37.3778
+          ],
+          [
+            -122.0339,
+            37.3778
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "apartment_id": "villas_on_the_blvd",
+        "apartment_name": "Villas on the Boulevard",
+        "destination_id": "S2",
+        "destination_name": "Starbucks Santa Clara (3605 El Camino Real)",
+        "destination_category": "Starbucks (chain)",
+        "total_travel_min": 13,
+        "segment_from": "villas_on_the_blvd",
+        "segment_to": "BUS_ECR_SCOTT",
+        "segment_min": 4,
+        "segment_mode": "walk",
+        "segment_from_type": "Apartment",
+        "segment_to_type": "bus_stop"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -121.9817,
+            37.3513
+          ],
+          [
+            -121.982,
+            37.3513
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "apartment_id": "villas_on_the_blvd",
+        "apartment_name": "Villas on the Boulevard",
+        "destination_id": "S2",
+        "destination_name": "Starbucks Santa Clara (3605 El Camino Real)",
+        "destination_category": "Starbucks (chain)",
+        "total_travel_min": 13,
+        "segment_from": "BUS_ECR_SCOTT",
+        "segment_to": "BUS_ECR_LAWRENCE",
+        "segment_min": 6,
+        "segment_mode": "bus",
+        "segment_from_type": "bus_stop",
+        "segment_to_type": "bus_stop"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -121.982,
+            37.3513
+          ],
+          [
+            -121.9841,
+            37.3531
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "apartment_id": "villas_on_the_blvd",
+        "apartment_name": "Villas on the Boulevard",
+        "destination_id": "S2",
+        "destination_name": "Starbucks Santa Clara (3605 El Camino Real)",
+        "destination_category": "Starbucks (chain)",
+        "total_travel_min": 13,
+        "segment_from": "BUS_ECR_LAWRENCE",
+        "segment_to": "S2",
+        "segment_min": 3,
+        "segment_mode": "walk",
+        "segment_from_type": "bus_stop",
+        "segment_to_type": "Starbucks (chain)"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -121.9841,
+            37.3531
+          ],
+          [
+            -121.9841,
+            37.353
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "apartment_id": "villas_on_the_blvd",
+        "apartment_name": "Villas on the Boulevard",
+        "destination_id": "S3",
+        "destination_name": "Starbucks Santa Clara (495 El Camino Real)",
+        "destination_category": "Starbucks (chain)",
+        "total_travel_min": 12,
+        "segment_from": "villas_on_the_blvd",
+        "segment_to": "BUS_ECR_SCOTT",
+        "segment_min": 4,
+        "segment_mode": "walk",
+        "segment_from_type": "Apartment",
+        "segment_to_type": "bus_stop"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -121.9817,
+            37.3513
+          ],
+          [
+            -121.982,
+            37.3513
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "apartment_id": "villas_on_the_blvd",
+        "apartment_name": "Villas on the Boulevard",
+        "destination_id": "S3",
+        "destination_name": "Starbucks Santa Clara (495 El Camino Real)",
+        "destination_category": "Starbucks (chain)",
+        "total_travel_min": 12,
+        "segment_from": "BUS_ECR_SCOTT",
+        "segment_to": "BUS_ECR_BENTON",
+        "segment_min": 4,
+        "segment_mode": "bus",
+        "segment_from_type": "bus_stop",
+        "segment_to_type": "bus_stop"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -121.982,
+            37.3513
+          ],
+          [
+            -121.9558,
+            37.3506
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "apartment_id": "villas_on_the_blvd",
+        "apartment_name": "Villas on the Boulevard",
+        "destination_id": "S3",
+        "destination_name": "Starbucks Santa Clara (495 El Camino Real)",
+        "destination_category": "Starbucks (chain)",
+        "total_travel_min": 12,
+        "segment_from": "BUS_ECR_BENTON",
+        "segment_to": "S3",
+        "segment_min": 4,
+        "segment_mode": "walk",
+        "segment_from_type": "bus_stop",
+        "segment_to_type": "Starbucks (chain)"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -121.9558,
+            37.3506
+          ],
+          [
+            -121.9556,
+            37.3506
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "apartment_id": "villas_on_the_blvd",
+        "apartment_name": "Villas on the Boulevard",
+        "destination_id": "S4",
+        "destination_name": "Starbucks San Jose (Zanker Rd)",
+        "destination_category": "Starbucks (chain)",
+        "total_travel_min": 45,
+        "segment_from": "villas_on_the_blvd",
+        "segment_to": "BUS_ECR_SCOTT",
+        "segment_min": 4,
+        "segment_mode": "walk",
+        "segment_from_type": "Apartment",
+        "segment_to_type": "bus_stop"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -121.9817,
+            37.3513
+          ],
+          [
+            -121.982,
+            37.3513
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "apartment_id": "villas_on_the_blvd",
+        "apartment_name": "Villas on the Boulevard",
+        "destination_id": "S4",
+        "destination_name": "Starbucks San Jose (Zanker Rd)",
+        "destination_category": "Starbucks (chain)",
+        "total_travel_min": 45,
+        "segment_from": "BUS_ECR_SCOTT",
+        "segment_to": "VTA_SC_TC",
+        "segment_min": 10,
+        "segment_mode": "bus",
+        "segment_from_type": "bus_stop",
+        "segment_to_type": "bus_hub"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -121.982,
+            37.3513
+          ],
+          [
+            -121.9368,
+            37.3529
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "apartment_id": "villas_on_the_blvd",
+        "apartment_name": "Villas on the Boulevard",
+        "destination_id": "S4",
+        "destination_name": "Starbucks San Jose (Zanker Rd)",
+        "destination_category": "Starbucks (chain)",
+        "total_travel_min": 45,
+        "segment_from": "VTA_SC_TC",
+        "segment_to": "VTA_DIRIDON_BUS",
+        "segment_min": 10,
+        "segment_mode": "bus",
+        "segment_from_type": "bus_hub",
+        "segment_to_type": "bus_hub"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -121.9368,
+            37.3529
+          ],
+          [
+            -121.902,
+            37.3298
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "apartment_id": "villas_on_the_blvd",
+        "apartment_name": "Villas on the Boulevard",
+        "destination_id": "S4",
+        "destination_name": "Starbucks San Jose (Zanker Rd)",
+        "destination_category": "Starbucks (chain)",
+        "total_travel_min": 45,
+        "segment_from": "VTA_DIRIDON_BUS",
+        "segment_to": "BUS_ZANKER_MONTAGUE",
+        "segment_min": 18,
+        "segment_mode": "bus",
+        "segment_from_type": "bus_hub",
+        "segment_to_type": "bus_stop"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -121.902,
+            37.3298
+          ],
+          [
+            -121.9236,
+            37.3984
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "apartment_id": "villas_on_the_blvd",
+        "apartment_name": "Villas on the Boulevard",
+        "destination_id": "S4",
+        "destination_name": "Starbucks San Jose (Zanker Rd)",
+        "destination_category": "Starbucks (chain)",
+        "total_travel_min": 45,
+        "segment_from": "BUS_ZANKER_MONTAGUE",
+        "segment_to": "S4",
+        "segment_min": 3,
+        "segment_mode": "walk",
+        "segment_from_type": "bus_stop",
+        "segment_to_type": "Starbucks (chain)"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -121.9236,
+            37.3984
+          ],
+          [
+            -121.9301,
+            37.3978
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "apartment_id": "villas_on_the_blvd",
+        "apartment_name": "Villas on the Boulevard",
+        "destination_id": "S5",
+        "destination_name": "Starbucks San Jose (Downtown — 181 E Santa Clara St)",
+        "destination_category": "Starbucks (chain)",
+        "total_travel_min": 40,
+        "segment_from": "villas_on_the_blvd",
+        "segment_to": "BUS_ECR_SCOTT",
+        "segment_min": 4,
+        "segment_mode": "walk",
+        "segment_from_type": "Apartment",
+        "segment_to_type": "bus_stop"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -121.9817,
+            37.3513
+          ],
+          [
+            -121.982,
+            37.3513
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "apartment_id": "villas_on_the_blvd",
+        "apartment_name": "Villas on the Boulevard",
+        "destination_id": "S5",
+        "destination_name": "Starbucks San Jose (Downtown — 181 E Santa Clara St)",
+        "destination_category": "Starbucks (chain)",
+        "total_travel_min": 40,
+        "segment_from": "BUS_ECR_SCOTT",
+        "segment_to": "VTA_SC_TC",
+        "segment_min": 10,
+        "segment_mode": "bus",
+        "segment_from_type": "bus_stop",
+        "segment_to_type": "bus_hub"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -121.982,
+            37.3513
+          ],
+          [
+            -121.9368,
+            37.3529
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "apartment_id": "villas_on_the_blvd",
+        "apartment_name": "Villas on the Boulevard",
+        "destination_id": "S5",
+        "destination_name": "Starbucks San Jose (Downtown — 181 E Santa Clara St)",
+        "destination_category": "Starbucks (chain)",
+        "total_travel_min": 40,
+        "segment_from": "VTA_SC_TC",
+        "segment_to": "CT_SANTA_CLARA",
+        "segment_min": 5,
+        "segment_mode": "walk",
+        "segment_from_type": "bus_hub",
+        "segment_to_type": "caltrain"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -121.9368,
+            37.3529
+          ],
+          [
+            -121.9366,
+            37.3527
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "apartment_id": "villas_on_the_blvd",
+        "apartment_name": "Villas on the Boulevard",
+        "destination_id": "S5",
+        "destination_name": "Starbucks San Jose (Downtown — 181 E Santa Clara St)",
+        "destination_category": "Starbucks (chain)",
+        "total_travel_min": 40,
+        "segment_from": "CT_SANTA_CLARA",
+        "segment_to": "CT_SJ_DIRIDON",
+        "segment_min": 5,
+        "segment_mode": "caltrain",
+        "segment_from_type": "caltrain",
+        "segment_to_type": "caltrain"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -121.9366,
+            37.3527
+          ],
+          [
+            -121.9022,
+            37.3297
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "apartment_id": "villas_on_the_blvd",
+        "apartment_name": "Villas on the Boulevard",
+        "destination_id": "S5",
+        "destination_name": "Starbucks San Jose (Downtown — 181 E Santa Clara St)",
+        "destination_category": "Starbucks (chain)",
+        "total_travel_min": 40,
+        "segment_from": "CT_SJ_DIRIDON",
+        "segment_to": "BUS_SANTACLARA_5TH",
+        "segment_min": 12,
+        "segment_mode": "walk",
+        "segment_from_type": "caltrain",
+        "segment_to_type": "bus_stop"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -121.9022,
+            37.3297
+          ],
+          [
+            -121.8868,
+            37.3363
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "apartment_id": "villas_on_the_blvd",
+        "apartment_name": "Villas on the Boulevard",
+        "destination_id": "S5",
+        "destination_name": "Starbucks San Jose (Downtown — 181 E Santa Clara St)",
+        "destination_category": "Starbucks (chain)",
+        "total_travel_min": 40,
+        "segment_from": "BUS_SANTACLARA_5TH",
+        "segment_to": "S5",
+        "segment_min": 4,
+        "segment_mode": "walk",
+        "segment_from_type": "bus_stop",
+        "segment_to_type": "Starbucks (chain)"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -121.8868,
+            37.3363
+          ],
+          [
+            -121.887,
+            37.3363
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "apartment_id": "villas_on_the_blvd",
+        "apartment_name": "Villas on the Boulevard",
+        "destination_id": "S6",
+        "destination_name": "Starbucks Milpitas (127 Ranch Dr)",
+        "destination_category": "Starbucks (chain)",
+        "total_travel_min": 59,
+        "segment_from": "villas_on_the_blvd",
+        "segment_to": "BUS_ECR_SCOTT",
+        "segment_min": 4,
+        "segment_mode": "walk",
+        "segment_from_type": "Apartment",
+        "segment_to_type": "bus_stop"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -121.9817,
+            37.3513
+          ],
+          [
+            -121.982,
+            37.3513
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "apartment_id": "villas_on_the_blvd",
+        "apartment_name": "Villas on the Boulevard",
+        "destination_id": "S6",
+        "destination_name": "Starbucks Milpitas (127 Ranch Dr)",
+        "destination_category": "Starbucks (chain)",
+        "total_travel_min": 59,
+        "segment_from": "BUS_ECR_SCOTT",
+        "segment_to": "VTA_SC_TC",
+        "segment_min": 10,
+        "segment_mode": "bus",
+        "segment_from_type": "bus_stop",
+        "segment_to_type": "bus_hub"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -121.982,
+            37.3513
+          ],
+          [
+            -121.9368,
+            37.3529
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "apartment_id": "villas_on_the_blvd",
+        "apartment_name": "Villas on the Boulevard",
+        "destination_id": "S6",
+        "destination_name": "Starbucks Milpitas (127 Ranch Dr)",
+        "destination_category": "Starbucks (chain)",
+        "total_travel_min": 59,
+        "segment_from": "VTA_SC_TC",
+        "segment_to": "VTA_DIRIDON_BUS",
+        "segment_min": 10,
+        "segment_mode": "bus",
+        "segment_from_type": "bus_hub",
+        "segment_to_type": "bus_hub"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -121.9368,
+            37.3529
+          ],
+          [
+            -121.902,
+            37.3298
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "apartment_id": "villas_on_the_blvd",
+        "apartment_name": "Villas on the Boulevard",
+        "destination_id": "S6",
+        "destination_name": "Starbucks Milpitas (127 Ranch Dr)",
+        "destination_category": "Starbucks (chain)",
+        "total_travel_min": 59,
+        "segment_from": "VTA_DIRIDON_BUS",
+        "segment_to": "BUS_CAPITOL_MILPITAS",
+        "segment_min": 22,
+        "segment_mode": "bus",
+        "segment_from_type": "bus_hub",
+        "segment_to_type": "bus_stop"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -121.902,
+            37.3298
+          ],
+          [
+            -121.8942,
+            37.4089
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "apartment_id": "villas_on_the_blvd",
+        "apartment_name": "Villas on the Boulevard",
+        "destination_id": "S6",
+        "destination_name": "Starbucks Milpitas (127 Ranch Dr)",
+        "destination_category": "Starbucks (chain)",
+        "total_travel_min": 59,
+        "segment_from": "BUS_CAPITOL_MILPITAS",
+        "segment_to": "BUS_RANCH_CALAVERAS",
+        "segment_min": 9,
+        "segment_mode": "bus",
+        "segment_from_type": "bus_stop",
+        "segment_to_type": "bus_stop"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -121.8942,
+            37.4089
+          ],
+          [
+            -121.9026,
+            37.418
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "apartment_id": "villas_on_the_blvd",
+        "apartment_name": "Villas on the Boulevard",
+        "destination_id": "S6",
+        "destination_name": "Starbucks Milpitas (127 Ranch Dr)",
+        "destination_category": "Starbucks (chain)",
+        "total_travel_min": 59,
+        "segment_from": "BUS_RANCH_CALAVERAS",
+        "segment_to": "S6",
+        "segment_min": 4,
+        "segment_mode": "walk",
+        "segment_from_type": "bus_stop",
+        "segment_to_type": "Starbucks (chain)"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -121.9026,
+            37.418
+          ],
+          [
+            -121.9025,
+            37.418
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "apartment_id": "villas_on_the_blvd",
+        "apartment_name": "Villas on the Boulevard",
+        "destination_id": "G1",
+        "destination_name": "24 Hour Fitness Sunnyvale (Sunnyvale Saratoga Super-Sport)",
+        "destination_category": "24 Hour Fitness",
+        "total_travel_min": 19,
+        "segment_from": "villas_on_the_blvd",
+        "segment_to": "BUS_ECR_SCOTT",
+        "segment_min": 4,
+        "segment_mode": "walk",
+        "segment_from_type": "Apartment",
+        "segment_to_type": "bus_stop"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -121.9817,
+            37.3513
+          ],
+          [
+            -121.982,
+            37.3513
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "apartment_id": "villas_on_the_blvd",
+        "apartment_name": "Villas on the Boulevard",
+        "destination_id": "G1",
+        "destination_name": "24 Hour Fitness Sunnyvale (Sunnyvale Saratoga Super-Sport)",
+        "destination_category": "24 Hour Fitness",
+        "total_travel_min": 19,
+        "segment_from": "BUS_ECR_SCOTT",
+        "segment_to": "BUS_ECR_LAWRENCE",
+        "segment_min": 6,
+        "segment_mode": "bus",
+        "segment_from_type": "bus_stop",
+        "segment_to_type": "bus_stop"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -121.982,
+            37.3513
+          ],
+          [
+            -121.9841,
+            37.3531
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "apartment_id": "villas_on_the_blvd",
+        "apartment_name": "Villas on the Boulevard",
+        "destination_id": "G1",
+        "destination_name": "24 Hour Fitness Sunnyvale (Sunnyvale Saratoga Super-Sport)",
+        "destination_category": "24 Hour Fitness",
+        "total_travel_min": 19,
+        "segment_from": "BUS_ECR_LAWRENCE",
+        "segment_to": "BUS_SUNNYVALE_SARATOGA",
+        "segment_min": 5,
+        "segment_mode": "bus",
+        "segment_from_type": "bus_stop",
+        "segment_to_type": "bus_stop"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -121.9841,
+            37.3531
+          ],
+          [
+            -122.011,
+            37.3588
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "apartment_id": "villas_on_the_blvd",
+        "apartment_name": "Villas on the Boulevard",
+        "destination_id": "G1",
+        "destination_name": "24 Hour Fitness Sunnyvale (Sunnyvale Saratoga Super-Sport)",
+        "destination_category": "24 Hour Fitness",
+        "total_travel_min": 19,
+        "segment_from": "BUS_SUNNYVALE_SARATOGA",
+        "segment_to": "G1",
+        "segment_min": 4,
+        "segment_mode": "walk",
+        "segment_from_type": "bus_stop",
+        "segment_to_type": "24 Hour Fitness"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -122.011,
+            37.3588
+          ],
+          [
+            -122.0116,
+            37.3588
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "apartment_id": "villas_on_the_blvd",
+        "apartment_name": "Villas on the Boulevard",
+        "destination_id": "G2",
+        "destination_name": "24 Hour Fitness Santa Clara (El Camino Real Super-Sport)",
+        "destination_category": "24 Hour Fitness",
+        "total_travel_min": 13,
+        "segment_from": "villas_on_the_blvd",
+        "segment_to": "BUS_ECR_SCOTT",
+        "segment_min": 4,
+        "segment_mode": "walk",
+        "segment_from_type": "Apartment",
+        "segment_to_type": "bus_stop"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -121.9817,
+            37.3513
+          ],
+          [
+            -121.982,
+            37.3513
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "apartment_id": "villas_on_the_blvd",
+        "apartment_name": "Villas on the Boulevard",
+        "destination_id": "G2",
+        "destination_name": "24 Hour Fitness Santa Clara (El Camino Real Super-Sport)",
+        "destination_category": "24 Hour Fitness",
+        "total_travel_min": 13,
+        "segment_from": "BUS_ECR_SCOTT",
+        "segment_to": "BUS_ECR_LAWRENCE",
+        "segment_min": 6,
+        "segment_mode": "bus",
+        "segment_from_type": "bus_stop",
+        "segment_to_type": "bus_stop"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -121.982,
+            37.3513
+          ],
+          [
+            -121.9841,
+            37.3531
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "apartment_id": "villas_on_the_blvd",
+        "apartment_name": "Villas on the Boulevard",
+        "destination_id": "G2",
+        "destination_name": "24 Hour Fitness Santa Clara (El Camino Real Super-Sport)",
+        "destination_category": "24 Hour Fitness",
+        "total_travel_min": 13,
+        "segment_from": "BUS_ECR_LAWRENCE",
+        "segment_to": "G2",
+        "segment_min": 3,
+        "segment_mode": "walk",
+        "segment_from_type": "bus_stop",
+        "segment_to_type": "24 Hour Fitness"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -121.9841,
+            37.3531
+          ],
+          [
+            -121.984,
+            37.3531
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "apartment_id": "villas_on_the_blvd",
+        "apartment_name": "Villas on the Boulevard",
+        "destination_id": "G3",
+        "destination_name": "24 Hour Fitness San Jose (Crane Ct Super-Sport)",
+        "destination_category": "24 Hour Fitness",
+        "total_travel_min": 55,
+        "segment_from": "villas_on_the_blvd",
+        "segment_to": "BUS_ECR_SCOTT",
+        "segment_min": 4,
+        "segment_mode": "walk",
+        "segment_from_type": "Apartment",
+        "segment_to_type": "bus_stop"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -121.9817,
+            37.3513
+          ],
+          [
+            -121.982,
+            37.3513
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "apartment_id": "villas_on_the_blvd",
+        "apartment_name": "Villas on the Boulevard",
+        "destination_id": "G3",
+        "destination_name": "24 Hour Fitness San Jose (Crane Ct Super-Sport)",
+        "destination_category": "24 Hour Fitness",
+        "total_travel_min": 55,
+        "segment_from": "BUS_ECR_SCOTT",
+        "segment_to": "VTA_SC_TC",
+        "segment_min": 10,
+        "segment_mode": "bus",
+        "segment_from_type": "bus_stop",
+        "segment_to_type": "bus_hub"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -121.982,
+            37.3513
+          ],
+          [
+            -121.9368,
+            37.3529
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "apartment_id": "villas_on_the_blvd",
+        "apartment_name": "Villas on the Boulevard",
+        "destination_id": "G3",
+        "destination_name": "24 Hour Fitness San Jose (Crane Ct Super-Sport)",
+        "destination_category": "24 Hour Fitness",
+        "total_travel_min": 55,
+        "segment_from": "VTA_SC_TC",
+        "segment_to": "VTA_DIRIDON_BUS",
+        "segment_min": 10,
+        "segment_mode": "bus",
+        "segment_from_type": "bus_hub",
+        "segment_to_type": "bus_hub"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -121.9368,
+            37.3529
+          ],
+          [
+            -121.902,
+            37.3298
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "apartment_id": "villas_on_the_blvd",
+        "apartment_name": "Villas on the Boulevard",
+        "destination_id": "G3",
+        "destination_name": "24 Hour Fitness San Jose (Crane Ct Super-Sport)",
+        "destination_category": "24 Hour Fitness",
+        "total_travel_min": 55,
+        "segment_from": "VTA_DIRIDON_BUS",
+        "segment_to": "BUS_COLEMAN_TAYLOR",
+        "segment_min": 6,
+        "segment_mode": "bus",
+        "segment_from_type": "bus_hub",
+        "segment_to_type": "bus_stop"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -121.902,
+            37.3298
+          ],
+          [
+            -121.9085,
+            37.3469
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "apartment_id": "villas_on_the_blvd",
+        "apartment_name": "Villas on the Boulevard",
+        "destination_id": "G3",
+        "destination_name": "24 Hour Fitness San Jose (Crane Ct Super-Sport)",
+        "destination_category": "24 Hour Fitness",
+        "total_travel_min": 55,
+        "segment_from": "BUS_COLEMAN_TAYLOR",
+        "segment_to": "BUS_TAYLOR_N1ST",
+        "segment_min": 8,
+        "segment_mode": "bus",
+        "segment_from_type": "bus_stop",
+        "segment_to_type": "bus_stop"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -121.9085,
+            37.3469
+          ],
+          [
+            -121.8962,
+            37.3525
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "apartment_id": "villas_on_the_blvd",
+        "apartment_name": "Villas on the Boulevard",
+        "destination_id": "G3",
+        "destination_name": "24 Hour Fitness San Jose (Crane Ct Super-Sport)",
+        "destination_category": "24 Hour Fitness",
+        "total_travel_min": 55,
+        "segment_from": "BUS_TAYLOR_N1ST",
+        "segment_to": "BUS_N1ST_CRANECT",
+        "segment_min": 12,
+        "segment_mode": "bus",
+        "segment_from_type": "bus_stop",
+        "segment_to_type": "bus_stop"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -121.8962,
+            37.3525
+          ],
+          [
+            -121.9105,
+            37.383
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "apartment_id": "villas_on_the_blvd",
+        "apartment_name": "Villas on the Boulevard",
+        "destination_id": "G3",
+        "destination_name": "24 Hour Fitness San Jose (Crane Ct Super-Sport)",
+        "destination_category": "24 Hour Fitness",
+        "total_travel_min": 55,
+        "segment_from": "BUS_N1ST_CRANECT",
+        "segment_to": "G3",
+        "segment_min": 5,
+        "segment_mode": "walk",
+        "segment_from_type": "bus_stop",
+        "segment_to_type": "24 Hour Fitness"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -121.9105,
+            37.383
+          ],
+          [
+            -121.9104,
+            37.3832
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "apartment_id": "villas_on_the_blvd",
+        "apartment_name": "Villas on the Boulevard",
+        "destination_id": "G4",
+        "destination_name": "24 Hour Fitness San Jose (Parkmoor)",
+        "destination_category": "24 Hour Fitness",
+        "total_travel_min": 37,
+        "segment_from": "villas_on_the_blvd",
+        "segment_to": "BUS_ECR_SCOTT",
+        "segment_min": 4,
+        "segment_mode": "walk",
+        "segment_from_type": "Apartment",
+        "segment_to_type": "bus_stop"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -121.9817,
+            37.3513
+          ],
+          [
+            -121.982,
+            37.3513
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "apartment_id": "villas_on_the_blvd",
+        "apartment_name": "Villas on the Boulevard",
+        "destination_id": "G4",
+        "destination_name": "24 Hour Fitness San Jose (Parkmoor)",
+        "destination_category": "24 Hour Fitness",
+        "total_travel_min": 37,
+        "segment_from": "BUS_ECR_SCOTT",
+        "segment_to": "VTA_SC_TC",
+        "segment_min": 10,
+        "segment_mode": "bus",
+        "segment_from_type": "bus_stop",
+        "segment_to_type": "bus_hub"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -121.982,
+            37.3513
+          ],
+          [
+            -121.9368,
+            37.3529
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "apartment_id": "villas_on_the_blvd",
+        "apartment_name": "Villas on the Boulevard",
+        "destination_id": "G4",
+        "destination_name": "24 Hour Fitness San Jose (Parkmoor)",
+        "destination_category": "24 Hour Fitness",
+        "total_travel_min": 37,
+        "segment_from": "VTA_SC_TC",
+        "segment_to": "VTA_DIRIDON_BUS",
+        "segment_min": 10,
+        "segment_mode": "bus",
+        "segment_from_type": "bus_hub",
+        "segment_to_type": "bus_hub"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -121.9368,
+            37.3529
+          ],
+          [
+            -121.902,
+            37.3298
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "apartment_id": "villas_on_the_blvd",
+        "apartment_name": "Villas on the Boulevard",
+        "destination_id": "G4",
+        "destination_name": "24 Hour Fitness San Jose (Parkmoor)",
+        "destination_category": "24 Hour Fitness",
+        "total_travel_min": 37,
+        "segment_from": "VTA_DIRIDON_BUS",
+        "segment_to": "BUS_PARKMOOR_MERIDIAN",
+        "segment_min": 8,
+        "segment_mode": "bus",
+        "segment_from_type": "bus_hub",
+        "segment_to_type": "bus_stop"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -121.902,
+            37.3298
+          ],
+          [
+            -121.908,
+            37.3151
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "apartment_id": "villas_on_the_blvd",
+        "apartment_name": "Villas on the Boulevard",
+        "destination_id": "G4",
+        "destination_name": "24 Hour Fitness San Jose (Parkmoor)",
+        "destination_category": "24 Hour Fitness",
+        "total_travel_min": 37,
+        "segment_from": "BUS_PARKMOOR_MERIDIAN",
+        "segment_to": "G4",
+        "segment_min": 5,
+        "segment_mode": "walk",
+        "segment_from_type": "bus_stop",
+        "segment_to_type": "24 Hour Fitness"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -121.908,
+            37.3151
+          ],
+          [
+            -121.9082,
+            37.315
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "apartment_id": "villas_on_the_blvd",
+        "apartment_name": "Villas on the Boulevard",
+        "destination_id": "G5",
+        "destination_name": "24 Hour Fitness Milpitas (E Calaveras Blvd)",
+        "destination_category": "24 Hour Fitness",
+        "total_travel_min": 57,
+        "segment_from": "villas_on_the_blvd",
+        "segment_to": "BUS_ECR_SCOTT",
+        "segment_min": 4,
+        "segment_mode": "walk",
+        "segment_from_type": "Apartment",
+        "segment_to_type": "bus_stop"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -121.9817,
+            37.3513
+          ],
+          [
+            -121.982,
+            37.3513
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "apartment_id": "villas_on_the_blvd",
+        "apartment_name": "Villas on the Boulevard",
+        "destination_id": "G5",
+        "destination_name": "24 Hour Fitness Milpitas (E Calaveras Blvd)",
+        "destination_category": "24 Hour Fitness",
+        "total_travel_min": 57,
+        "segment_from": "BUS_ECR_SCOTT",
+        "segment_to": "VTA_SC_TC",
+        "segment_min": 10,
+        "segment_mode": "bus",
+        "segment_from_type": "bus_stop",
+        "segment_to_type": "bus_hub"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -121.982,
+            37.3513
+          ],
+          [
+            -121.9368,
+            37.3529
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "apartment_id": "villas_on_the_blvd",
+        "apartment_name": "Villas on the Boulevard",
+        "destination_id": "G5",
+        "destination_name": "24 Hour Fitness Milpitas (E Calaveras Blvd)",
+        "destination_category": "24 Hour Fitness",
+        "total_travel_min": 57,
+        "segment_from": "VTA_SC_TC",
+        "segment_to": "VTA_DIRIDON_BUS",
+        "segment_min": 10,
+        "segment_mode": "bus",
+        "segment_from_type": "bus_hub",
+        "segment_to_type": "bus_hub"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -121.9368,
+            37.3529
+          ],
+          [
+            -121.902,
+            37.3298
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "apartment_id": "villas_on_the_blvd",
+        "apartment_name": "Villas on the Boulevard",
+        "destination_id": "G5",
+        "destination_name": "24 Hour Fitness Milpitas (E Calaveras Blvd)",
+        "destination_category": "24 Hour Fitness",
+        "total_travel_min": 57,
+        "segment_from": "VTA_DIRIDON_BUS",
+        "segment_to": "BUS_CAPITOL_MILPITAS",
+        "segment_min": 22,
+        "segment_mode": "bus",
+        "segment_from_type": "bus_hub",
+        "segment_to_type": "bus_stop"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -121.902,
+            37.3298
+          ],
+          [
+            -121.8942,
+            37.4089
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "apartment_id": "villas_on_the_blvd",
+        "apartment_name": "Villas on the Boulevard",
+        "destination_id": "G5",
+        "destination_name": "24 Hour Fitness Milpitas (E Calaveras Blvd)",
+        "destination_category": "24 Hour Fitness",
+        "total_travel_min": 57,
+        "segment_from": "BUS_CAPITOL_MILPITAS",
+        "segment_to": "BUS_CALAVERAS_MILPITAS",
+        "segment_min": 5,
+        "segment_mode": "bus",
+        "segment_from_type": "bus_stop",
+        "segment_to_type": "bus_stop"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -121.8942,
+            37.4089
+          ],
+          [
+            -121.8965,
+            37.4295
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "apartment_id": "villas_on_the_blvd",
+        "apartment_name": "Villas on the Boulevard",
+        "destination_id": "G5",
+        "destination_name": "24 Hour Fitness Milpitas (E Calaveras Blvd)",
+        "destination_category": "24 Hour Fitness",
+        "total_travel_min": 57,
+        "segment_from": "BUS_CALAVERAS_MILPITAS",
+        "segment_to": "G5",
+        "segment_min": 6,
+        "segment_mode": "walk",
+        "segment_from_type": "bus_stop",
+        "segment_to_type": "24 Hour Fitness"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -121.8965,
+            37.4295
+          ],
+          [
+            -121.8964,
+            37.4296
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "apartment_id": "villas_on_the_blvd",
+        "apartment_name": "Villas on the Boulevard",
+        "destination_id": "G6",
+        "destination_name": "24 Hour Fitness San Jose (McKee Rd)",
+        "destination_category": "24 Hour Fitness",
+        "total_travel_min": 72,
+        "segment_from": "villas_on_the_blvd",
+        "segment_to": "BUS_ECR_SCOTT",
+        "segment_min": 4,
+        "segment_mode": "walk",
+        "segment_from_type": "Apartment",
+        "segment_to_type": "bus_stop"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -121.9817,
+            37.3513
+          ],
+          [
+            -121.982,
+            37.3513
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "apartment_id": "villas_on_the_blvd",
+        "apartment_name": "Villas on the Boulevard",
+        "destination_id": "G6",
+        "destination_name": "24 Hour Fitness San Jose (McKee Rd)",
+        "destination_category": "24 Hour Fitness",
+        "total_travel_min": 72,
+        "segment_from": "BUS_ECR_SCOTT",
+        "segment_to": "VTA_SC_TC",
+        "segment_min": 10,
+        "segment_mode": "bus",
+        "segment_from_type": "bus_stop",
+        "segment_to_type": "bus_hub"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -121.982,
+            37.3513
+          ],
+          [
+            -121.9368,
+            37.3529
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "apartment_id": "villas_on_the_blvd",
+        "apartment_name": "Villas on the Boulevard",
+        "destination_id": "G6",
+        "destination_name": "24 Hour Fitness San Jose (McKee Rd)",
+        "destination_category": "24 Hour Fitness",
+        "total_travel_min": 72,
+        "segment_from": "VTA_SC_TC",
+        "segment_to": "VTA_DIRIDON_BUS",
+        "segment_min": 10,
+        "segment_mode": "bus",
+        "segment_from_type": "bus_hub",
+        "segment_to_type": "bus_hub"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -121.9368,
+            37.3529
+          ],
+          [
+            -121.902,
+            37.3298
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "apartment_id": "villas_on_the_blvd",
+        "apartment_name": "Villas on the Boulevard",
+        "destination_id": "G6",
+        "destination_name": "24 Hour Fitness San Jose (McKee Rd)",
+        "destination_category": "24 Hour Fitness",
+        "total_travel_min": 72,
+        "segment_from": "VTA_DIRIDON_BUS",
+        "segment_to": "BUS_COLEMAN_TAYLOR",
+        "segment_min": 6,
+        "segment_mode": "bus",
+        "segment_from_type": "bus_hub",
+        "segment_to_type": "bus_stop"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -121.902,
+            37.3298
+          ],
+          [
+            -121.9085,
+            37.3469
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "apartment_id": "villas_on_the_blvd",
+        "apartment_name": "Villas on the Boulevard",
+        "destination_id": "G6",
+        "destination_name": "24 Hour Fitness San Jose (McKee Rd)",
+        "destination_category": "24 Hour Fitness",
+        "total_travel_min": 72,
+        "segment_from": "BUS_COLEMAN_TAYLOR",
+        "segment_to": "BUS_TAYLOR_N1ST",
+        "segment_min": 8,
+        "segment_mode": "bus",
+        "segment_from_type": "bus_stop",
+        "segment_to_type": "bus_stop"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -121.9085,
+            37.3469
+          ],
+          [
+            -121.8962,
+            37.3525
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "apartment_id": "villas_on_the_blvd",
+        "apartment_name": "Villas on the Boulevard",
+        "destination_id": "G6",
+        "destination_name": "24 Hour Fitness San Jose (McKee Rd)",
+        "destination_category": "24 Hour Fitness",
+        "total_travel_min": 72,
+        "segment_from": "BUS_TAYLOR_N1ST",
+        "segment_to": "BUS_N1ST_CRANECT",
+        "segment_min": 12,
+        "segment_mode": "bus",
+        "segment_from_type": "bus_stop",
+        "segment_to_type": "bus_stop"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -121.8962,
+            37.3525
+          ],
+          [
+            -121.9105,
+            37.383
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "apartment_id": "villas_on_the_blvd",
+        "apartment_name": "Villas on the Boulevard",
+        "destination_id": "G6",
+        "destination_name": "24 Hour Fitness San Jose (McKee Rd)",
+        "destination_category": "24 Hour Fitness",
+        "total_travel_min": 72,
+        "segment_from": "BUS_N1ST_CRANECT",
+        "segment_to": "BUS_MCKEE_N13TH",
+        "segment_min": 15,
+        "segment_mode": "bus",
+        "segment_from_type": "bus_stop",
+        "segment_to_type": "bus_stop"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -121.9105,
+            37.383
+          ],
+          [
+            -121.849,
+            37.3685
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "apartment_id": "villas_on_the_blvd",
+        "apartment_name": "Villas on the Boulevard",
+        "destination_id": "G6",
+        "destination_name": "24 Hour Fitness San Jose (McKee Rd)",
+        "destination_category": "24 Hour Fitness",
+        "total_travel_min": 72,
+        "segment_from": "BUS_MCKEE_N13TH",
+        "segment_to": "G6",
+        "segment_min": 7,
+        "segment_mode": "walk",
+        "segment_from_type": "bus_stop",
+        "segment_to_type": "24 Hour Fitness"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -121.849,
+            37.3685
+          ],
+          [
+            -121.8487,
+            37.3685
+          ]
+        ]
+      }
+    }
+  ]
+}

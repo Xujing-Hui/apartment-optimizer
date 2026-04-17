@@ -1,0 +1,2 @@
+id,name,lat,lng,category,category_label,weekly_visits,monthly_rent,note
+NEU_SV,Northeastern University Silicon Valley,37.3367,-121.8902,school_chain_endpoint,NEU Campus,3,,Fixed chain endpoint — always visited after a Starbucks stop; never scored as a standalone destination
