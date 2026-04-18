@@ -1,0 +1,2024 @@
+{
+  "metadata": {
+    "nodes": 66,
+    "undirected_edges": 87,
+    "input_files": {
+      "apartments": "C:\\Users\\tygac\\Downloads\\apartment-optimizer\\Data\\apartments_json_v2.json",
+      "stations": "C:\\Users\\tygac\\Downloads\\apartment-optimizer\\Data\\stations_json_v2.json",
+      "destinations": "C:\\Users\\tygac\\Downloads\\apartment-optimizer\\Data\\destinations_json_v2.json"
+    }
+  },
+  "rankings": [
+    {
+      "apartment_id": "cannery_park",
+      "apartment_name": "Cannery Park by Windsor",
+      "monthly_rent": 3359,
+      "area": "Downtown San Jose",
+      "total_minutes_per_week": 215.58598,
+      "categories": {
+        "starbucks_neu_chain": {
+          "category_key": "starbucks_neu_chain",
+          "weekly_visits": 3,
+          "chain_endpoint_id": "NEU_SV",
+          "chain_endpoint_name": "Northeastern University Silicon Valley",
+          "one_trip_minutes": 22.579824,
+          "weekly_weighted_minutes": 67.739472,
+          "optimal_starbucks_id": "S5",
+          "optimal_starbucks_name": "Starbucks San Jose (Downtown — 181 E Santa Clara St)",
+          "optimal_leg1_mode": "transit",
+          "optimal_leg2_mode": "straight_line_walk",
+          "per_starbucks": [
+            {
+              "starbucks_id": "S1",
+              "starbucks_name": "Starbucks Sunnyvale (W El Camino Real)",
+              "minutes_apt_to_starbucks_transit": 45,
+              "minutes_apt_to_starbucks_walk_straight_line": null,
+              "minutes_apt_to_starbucks": 45,
+              "leg1_used_straight_line_walk": false,
+              "leg1_mode": "transit",
+              "minutes_starbucks_to_neu_transit": 36,
+              "minutes_starbucks_to_neu_walk_straight_line": null,
+              "minutes_starbucks_to_neu": 36,
+              "leg2_used_straight_line_walk": false,
+              "leg2_mode": "transit",
+              "minutes_one_chain_trip": 81
+            },
+            {
+              "starbucks_id": "S2",
+              "starbucks_name": "Starbucks Santa Clara (3605 El Camino Real)",
+              "minutes_apt_to_starbucks_transit": 48,
+              "minutes_apt_to_starbucks_walk_straight_line": null,
+              "minutes_apt_to_starbucks": 48,
+              "leg1_used_straight_line_walk": false,
+              "leg1_mode": "transit",
+              "minutes_starbucks_to_neu_transit": 41,
+              "minutes_starbucks_to_neu_walk_straight_line": null,
+              "minutes_starbucks_to_neu": 41,
+              "leg2_used_straight_line_walk": false,
+              "leg2_mode": "transit",
+              "minutes_one_chain_trip": 89
+            },
+            {
+              "starbucks_id": "S3",
+              "starbucks_name": "Starbucks Santa Clara (495 El Camino Real)",
+              "minutes_apt_to_starbucks_transit": 41,
+              "minutes_apt_to_starbucks_walk_straight_line": null,
+              "minutes_apt_to_starbucks": 41,
+              "leg1_used_straight_line_walk": false,
+              "leg1_mode": "transit",
+              "minutes_starbucks_to_neu_transit": 34,
+              "minutes_starbucks_to_neu_walk_straight_line": null,
+              "minutes_starbucks_to_neu": 34,
+              "leg2_used_straight_line_walk": false,
+              "leg2_mode": "transit",
+              "minutes_one_chain_trip": 75
+            },
+            {
+              "starbucks_id": "S4",
+              "starbucks_name": "Starbucks San Jose (Zanker Rd)",
+              "minutes_apt_to_starbucks_transit": 33,
+              "minutes_apt_to_starbucks_walk_straight_line": null,
+              "minutes_apt_to_starbucks": 33,
+              "leg1_used_straight_line_walk": false,
+              "leg1_mode": "transit",
+              "minutes_starbucks_to_neu_transit": 35,
+              "minutes_starbucks_to_neu_walk_straight_line": null,
+              "minutes_starbucks_to_neu": 35,
+              "leg2_used_straight_line_walk": false,
+              "leg2_mode": "transit",
+              "minutes_one_chain_trip": 68
+            },
+            {
+              "starbucks_id": "S5",
+              "starbucks_name": "Starbucks San Jose (Downtown — 181 E Santa Clara St)",
+              "minutes_apt_to_starbucks_transit": 19,
+              "minutes_apt_to_starbucks_walk_straight_line": 24.75119,
+              "minutes_apt_to_starbucks": 19,
+              "leg1_used_straight_line_walk": false,
+              "leg1_mode": "transit",
+              "minutes_starbucks_to_neu_transit": 28,
+              "minutes_starbucks_to_neu_walk_straight_line": 3.579824,
+              "minutes_starbucks_to_neu": 3.579824,
+              "leg2_used_straight_line_walk": true,
+              "leg2_mode": "straight_line_walk",
+              "minutes_one_chain_trip": 22.579824
+            },
+            {
+              "starbucks_id": "S6",
+              "starbucks_name": "Starbucks Milpitas (127 Ranch Dr)",
+              "minutes_apt_to_starbucks_transit": 54,
+              "minutes_apt_to_starbucks_walk_straight_line": null,
+              "minutes_apt_to_starbucks": 54,
+              "leg1_used_straight_line_walk": false,
+              "leg1_mode": "transit",
+              "minutes_starbucks_to_neu_transit": 49,
+              "minutes_starbucks_to_neu_walk_straight_line": null,
+              "minutes_starbucks_to_neu": 49,
+              "leg2_used_straight_line_walk": false,
+              "leg2_mode": "transit",
+              "minutes_one_chain_trip": 103
+            }
+          ],
+          "path_apartment_to_optimal_starbucks": [
+            "cannery_park",
+            "BUS_TAYLOR_N1ST",
+            "BUS_SANTACLARA_5TH",
+            "S5"
+          ],
+          "path_apartment_to_optimal_starbucks_legs": [
+            {
+              "from": "cannery_park",
+              "to": "BUS_TAYLOR_N1ST",
+              "minutes": 5,
+              "mode": "walk"
+            },
+            {
+              "from": "BUS_TAYLOR_N1ST",
+              "to": "BUS_SANTACLARA_5TH",
+              "minutes": 10,
+              "mode": "walk"
+            },
+            {
+              "from": "BUS_SANTACLARA_5TH",
+              "to": "S5",
+              "minutes": 4,
+              "mode": "walk"
+            }
+          ],
+          "path_optimal_starbucks_to_neu": [
+            "S5",
+            "NEU_SV"
+          ],
+          "path_optimal_starbucks_to_neu_legs": [
+            {
+              "from": "S5",
+              "to": "NEU_SV",
+              "minutes": 3.579824,
+              "mode": "straight_line_walk"
+            }
+          ],
+          "reachable": true
+        },
+        "costco": {
+          "category_key": "costco",
+          "weekly_visits": 1,
+          "best_candidate_id": "C5",
+          "best_candidate_name": "Costco San Jose (Senter Rd)",
+          "one_way_minutes": 29,
+          "one_way_minutes_transit": 29,
+          "one_way_minutes_walk_straight_line": null,
+          "used_straight_line_walk": false,
+          "weekly_weighted_minutes": 29,
+          "path_apartment_to_best": [
+            "cannery_park",
+            "BUS_TAYLOR_N1ST",
+            "BUS_SENTER_TULLY",
+            "C5"
+          ],
+          "path_apartment_to_best_legs": [
+            {
+              "from": "cannery_park",
+              "to": "BUS_TAYLOR_N1ST",
+              "minutes": 5,
+              "mode": "walk"
+            },
+            {
+              "from": "BUS_TAYLOR_N1ST",
+              "to": "BUS_SENTER_TULLY",
+              "minutes": 18,
+              "mode": "bus"
+            },
+            {
+              "from": "BUS_SENTER_TULLY",
+              "to": "C5",
+              "minutes": 6,
+              "mode": "walk"
+            }
+          ],
+          "reachable": true,
+          "candidates_minutes": [
+            {
+              "id": "C1",
+              "minutes": 36,
+              "transit_minutes": 36,
+              "walk_straight_line_minutes": null,
+              "used_straight_line_walk": false
+            },
+            {
+              "id": "C2",
+              "minutes": 36,
+              "transit_minutes": 36,
+              "walk_straight_line_minutes": 44.751195,
+              "used_straight_line_walk": false
+            },
+            {
+              "id": "C3",
+              "minutes": 33,
+              "transit_minutes": 33,
+              "walk_straight_line_minutes": null,
+              "used_straight_line_walk": false
+            },
+            {
+              "id": "C4",
+              "minutes": 51,
+              "transit_minutes": 51,
+              "walk_straight_line_minutes": null,
+              "used_straight_line_walk": false
+            },
+            {
+              "id": "C5",
+              "minutes": 29,
+              "transit_minutes": 29,
+              "walk_straight_line_minutes": null,
+              "used_straight_line_walk": false
+            },
+            {
+              "id": "C6",
+              "minutes": 52,
+              "transit_minutes": 52,
+              "walk_straight_line_minutes": null,
+              "used_straight_line_walk": false
+            }
+          ]
+        },
+        "trader_joes": {
+          "category_key": "trader_joes",
+          "weekly_visits": 2,
+          "best_candidate_id": "T2",
+          "best_candidate_name": "Trader Joe's San Jose (Coleman Ave)",
+          "one_way_minutes": 15.423254,
+          "one_way_minutes_transit": 18,
+          "one_way_minutes_walk_straight_line": 15.423254,
+          "used_straight_line_walk": true,
+          "weekly_weighted_minutes": 30.846508,
+          "path_apartment_to_best": [
+            "cannery_park",
+            "T2"
+          ],
+          "path_apartment_to_best_legs": [
+            {
+              "from": "cannery_park",
+              "to": "T2",
+              "minutes": 15.423254,
+              "mode": "straight_line_walk"
+            }
+          ],
+          "reachable": true,
+          "candidates_minutes": [
+            {
+              "id": "T1",
+              "minutes": 46,
+              "transit_minutes": 46,
+              "walk_straight_line_minutes": null,
+              "used_straight_line_walk": false
+            },
+            {
+              "id": "T2",
+              "minutes": 15.423254,
+              "transit_minutes": 18,
+              "walk_straight_line_minutes": 15.423254,
+              "used_straight_line_walk": true
+            },
+            {
+              "id": "T3",
+              "minutes": 54,
+              "transit_minutes": 54,
+              "walk_straight_line_minutes": null,
+              "used_straight_line_walk": false
+            },
+            {
+              "id": "T4",
+              "minutes": 47,
+              "transit_minutes": 47,
+              "walk_straight_line_minutes": null,
+              "used_straight_line_walk": false
+            },
+            {
+              "id": "T5",
+              "minutes": 47,
+              "transit_minutes": 47,
+              "walk_straight_line_minutes": null,
+              "used_straight_line_walk": false
+            },
+            {
+              "id": "T6",
+              "minutes": 47,
+              "transit_minutes": 47,
+              "walk_straight_line_minutes": null,
+              "used_straight_line_walk": false
+            }
+          ]
+        },
+        "gym_24hf": {
+          "category_key": "gym_24hf",
+          "weekly_visits": 4,
+          "best_candidate_id": "G3",
+          "best_candidate_name": "24 Hour Fitness San Jose (Crane Ct Super-Sport)",
+          "one_way_minutes": 22,
+          "one_way_minutes_transit": 22,
+          "one_way_minutes_walk_straight_line": null,
+          "used_straight_line_walk": false,
+          "weekly_weighted_minutes": 88,
+          "path_apartment_to_best": [
+            "cannery_park",
+            "BUS_TAYLOR_N1ST",
+            "BUS_N1ST_CRANECT",
+            "G3"
+          ],
+          "path_apartment_to_best_legs": [
+            {
+              "from": "cannery_park",
+              "to": "BUS_TAYLOR_N1ST",
+              "minutes": 5,
+              "mode": "walk"
+            },
+            {
+              "from": "BUS_TAYLOR_N1ST",
+              "to": "BUS_N1ST_CRANECT",
+              "minutes": 12,
+              "mode": "bus"
+            },
+            {
+              "from": "BUS_N1ST_CRANECT",
+              "to": "G3",
+              "minutes": 5,
+              "mode": "walk"
+            }
+          ],
+          "reachable": true,
+          "candidates_minutes": [
+            {
+              "id": "G1",
+              "minutes": 48,
+              "transit_minutes": 48,
+              "walk_straight_line_minutes": null,
+              "used_straight_line_walk": false
+            },
+            {
+              "id": "G2",
+              "minutes": 48,
+              "transit_minutes": 48,
+              "walk_straight_line_minutes": null,
+              "used_straight_line_walk": false
+            },
+            {
+              "id": "G3",
+              "minutes": 22,
+              "transit_minutes": 22,
+              "walk_straight_line_minutes": null,
+              "used_straight_line_walk": false
+            },
+            {
+              "id": "G4",
+              "minutes": 32,
+              "transit_minutes": 32,
+              "walk_straight_line_minutes": null,
+              "used_straight_line_walk": false
+            },
+            {
+              "id": "G5",
+              "minutes": 52,
+              "transit_minutes": 52,
+              "walk_straight_line_minutes": null,
+              "used_straight_line_walk": false
+            },
+            {
+              "id": "G6",
+              "minutes": 39,
+              "transit_minutes": 39,
+              "walk_straight_line_minutes": null,
+              "used_straight_line_walk": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "apartment_id": "villas_on_the_blvd",
+      "apartment_name": "Villas on the Boulevard",
+      "monthly_rent": 3465,
+      "area": "Santa Clara",
+      "total_minutes_per_week": 218.004039,
+      "categories": {
+        "starbucks_neu_chain": {
+          "category_key": "starbucks_neu_chain",
+          "weekly_visits": 3,
+          "chain_endpoint_id": "NEU_SV",
+          "chain_endpoint_name": "Northeastern University Silicon Valley",
+          "one_trip_minutes": 43.579824,
+          "weekly_weighted_minutes": 130.739472,
+          "optimal_starbucks_id": "S5",
+          "optimal_starbucks_name": "Starbucks San Jose (Downtown — 181 E Santa Clara St)",
+          "optimal_leg1_mode": "transit",
+          "optimal_leg2_mode": "straight_line_walk",
+          "per_starbucks": [
+            {
+              "starbucks_id": "S1",
+              "starbucks_name": "Starbucks Sunnyvale (W El Camino Real)",
+              "minutes_apt_to_starbucks_transit": 21,
+              "minutes_apt_to_starbucks_walk_straight_line": null,
+              "minutes_apt_to_starbucks": 21,
+              "leg1_used_straight_line_walk": false,
+              "leg1_mode": "transit",
+              "minutes_starbucks_to_neu_transit": 36,
+              "minutes_starbucks_to_neu_walk_straight_line": null,
+              "minutes_starbucks_to_neu": 36,
+              "leg2_used_straight_line_walk": false,
+              "leg2_mode": "transit",
+              "minutes_one_chain_trip": 57
+            },
+            {
+              "starbucks_id": "S2",
+              "starbucks_name": "Starbucks Santa Clara (3605 El Camino Real)",
+              "minutes_apt_to_starbucks_transit": 13,
+              "minutes_apt_to_starbucks_walk_straight_line": 3.551756,
+              "minutes_apt_to_starbucks": 3.551756,
+              "leg1_used_straight_line_walk": true,
+              "leg1_mode": "straight_line_walk",
+              "minutes_starbucks_to_neu_transit": 41,
+              "minutes_starbucks_to_neu_walk_straight_line": null,
+              "minutes_starbucks_to_neu": 41,
+              "leg2_used_straight_line_walk": false,
+              "leg2_mode": "transit",
+              "minutes_one_chain_trip": 44.551756
+            },
+            {
+              "starbucks_id": "S3",
+              "starbucks_name": "Starbucks Santa Clara (495 El Camino Real)",
+              "minutes_apt_to_starbucks_transit": 12,
+              "minutes_apt_to_starbucks_walk_straight_line": 28.854514,
+              "minutes_apt_to_starbucks": 12,
+              "leg1_used_straight_line_walk": false,
+              "leg1_mode": "transit",
+              "minutes_starbucks_to_neu_transit": 34,
+              "minutes_starbucks_to_neu_walk_straight_line": null,
+              "minutes_starbucks_to_neu": 34,
+              "leg2_used_straight_line_walk": false,
+              "leg2_mode": "transit",
+              "minutes_one_chain_trip": 46
+            },
+            {
+              "starbucks_id": "S4",
+              "starbucks_name": "Starbucks San Jose (Zanker Rd)",
+              "minutes_apt_to_starbucks_transit": 45,
+              "minutes_apt_to_starbucks_walk_straight_line": null,
+              "minutes_apt_to_starbucks": 45,
+              "leg1_used_straight_line_walk": false,
+              "leg1_mode": "transit",
+              "minutes_starbucks_to_neu_transit": 35,
+              "minutes_starbucks_to_neu_walk_straight_line": null,
+              "minutes_starbucks_to_neu": 35,
+              "leg2_used_straight_line_walk": false,
+              "leg2_mode": "transit",
+              "minutes_one_chain_trip": 80
+            },
+            {
+              "starbucks_id": "S5",
+              "starbucks_name": "Starbucks San Jose (Downtown — 181 E Santa Clara St)",
+              "minutes_apt_to_starbucks_transit": 40,
+              "minutes_apt_to_starbucks_walk_straight_line": null,
+              "minutes_apt_to_starbucks": 40,
+              "leg1_used_straight_line_walk": false,
+              "leg1_mode": "transit",
+              "minutes_starbucks_to_neu_transit": 28,
+              "minutes_starbucks_to_neu_walk_straight_line": 3.579824,
+              "minutes_starbucks_to_neu": 3.579824,
+              "leg2_used_straight_line_walk": true,
+              "leg2_mode": "straight_line_walk",
+              "minutes_one_chain_trip": 43.579824
+            },
+            {
+              "starbucks_id": "S6",
+              "starbucks_name": "Starbucks Milpitas (127 Ranch Dr)",
+              "minutes_apt_to_starbucks_transit": 59,
+              "minutes_apt_to_starbucks_walk_straight_line": null,
+              "minutes_apt_to_starbucks": 59,
+              "leg1_used_straight_line_walk": false,
+              "leg1_mode": "transit",
+              "minutes_starbucks_to_neu_transit": 49,
+              "minutes_starbucks_to_neu_walk_straight_line": null,
+              "minutes_starbucks_to_neu": 49,
+              "leg2_used_straight_line_walk": false,
+              "leg2_mode": "transit",
+              "minutes_one_chain_trip": 108
+            }
+          ],
+          "path_apartment_to_optimal_starbucks": [
+            "villas_on_the_blvd",
+            "BUS_ECR_SCOTT",
+            "VTA_SC_TC",
+            "CT_SANTA_CLARA",
+            "CT_SJ_DIRIDON",
+            "BUS_SANTACLARA_5TH",
+            "S5"
+          ],
+          "path_apartment_to_optimal_starbucks_legs": [
+            {
+              "from": "villas_on_the_blvd",
+              "to": "BUS_ECR_SCOTT",
+              "minutes": 4,
+              "mode": "walk"
+            },
+            {
+              "from": "BUS_ECR_SCOTT",
+              "to": "VTA_SC_TC",
+              "minutes": 10,
+              "mode": "bus"
+            },
+            {
+              "from": "VTA_SC_TC",
+              "to": "CT_SANTA_CLARA",
+              "minutes": 5,
+              "mode": "walk"
+            },
+            {
+              "from": "CT_SANTA_CLARA",
+              "to": "CT_SJ_DIRIDON",
+              "minutes": 5,
+              "mode": "caltrain"
+            },
+            {
+              "from": "CT_SJ_DIRIDON",
+              "to": "BUS_SANTACLARA_5TH",
+              "minutes": 12,
+              "mode": "walk"
+            },
+            {
+              "from": "BUS_SANTACLARA_5TH",
+              "to": "S5",
+              "minutes": 4,
+              "mode": "walk"
+            }
+          ],
+          "path_optimal_starbucks_to_neu": [
+            "S5",
+            "NEU_SV"
+          ],
+          "path_optimal_starbucks_to_neu_legs": [
+            {
+              "from": "S5",
+              "to": "NEU_SV",
+              "minutes": 3.579824,
+              "mode": "straight_line_walk"
+            }
+          ],
+          "reachable": true
+        },
+        "costco": {
+          "category_key": "costco",
+          "weekly_visits": 1,
+          "best_candidate_id": "C1",
+          "best_candidate_name": "Costco Sunnyvale",
+          "one_way_minutes": 29,
+          "one_way_minutes_transit": 29,
+          "one_way_minutes_walk_straight_line": 31.415918,
+          "used_straight_line_walk": false,
+          "weekly_weighted_minutes": 29,
+          "path_apartment_to_best": [
+            "villas_on_the_blvd",
+            "BUS_ECR_SCOTT",
+            "VTA_SC_TC",
+            "CT_SANTA_CLARA",
+            "CT_LAWRENCE",
+            "C1"
+          ],
+          "path_apartment_to_best_legs": [
+            {
+              "from": "villas_on_the_blvd",
+              "to": "BUS_ECR_SCOTT",
+              "minutes": 4,
+              "mode": "walk"
+            },
+            {
+              "from": "BUS_ECR_SCOTT",
+              "to": "VTA_SC_TC",
+              "minutes": 10,
+              "mode": "bus"
+            },
+            {
+              "from": "VTA_SC_TC",
+              "to": "CT_SANTA_CLARA",
+              "minutes": 5,
+              "mode": "walk"
+            },
+            {
+              "from": "CT_SANTA_CLARA",
+              "to": "CT_LAWRENCE",
+              "minutes": 4,
+              "mode": "caltrain"
+            },
+            {
+              "from": "CT_LAWRENCE",
+              "to": "C1",
+              "minutes": 6,
+              "mode": "walk"
+            }
+          ],
+          "reachable": true,
+          "candidates_minutes": [
+            {
+              "id": "C1",
+              "minutes": 29,
+              "transit_minutes": 29,
+              "walk_straight_line_minutes": 31.415918,
+              "used_straight_line_walk": false
+            },
+            {
+              "id": "C2",
+              "minutes": 33,
+              "transit_minutes": 33,
+              "walk_straight_line_minutes": null,
+              "used_straight_line_walk": false
+            },
+            {
+              "id": "C3",
+              "minutes": 53,
+              "transit_minutes": 53,
+              "walk_straight_line_minutes": null,
+              "used_straight_line_walk": false
+            },
+            {
+              "id": "C4",
+              "minutes": 42,
+              "transit_minutes": 42,
+              "walk_straight_line_minutes": null,
+              "used_straight_line_walk": false
+            },
+            {
+              "id": "C5",
+              "minutes": 62,
+              "transit_minutes": 62,
+              "walk_straight_line_minutes": null,
+              "used_straight_line_walk": false
+            },
+            {
+              "id": "C6",
+              "minutes": 57,
+              "transit_minutes": 57,
+              "walk_straight_line_minutes": null,
+              "used_straight_line_walk": false
+            }
+          ]
+        },
+        "trader_joes": {
+          "category_key": "trader_joes",
+          "weekly_visits": 2,
+          "best_candidate_id": "T1",
+          "best_candidate_name": "Trader Joe's Sunnyvale (El Camino Real)",
+          "one_way_minutes": 22,
+          "one_way_minutes_transit": 22,
+          "one_way_minutes_walk_straight_line": null,
+          "used_straight_line_walk": false,
+          "weekly_weighted_minutes": 44,
+          "path_apartment_to_best": [
+            "villas_on_the_blvd",
+            "BUS_ECR_SCOTT",
+            "BUS_ECR_LAWRENCE",
+            "BUS_ECR_MATHILDA",
+            "T1"
+          ],
+          "path_apartment_to_best_legs": [
+            {
+              "from": "villas_on_the_blvd",
+              "to": "BUS_ECR_SCOTT",
+              "minutes": 4,
+              "mode": "walk"
+            },
+            {
+              "from": "BUS_ECR_SCOTT",
+              "to": "BUS_ECR_LAWRENCE",
+              "minutes": 6,
+              "mode": "bus"
+            },
+            {
+              "from": "BUS_ECR_LAWRENCE",
+              "to": "BUS_ECR_MATHILDA",
+              "minutes": 8,
+              "mode": "bus"
+            },
+            {
+              "from": "BUS_ECR_MATHILDA",
+              "to": "T1",
+              "minutes": 4,
+              "mode": "walk"
+            }
+          ],
+          "reachable": true,
+          "candidates_minutes": [
+            {
+              "id": "T1",
+              "minutes": 22,
+              "transit_minutes": 22,
+              "walk_straight_line_minutes": null,
+              "used_straight_line_walk": false
+            },
+            {
+              "id": "T2",
+              "minutes": 35,
+              "transit_minutes": 35,
+              "walk_straight_line_minutes": null,
+              "used_straight_line_walk": false
+            },
+            {
+              "id": "T3",
+              "minutes": 59,
+              "transit_minutes": 59,
+              "walk_straight_line_minutes": null,
+              "used_straight_line_walk": false
+            },
+            {
+              "id": "T4",
+              "minutes": 38,
+              "transit_minutes": 38,
+              "walk_straight_line_minutes": null,
+              "used_straight_line_walk": false
+            },
+            {
+              "id": "T5",
+              "minutes": 38,
+              "transit_minutes": 38,
+              "walk_straight_line_minutes": null,
+              "used_straight_line_walk": false
+            },
+            {
+              "id": "T6",
+              "minutes": 52,
+              "transit_minutes": 52,
+              "walk_straight_line_minutes": null,
+              "used_straight_line_walk": false
+            }
+          ]
+        },
+        "gym_24hf": {
+          "category_key": "gym_24hf",
+          "weekly_visits": 4,
+          "best_candidate_id": "G2",
+          "best_candidate_name": "24 Hour Fitness Santa Clara (El Camino Real Super-Sport)",
+          "one_way_minutes": 3.566142,
+          "one_way_minutes_transit": 13,
+          "one_way_minutes_walk_straight_line": 3.566142,
+          "used_straight_line_walk": true,
+          "weekly_weighted_minutes": 14.264567,
+          "path_apartment_to_best": [
+            "villas_on_the_blvd",
+            "G2"
+          ],
+          "path_apartment_to_best_legs": [
+            {
+              "from": "villas_on_the_blvd",
+              "to": "G2",
+              "minutes": 3.566142,
+              "mode": "straight_line_walk"
+            }
+          ],
+          "reachable": true,
+          "candidates_minutes": [
+            {
+              "id": "G1",
+              "minutes": 19,
+              "transit_minutes": 19,
+              "walk_straight_line_minutes": 34.64071,
+              "used_straight_line_walk": false
+            },
+            {
+              "id": "G2",
+              "minutes": 3.566142,
+              "transit_minutes": 13,
+              "walk_straight_line_minutes": 3.566142,
+              "used_straight_line_walk": true
+            },
+            {
+              "id": "G3",
+              "minutes": 55,
+              "transit_minutes": 55,
+              "walk_straight_line_minutes": null,
+              "used_straight_line_walk": false
+            },
+            {
+              "id": "G4",
+              "minutes": 37,
+              "transit_minutes": 37,
+              "walk_straight_line_minutes": null,
+              "used_straight_line_walk": false
+            },
+            {
+              "id": "G5",
+              "minutes": 57,
+              "transit_minutes": 57,
+              "walk_straight_line_minutes": null,
+              "used_straight_line_walk": false
+            },
+            {
+              "id": "G6",
+              "minutes": 72,
+              "transit_minutes": 72,
+              "walk_straight_line_minutes": null,
+              "used_straight_line_walk": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "apartment_id": "murphy_station",
+      "apartment_name": "Murphy Station",
+      "monthly_rent": 3817,
+      "area": "Sunnyvale",
+      "total_minutes_per_week": 238.121811,
+      "categories": {
+        "starbucks_neu_chain": {
+          "category_key": "starbucks_neu_chain",
+          "weekly_visits": 3,
+          "chain_endpoint_id": "NEU_SV",
+          "chain_endpoint_name": "Northeastern University Silicon Valley",
+          "one_trip_minutes": 40.579824,
+          "weekly_weighted_minutes": 121.739472,
+          "optimal_starbucks_id": "S5",
+          "optimal_starbucks_name": "Starbucks San Jose (Downtown — 181 E Santa Clara St)",
+          "optimal_leg1_mode": "transit",
+          "optimal_leg2_mode": "straight_line_walk",
+          "per_starbucks": [
+            {
+              "starbucks_id": "S1",
+              "starbucks_name": "Starbucks Sunnyvale (W El Camino Real)",
+              "minutes_apt_to_starbucks_transit": 19,
+              "minutes_apt_to_starbucks_walk_straight_line": 4.713302,
+              "minutes_apt_to_starbucks": 4.713302,
+              "leg1_used_straight_line_walk": true,
+              "leg1_mode": "straight_line_walk",
+              "minutes_starbucks_to_neu_transit": 36,
+              "minutes_starbucks_to_neu_walk_straight_line": null,
+              "minutes_starbucks_to_neu": 36,
+              "leg2_used_straight_line_walk": false,
+              "leg2_mode": "transit",
+              "minutes_one_chain_trip": 40.713302
+            },
+            {
+              "starbucks_id": "S2",
+              "starbucks_name": "Starbucks Santa Clara (3605 El Camino Real)",
+              "minutes_apt_to_starbucks_transit": 26,
+              "minutes_apt_to_starbucks_walk_straight_line": null,
+              "minutes_apt_to_starbucks": 26,
+              "leg1_used_straight_line_walk": false,
+              "leg1_mode": "transit",
+              "minutes_starbucks_to_neu_transit": 41,
+              "minutes_starbucks_to_neu_walk_straight_line": null,
+              "minutes_starbucks_to_neu": 41,
+              "leg2_used_straight_line_walk": false,
+              "leg2_mode": "transit",
+              "minutes_one_chain_trip": 67
+            },
+            {
+              "starbucks_id": "S3",
+              "starbucks_name": "Starbucks Santa Clara (495 El Camino Real)",
+              "minutes_apt_to_starbucks_transit": 32,
+              "minutes_apt_to_starbucks_walk_straight_line": null,
+              "minutes_apt_to_starbucks": 32,
+              "leg1_used_straight_line_walk": false,
+              "leg1_mode": "transit",
+              "minutes_starbucks_to_neu_transit": 34,
+              "minutes_starbucks_to_neu_walk_straight_line": null,
+              "minutes_starbucks_to_neu": 34,
+              "leg2_used_straight_line_walk": false,
+              "leg2_mode": "transit",
+              "minutes_one_chain_trip": 66
+            },
+            {
+              "starbucks_id": "S4",
+              "starbucks_name": "Starbucks San Jose (Zanker Rd)",
+              "minutes_apt_to_starbucks_transit": 44,
+              "minutes_apt_to_starbucks_walk_straight_line": null,
+              "minutes_apt_to_starbucks": 44,
+              "leg1_used_straight_line_walk": false,
+              "leg1_mode": "transit",
+              "minutes_starbucks_to_neu_transit": 35,
+              "minutes_starbucks_to_neu_walk_straight_line": null,
+              "minutes_starbucks_to_neu": 35,
+              "leg2_used_straight_line_walk": false,
+              "leg2_mode": "transit",
+              "minutes_one_chain_trip": 79
+            },
+            {
+              "starbucks_id": "S5",
+              "starbucks_name": "Starbucks San Jose (Downtown — 181 E Santa Clara St)",
+              "minutes_apt_to_starbucks_transit": 37,
+              "minutes_apt_to_starbucks_walk_straight_line": null,
+              "minutes_apt_to_starbucks": 37,
+              "leg1_used_straight_line_walk": false,
+              "leg1_mode": "transit",
+              "minutes_starbucks_to_neu_transit": 28,
+              "minutes_starbucks_to_neu_walk_straight_line": 3.579824,
+              "minutes_starbucks_to_neu": 3.579824,
+              "leg2_used_straight_line_walk": true,
+              "leg2_mode": "straight_line_walk",
+              "minutes_one_chain_trip": 40.579824
+            },
+            {
+              "starbucks_id": "S6",
+              "starbucks_name": "Starbucks Milpitas (127 Ranch Dr)",
+              "minutes_apt_to_starbucks_transit": 54,
+              "minutes_apt_to_starbucks_walk_straight_line": null,
+              "minutes_apt_to_starbucks": 54,
+              "leg1_used_straight_line_walk": false,
+              "leg1_mode": "transit",
+              "minutes_starbucks_to_neu_transit": 49,
+              "minutes_starbucks_to_neu_walk_straight_line": null,
+              "minutes_starbucks_to_neu": 49,
+              "leg2_used_straight_line_walk": false,
+              "leg2_mode": "transit",
+              "minutes_one_chain_trip": 103
+            }
+          ],
+          "path_apartment_to_optimal_starbucks": [
+            "murphy_station",
+            "CT_SUNNYVALE",
+            "CT_LAWRENCE",
+            "CT_SANTA_CLARA",
+            "CT_SJ_DIRIDON",
+            "BUS_SANTACLARA_5TH",
+            "S5"
+          ],
+          "path_apartment_to_optimal_starbucks_legs": [
+            {
+              "from": "murphy_station",
+              "to": "CT_SUNNYVALE",
+              "minutes": 8,
+              "mode": "walk"
+            },
+            {
+              "from": "CT_SUNNYVALE",
+              "to": "CT_LAWRENCE",
+              "minutes": 4,
+              "mode": "caltrain"
+            },
+            {
+              "from": "CT_LAWRENCE",
+              "to": "CT_SANTA_CLARA",
+              "minutes": 4,
+              "mode": "caltrain"
+            },
+            {
+              "from": "CT_SANTA_CLARA",
+              "to": "CT_SJ_DIRIDON",
+              "minutes": 5,
+              "mode": "caltrain"
+            },
+            {
+              "from": "CT_SJ_DIRIDON",
+              "to": "BUS_SANTACLARA_5TH",
+              "minutes": 12,
+              "mode": "walk"
+            },
+            {
+              "from": "BUS_SANTACLARA_5TH",
+              "to": "S5",
+              "minutes": 4,
+              "mode": "walk"
+            }
+          ],
+          "path_optimal_starbucks_to_neu": [
+            "S5",
+            "NEU_SV"
+          ],
+          "path_optimal_starbucks_to_neu_legs": [
+            {
+              "from": "S5",
+              "to": "NEU_SV",
+              "minutes": 3.579824,
+              "mode": "straight_line_walk"
+            }
+          ],
+          "reachable": true
+        },
+        "costco": {
+          "category_key": "costco",
+          "weekly_visits": 1,
+          "best_candidate_id": "C1",
+          "best_candidate_name": "Costco Sunnyvale",
+          "one_way_minutes": 18,
+          "one_way_minutes_transit": 18,
+          "one_way_minutes_walk_straight_line": 38.240463,
+          "used_straight_line_walk": false,
+          "weekly_weighted_minutes": 18,
+          "path_apartment_to_best": [
+            "murphy_station",
+            "CT_SUNNYVALE",
+            "CT_LAWRENCE",
+            "C1"
+          ],
+          "path_apartment_to_best_legs": [
+            {
+              "from": "murphy_station",
+              "to": "CT_SUNNYVALE",
+              "minutes": 8,
+              "mode": "walk"
+            },
+            {
+              "from": "CT_SUNNYVALE",
+              "to": "CT_LAWRENCE",
+              "minutes": 4,
+              "mode": "caltrain"
+            },
+            {
+              "from": "CT_LAWRENCE",
+              "to": "C1",
+              "minutes": 6,
+              "mode": "walk"
+            }
+          ],
+          "reachable": true,
+          "candidates_minutes": [
+            {
+              "id": "C1",
+              "minutes": 18,
+              "transit_minutes": 18,
+              "walk_straight_line_minutes": 38.240463,
+              "used_straight_line_walk": false
+            },
+            {
+              "id": "C2",
+              "minutes": 40,
+              "transit_minutes": 40,
+              "walk_straight_line_minutes": null,
+              "used_straight_line_walk": false
+            },
+            {
+              "id": "C3",
+              "minutes": 52,
+              "transit_minutes": 52,
+              "walk_straight_line_minutes": null,
+              "used_straight_line_walk": false
+            },
+            {
+              "id": "C4",
+              "minutes": 25,
+              "transit_minutes": 25,
+              "walk_straight_line_minutes": null,
+              "used_straight_line_walk": false
+            },
+            {
+              "id": "C5",
+              "minutes": 61,
+              "transit_minutes": 61,
+              "walk_straight_line_minutes": null,
+              "used_straight_line_walk": false
+            },
+            {
+              "id": "C6",
+              "minutes": 56,
+              "transit_minutes": 56,
+              "walk_straight_line_minutes": null,
+              "used_straight_line_walk": false
+            }
+          ]
+        },
+        "trader_joes": {
+          "category_key": "trader_joes",
+          "weekly_visits": 2,
+          "best_candidate_id": "T1",
+          "best_candidate_name": "Trader Joe's Sunnyvale (El Camino Real)",
+          "one_way_minutes": 5.191169,
+          "one_way_minutes_transit": 20,
+          "one_way_minutes_walk_straight_line": 5.191169,
+          "used_straight_line_walk": true,
+          "weekly_weighted_minutes": 10.382339,
+          "path_apartment_to_best": [
+            "murphy_station",
+            "T1"
+          ],
+          "path_apartment_to_best_legs": [
+            {
+              "from": "murphy_station",
+              "to": "T1",
+              "minutes": 5.191169,
+              "mode": "straight_line_walk"
+            }
+          ],
+          "reachable": true,
+          "candidates_minutes": [
+            {
+              "id": "T1",
+              "minutes": 5.191169,
+              "transit_minutes": 20,
+              "walk_straight_line_minutes": 5.191169,
+              "used_straight_line_walk": true
+            },
+            {
+              "id": "T2",
+              "minutes": 34,
+              "transit_minutes": 34,
+              "walk_straight_line_minutes": null,
+              "used_straight_line_walk": false
+            },
+            {
+              "id": "T3",
+              "minutes": 57,
+              "transit_minutes": 57,
+              "walk_straight_line_minutes": null,
+              "used_straight_line_walk": false
+            },
+            {
+              "id": "T4",
+              "minutes": 21,
+              "transit_minutes": 21,
+              "walk_straight_line_minutes": null,
+              "used_straight_line_walk": false
+            },
+            {
+              "id": "T5",
+              "minutes": 29,
+              "transit_minutes": 29,
+              "walk_straight_line_minutes": null,
+              "used_straight_line_walk": false
+            },
+            {
+              "id": "T6",
+              "minutes": 51,
+              "transit_minutes": 51,
+              "walk_straight_line_minutes": null,
+              "used_straight_line_walk": false
+            }
+          ]
+        },
+        "gym_24hf": {
+          "category_key": "gym_24hf",
+          "weekly_visits": 4,
+          "best_candidate_id": "G1",
+          "best_candidate_name": "24 Hour Fitness Sunnyvale (Sunnyvale Saratoga Super-Sport)",
+          "one_way_minutes": 22,
+          "one_way_minutes_transit": 22,
+          "one_way_minutes_walk_straight_line": 33.792504,
+          "used_straight_line_walk": false,
+          "weekly_weighted_minutes": 88,
+          "path_apartment_to_best": [
+            "murphy_station",
+            "CT_SUNNYVALE",
+            "VTA_SUNNYVALE_TC",
+            "BUS_SUNNYVALE_SARATOGA",
+            "G1"
+          ],
+          "path_apartment_to_best_legs": [
+            {
+              "from": "murphy_station",
+              "to": "CT_SUNNYVALE",
+              "minutes": 8,
+              "mode": "walk"
+            },
+            {
+              "from": "CT_SUNNYVALE",
+              "to": "VTA_SUNNYVALE_TC",
+              "minutes": 3,
+              "mode": "walk"
+            },
+            {
+              "from": "VTA_SUNNYVALE_TC",
+              "to": "BUS_SUNNYVALE_SARATOGA",
+              "minutes": 7,
+              "mode": "bus"
+            },
+            {
+              "from": "BUS_SUNNYVALE_SARATOGA",
+              "to": "G1",
+              "minutes": 4,
+              "mode": "walk"
+            }
+          ],
+          "reachable": true,
+          "candidates_minutes": [
+            {
+              "id": "G1",
+              "minutes": 22,
+              "transit_minutes": 22,
+              "walk_straight_line_minutes": 33.792504,
+              "used_straight_line_walk": false
+            },
+            {
+              "id": "G2",
+              "minutes": 26,
+              "transit_minutes": 26,
+              "walk_straight_line_minutes": null,
+              "used_straight_line_walk": false
+            },
+            {
+              "id": "G3",
+              "minutes": 54,
+              "transit_minutes": 54,
+              "walk_straight_line_minutes": null,
+              "used_straight_line_walk": false
+            },
+            {
+              "id": "G4",
+              "minutes": 36,
+              "transit_minutes": 36,
+              "walk_straight_line_minutes": null,
+              "used_straight_line_walk": false
+            },
+            {
+              "id": "G5",
+              "minutes": 52,
+              "transit_minutes": 52,
+              "walk_straight_line_minutes": null,
+              "used_straight_line_walk": false
+            },
+            {
+              "id": "G6",
+              "minutes": 71,
+              "transit_minutes": 71,
+              "walk_straight_line_minutes": null,
+              "used_straight_line_walk": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "apartment_id": "the_harlowe",
+      "apartment_name": "The Harlowe",
+      "monthly_rent": 3300,
+      "area": "Milpitas",
+      "total_minutes_per_week": 267.103292,
+      "categories": {
+        "starbucks_neu_chain": {
+          "category_key": "starbucks_neu_chain",
+          "weekly_visits": 3,
+          "chain_endpoint_id": "NEU_SV",
+          "chain_endpoint_name": "Northeastern University Silicon Valley",
+          "one_trip_minutes": 48.579824,
+          "weekly_weighted_minutes": 145.739472,
+          "optimal_starbucks_id": "S5",
+          "optimal_starbucks_name": "Starbucks San Jose (Downtown — 181 E Santa Clara St)",
+          "optimal_leg1_mode": "transit",
+          "optimal_leg2_mode": "straight_line_walk",
+          "per_starbucks": [
+            {
+              "starbucks_id": "S1",
+              "starbucks_name": "Starbucks Sunnyvale (W El Camino Real)",
+              "minutes_apt_to_starbucks_transit": 48,
+              "minutes_apt_to_starbucks_walk_straight_line": null,
+              "minutes_apt_to_starbucks": 48,
+              "leg1_used_straight_line_walk": false,
+              "leg1_mode": "transit",
+              "minutes_starbucks_to_neu_transit": 36,
+              "minutes_starbucks_to_neu_walk_straight_line": null,
+              "minutes_starbucks_to_neu": 36,
+              "leg2_used_straight_line_walk": false,
+              "leg2_mode": "transit",
+              "minutes_one_chain_trip": 84
+            },
+            {
+              "starbucks_id": "S2",
+              "starbucks_name": "Starbucks Santa Clara (3605 El Camino Real)",
+              "minutes_apt_to_starbucks_transit": 55,
+              "minutes_apt_to_starbucks_walk_straight_line": null,
+              "minutes_apt_to_starbucks": 55,
+              "leg1_used_straight_line_walk": false,
+              "leg1_mode": "transit",
+              "minutes_starbucks_to_neu_transit": 41,
+              "minutes_starbucks_to_neu_walk_straight_line": null,
+              "minutes_starbucks_to_neu": 41,
+              "leg2_used_straight_line_walk": false,
+              "leg2_mode": "transit",
+              "minutes_one_chain_trip": 96
+            },
+            {
+              "starbucks_id": "S3",
+              "starbucks_name": "Starbucks Santa Clara (495 El Camino Real)",
+              "minutes_apt_to_starbucks_transit": 51,
+              "minutes_apt_to_starbucks_walk_straight_line": null,
+              "minutes_apt_to_starbucks": 51,
+              "leg1_used_straight_line_walk": false,
+              "leg1_mode": "transit",
+              "minutes_starbucks_to_neu_transit": 34,
+              "minutes_starbucks_to_neu_walk_straight_line": null,
+              "minutes_starbucks_to_neu": 34,
+              "leg2_used_straight_line_walk": false,
+              "leg2_mode": "transit",
+              "minutes_one_chain_trip": 85
+            },
+            {
+              "starbucks_id": "S4",
+              "starbucks_name": "Starbucks San Jose (Zanker Rd)",
+              "minutes_apt_to_starbucks_transit": 30,
+              "minutes_apt_to_starbucks_walk_straight_line": 42.226688,
+              "minutes_apt_to_starbucks": 30,
+              "leg1_used_straight_line_walk": false,
+              "leg1_mode": "transit",
+              "minutes_starbucks_to_neu_transit": 35,
+              "minutes_starbucks_to_neu_walk_straight_line": null,
+              "minutes_starbucks_to_neu": 35,
+              "leg2_used_straight_line_walk": false,
+              "leg2_mode": "transit",
+              "minutes_one_chain_trip": 65
+            },
+            {
+              "starbucks_id": "S5",
+              "starbucks_name": "Starbucks San Jose (Downtown — 181 E Santa Clara St)",
+              "minutes_apt_to_starbucks_transit": 45,
+              "minutes_apt_to_starbucks_walk_straight_line": null,
+              "minutes_apt_to_starbucks": 45,
+              "leg1_used_straight_line_walk": false,
+              "leg1_mode": "transit",
+              "minutes_starbucks_to_neu_transit": 28,
+              "minutes_starbucks_to_neu_walk_straight_line": 3.579824,
+              "minutes_starbucks_to_neu": 3.579824,
+              "leg2_used_straight_line_walk": true,
+              "leg2_mode": "straight_line_walk",
+              "minutes_one_chain_trip": 48.579824
+            },
+            {
+              "starbucks_id": "S6",
+              "starbucks_name": "Starbucks Milpitas (127 Ranch Dr)",
+              "minutes_apt_to_starbucks_transit": 20,
+              "minutes_apt_to_starbucks_walk_straight_line": 15.426765,
+              "minutes_apt_to_starbucks": 15.426765,
+              "leg1_used_straight_line_walk": true,
+              "leg1_mode": "straight_line_walk",
+              "minutes_starbucks_to_neu_transit": 49,
+              "minutes_starbucks_to_neu_walk_straight_line": null,
+              "minutes_starbucks_to_neu": 49,
+              "leg2_used_straight_line_walk": false,
+              "leg2_mode": "transit",
+              "minutes_one_chain_trip": 64.426765
+            }
+          ],
+          "path_apartment_to_optimal_starbucks": [
+            "the_harlowe",
+            "BUS_CAPITOL_MILPITAS",
+            "VTA_DIRIDON_BUS",
+            "BUS_SANTACLARA_5TH",
+            "S5"
+          ],
+          "path_apartment_to_optimal_starbucks_legs": [
+            {
+              "from": "the_harlowe",
+              "to": "BUS_CAPITOL_MILPITAS",
+              "minutes": 7,
+              "mode": "walk"
+            },
+            {
+              "from": "BUS_CAPITOL_MILPITAS",
+              "to": "VTA_DIRIDON_BUS",
+              "minutes": 22,
+              "mode": "bus"
+            },
+            {
+              "from": "VTA_DIRIDON_BUS",
+              "to": "BUS_SANTACLARA_5TH",
+              "minutes": 12,
+              "mode": "walk"
+            },
+            {
+              "from": "BUS_SANTACLARA_5TH",
+              "to": "S5",
+              "minutes": 4,
+              "mode": "walk"
+            }
+          ],
+          "path_optimal_starbucks_to_neu": [
+            "S5",
+            "NEU_SV"
+          ],
+          "path_optimal_starbucks_to_neu_legs": [
+            {
+              "from": "S5",
+              "to": "NEU_SV",
+              "minutes": 3.579824,
+              "mode": "straight_line_walk"
+            }
+          ],
+          "reachable": true
+        },
+        "costco": {
+          "category_key": "costco",
+          "weekly_visits": 1,
+          "best_candidate_id": "C3",
+          "best_candidate_name": "Costco San Jose (Automation Pkwy)",
+          "one_way_minutes": 29.001515,
+          "one_way_minutes_transit": 45,
+          "one_way_minutes_walk_straight_line": 29.001515,
+          "used_straight_line_walk": true,
+          "weekly_weighted_minutes": 29.001515,
+          "path_apartment_to_best": [
+            "the_harlowe",
+            "C3"
+          ],
+          "path_apartment_to_best_legs": [
+            {
+              "from": "the_harlowe",
+              "to": "C3",
+              "minutes": 29.001515,
+              "mode": "straight_line_walk"
+            }
+          ],
+          "reachable": true,
+          "candidates_minutes": [
+            {
+              "id": "C1",
+              "minutes": 46,
+              "transit_minutes": 46,
+              "walk_straight_line_minutes": null,
+              "used_straight_line_walk": false
+            },
+            {
+              "id": "C2",
+              "minutes": 46,
+              "transit_minutes": 46,
+              "walk_straight_line_minutes": null,
+              "used_straight_line_walk": false
+            },
+            {
+              "id": "C3",
+              "minutes": 29.001515,
+              "transit_minutes": 45,
+              "walk_straight_line_minutes": 29.001515,
+              "used_straight_line_walk": true
+            },
+            {
+              "id": "C4",
+              "minutes": 60,
+              "transit_minutes": 60,
+              "walk_straight_line_minutes": null,
+              "used_straight_line_walk": false
+            },
+            {
+              "id": "C5",
+              "minutes": 67,
+              "transit_minutes": 67,
+              "walk_straight_line_minutes": null,
+              "used_straight_line_walk": false
+            },
+            {
+              "id": "C6",
+              "minutes": 62,
+              "transit_minutes": 62,
+              "walk_straight_line_minutes": null,
+              "used_straight_line_walk": false
+            }
+          ]
+        },
+        "trader_joes": {
+          "category_key": "trader_joes",
+          "weekly_visits": 2,
+          "best_candidate_id": "T3",
+          "best_candidate_name": "Trader Joe's Milpitas (Great Mall Pkwy)",
+          "one_way_minutes": 10.181153,
+          "one_way_minutes_transit": 20,
+          "one_way_minutes_walk_straight_line": 10.181153,
+          "used_straight_line_walk": true,
+          "weekly_weighted_minutes": 20.362305,
+          "path_apartment_to_best": [
+            "the_harlowe",
+            "T3"
+          ],
+          "path_apartment_to_best_legs": [
+            {
+              "from": "the_harlowe",
+              "to": "T3",
+              "minutes": 10.181153,
+              "mode": "straight_line_walk"
+            }
+          ],
+          "reachable": true,
+          "candidates_minutes": [
+            {
+              "id": "T1",
+              "minutes": 49,
+              "transit_minutes": 49,
+              "walk_straight_line_minutes": null,
+              "used_straight_line_walk": false
+            },
+            {
+              "id": "T2",
+              "minutes": 40,
+              "transit_minutes": 40,
+              "walk_straight_line_minutes": null,
+              "used_straight_line_walk": false
+            },
+            {
+              "id": "T3",
+              "minutes": 10.181153,
+              "transit_minutes": 20,
+              "walk_straight_line_minutes": 10.181153,
+              "used_straight_line_walk": true
+            },
+            {
+              "id": "T4",
+              "minutes": 56,
+              "transit_minutes": 56,
+              "walk_straight_line_minutes": null,
+              "used_straight_line_walk": false
+            },
+            {
+              "id": "T5",
+              "minutes": 57,
+              "transit_minutes": 57,
+              "walk_straight_line_minutes": null,
+              "used_straight_line_walk": false
+            },
+            {
+              "id": "T6",
+              "minutes": 57,
+              "transit_minutes": 57,
+              "walk_straight_line_minutes": null,
+              "used_straight_line_walk": false
+            }
+          ]
+        },
+        "gym_24hf": {
+          "category_key": "gym_24hf",
+          "weekly_visits": 4,
+          "best_candidate_id": "G5",
+          "best_candidate_name": "24 Hour Fitness Milpitas (E Calaveras Blvd)",
+          "one_way_minutes": 18,
+          "one_way_minutes_transit": 18,
+          "one_way_minutes_walk_straight_line": 28.848035,
+          "used_straight_line_walk": false,
+          "weekly_weighted_minutes": 72,
+          "path_apartment_to_best": [
+            "the_harlowe",
+            "BUS_CAPITOL_MILPITAS",
+            "BUS_CALAVERAS_MILPITAS",
+            "G5"
+          ],
+          "path_apartment_to_best_legs": [
+            {
+              "from": "the_harlowe",
+              "to": "BUS_CAPITOL_MILPITAS",
+              "minutes": 7,
+              "mode": "walk"
+            },
+            {
+              "from": "BUS_CAPITOL_MILPITAS",
+              "to": "BUS_CALAVERAS_MILPITAS",
+              "minutes": 5,
+              "mode": "bus"
+            },
+            {
+              "from": "BUS_CALAVERAS_MILPITAS",
+              "to": "G5",
+              "minutes": 6,
+              "mode": "walk"
+            }
+          ],
+          "reachable": true,
+          "candidates_minutes": [
+            {
+              "id": "G1",
+              "minutes": 51,
+              "transit_minutes": 51,
+              "walk_straight_line_minutes": null,
+              "used_straight_line_walk": false
+            },
+            {
+              "id": "G2",
+              "minutes": 55,
+              "transit_minutes": 55,
+              "walk_straight_line_minutes": null,
+              "used_straight_line_walk": false
+            },
+            {
+              "id": "G3",
+              "minutes": 39.803033,
+              "transit_minutes": 40,
+              "walk_straight_line_minutes": 39.803033,
+              "used_straight_line_walk": true
+            },
+            {
+              "id": "G4",
+              "minutes": 42,
+              "transit_minutes": 42,
+              "walk_straight_line_minutes": null,
+              "used_straight_line_walk": false
+            },
+            {
+              "id": "G5",
+              "minutes": 18,
+              "transit_minutes": 18,
+              "walk_straight_line_minutes": 28.848035,
+              "used_straight_line_walk": false
+            },
+            {
+              "id": "G6",
+              "minutes": 39,
+              "transit_minutes": 39,
+              "walk_straight_line_minutes": null,
+              "used_straight_line_walk": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "apartment_id": "the_verdant",
+      "apartment_name": "The Verdant Apartments",
+      "monthly_rent": 3292,
+      "area": "North San Jose",
+      "total_minutes_per_week": 273.85267,
+      "categories": {
+        "starbucks_neu_chain": {
+          "category_key": "starbucks_neu_chain",
+          "weekly_visits": 3,
+          "chain_endpoint_id": "NEU_SV",
+          "chain_endpoint_name": "Northeastern University Silicon Valley",
+          "one_trip_minutes": 36.284223,
+          "weekly_weighted_minutes": 108.85267,
+          "optimal_starbucks_id": "S4",
+          "optimal_starbucks_name": "Starbucks San Jose (Zanker Rd)",
+          "optimal_leg1_mode": "straight_line_walk",
+          "optimal_leg2_mode": "transit",
+          "per_starbucks": [
+            {
+              "starbucks_id": "S1",
+              "starbucks_name": "Starbucks Sunnyvale (W El Camino Real)",
+              "minutes_apt_to_starbucks_transit": 50,
+              "minutes_apt_to_starbucks_walk_straight_line": null,
+              "minutes_apt_to_starbucks": 50,
+              "leg1_used_straight_line_walk": false,
+              "leg1_mode": "transit",
+              "minutes_starbucks_to_neu_transit": 36,
+              "minutes_starbucks_to_neu_walk_straight_line": null,
+              "minutes_starbucks_to_neu": 36,
+              "leg2_used_straight_line_walk": false,
+              "leg2_mode": "transit",
+              "minutes_one_chain_trip": 86
+            },
+            {
+              "starbucks_id": "S2",
+              "starbucks_name": "Starbucks Santa Clara (3605 El Camino Real)",
+              "minutes_apt_to_starbucks_transit": 57,
+              "minutes_apt_to_starbucks_walk_straight_line": null,
+              "minutes_apt_to_starbucks": 57,
+              "leg1_used_straight_line_walk": false,
+              "leg1_mode": "transit",
+              "minutes_starbucks_to_neu_transit": 41,
+              "minutes_starbucks_to_neu_walk_straight_line": null,
+              "minutes_starbucks_to_neu": 41,
+              "leg2_used_straight_line_walk": false,
+              "leg2_mode": "transit",
+              "minutes_one_chain_trip": 98
+            },
+            {
+              "starbucks_id": "S3",
+              "starbucks_name": "Starbucks Santa Clara (495 El Camino Real)",
+              "minutes_apt_to_starbucks_transit": 50,
+              "minutes_apt_to_starbucks_walk_straight_line": null,
+              "minutes_apt_to_starbucks": 50,
+              "leg1_used_straight_line_walk": false,
+              "leg1_mode": "transit",
+              "minutes_starbucks_to_neu_transit": 34,
+              "minutes_starbucks_to_neu_walk_straight_line": null,
+              "minutes_starbucks_to_neu": 34,
+              "leg2_used_straight_line_walk": false,
+              "leg2_mode": "transit",
+              "minutes_one_chain_trip": 84
+            },
+            {
+              "starbucks_id": "S4",
+              "starbucks_name": "Starbucks San Jose (Zanker Rd)",
+              "minutes_apt_to_starbucks_transit": 13,
+              "minutes_apt_to_starbucks_walk_straight_line": 1.284223,
+              "minutes_apt_to_starbucks": 1.284223,
+              "leg1_used_straight_line_walk": true,
+              "leg1_mode": "straight_line_walk",
+              "minutes_starbucks_to_neu_transit": 35,
+              "minutes_starbucks_to_neu_walk_straight_line": null,
+              "minutes_starbucks_to_neu": 35,
+              "leg2_used_straight_line_walk": false,
+              "leg2_mode": "transit",
+              "minutes_one_chain_trip": 36.284223
+            },
+            {
+              "starbucks_id": "S5",
+              "starbucks_name": "Starbucks San Jose (Downtown — 181 E Santa Clara St)",
+              "minutes_apt_to_starbucks_transit": 39,
+              "minutes_apt_to_starbucks_walk_straight_line": null,
+              "minutes_apt_to_starbucks": 39,
+              "leg1_used_straight_line_walk": false,
+              "leg1_mode": "transit",
+              "minutes_starbucks_to_neu_transit": 28,
+              "minutes_starbucks_to_neu_walk_straight_line": 3.579824,
+              "minutes_starbucks_to_neu": 3.579824,
+              "leg2_used_straight_line_walk": true,
+              "leg2_mode": "straight_line_walk",
+              "minutes_one_chain_trip": 42.579824
+            },
+            {
+              "starbucks_id": "S6",
+              "starbucks_name": "Starbucks Milpitas (127 Ranch Dr)",
+              "minutes_apt_to_starbucks_transit": 35,
+              "minutes_apt_to_starbucks_walk_straight_line": 40.840123,
+              "minutes_apt_to_starbucks": 35,
+              "leg1_used_straight_line_walk": false,
+              "leg1_mode": "transit",
+              "minutes_starbucks_to_neu_transit": 49,
+              "minutes_starbucks_to_neu_walk_straight_line": null,
+              "minutes_starbucks_to_neu": 49,
+              "leg2_used_straight_line_walk": false,
+              "leg2_mode": "transit",
+              "minutes_one_chain_trip": 84
+            }
+          ],
+          "path_apartment_to_optimal_starbucks": [
+            "the_verdant",
+            "S4"
+          ],
+          "path_apartment_to_optimal_starbucks_legs": [
+            {
+              "from": "the_verdant",
+              "to": "S4",
+              "minutes": 1.284223,
+              "mode": "straight_line_walk"
+            }
+          ],
+          "path_optimal_starbucks_to_neu": [
+            "S4",
+            "BUS_ZANKER_MONTAGUE",
+            "VTA_DIRIDON_BUS",
+            "CT_SJ_DIRIDON",
+            "NEU_SV"
+          ],
+          "path_optimal_starbucks_to_neu_legs": [
+            {
+              "from": "S4",
+              "to": "BUS_ZANKER_MONTAGUE",
+              "minutes": 3,
+              "mode": "walk"
+            },
+            {
+              "from": "BUS_ZANKER_MONTAGUE",
+              "to": "VTA_DIRIDON_BUS",
+              "minutes": 18,
+              "mode": "bus"
+            },
+            {
+              "from": "VTA_DIRIDON_BUS",
+              "to": "CT_SJ_DIRIDON",
+              "minutes": 2,
+              "mode": "walk"
+            },
+            {
+              "from": "CT_SJ_DIRIDON",
+              "to": "NEU_SV",
+              "minutes": 12,
+              "mode": "walk"
+            }
+          ],
+          "reachable": true
+        },
+        "costco": {
+          "category_key": "costco",
+          "weekly_visits": 1,
+          "best_candidate_id": "C3",
+          "best_candidate_name": "Costco San Jose (Automation Pkwy)",
+          "one_way_minutes": 23,
+          "one_way_minutes_transit": 23,
+          "one_way_minutes_walk_straight_line": 36.798947,
+          "used_straight_line_walk": false,
+          "weekly_weighted_minutes": 23,
+          "path_apartment_to_best": [
+            "the_verdant",
+            "BUS_CASAVERDE_ORCHARD",
+            "BUS_AUTOMATION_N1ST",
+            "C3"
+          ],
+          "path_apartment_to_best_legs": [
+            {
+              "from": "the_verdant",
+              "to": "BUS_CASAVERDE_ORCHARD",
+              "minutes": 5,
+              "mode": "walk"
+            },
+            {
+              "from": "BUS_CASAVERDE_ORCHARD",
+              "to": "BUS_AUTOMATION_N1ST",
+              "minutes": 10,
+              "mode": "bus"
+            },
+            {
+              "from": "BUS_AUTOMATION_N1ST",
+              "to": "C3",
+              "minutes": 8,
+              "mode": "walk"
+            }
+          ],
+          "reachable": true,
+          "candidates_minutes": [
+            {
+              "id": "C1",
+              "minutes": 45,
+              "transit_minutes": 45,
+              "walk_straight_line_minutes": null,
+              "used_straight_line_walk": false
+            },
+            {
+              "id": "C2",
+              "minutes": 45,
+              "transit_minutes": 45,
+              "walk_straight_line_minutes": null,
+              "used_straight_line_walk": false
+            },
+            {
+              "id": "C3",
+              "minutes": 23,
+              "transit_minutes": 23,
+              "walk_straight_line_minutes": 36.798947,
+              "used_straight_line_walk": false
+            },
+            {
+              "id": "C4",
+              "minutes": 60,
+              "transit_minutes": 60,
+              "walk_straight_line_minutes": null,
+              "used_straight_line_walk": false
+            },
+            {
+              "id": "C5",
+              "minutes": 49,
+              "transit_minutes": 49,
+              "walk_straight_line_minutes": null,
+              "used_straight_line_walk": false
+            },
+            {
+              "id": "C6",
+              "minutes": 61,
+              "transit_minutes": 61,
+              "walk_straight_line_minutes": null,
+              "used_straight_line_walk": false
+            }
+          ]
+        },
+        "trader_joes": {
+          "category_key": "trader_joes",
+          "weekly_visits": 2,
+          "best_candidate_id": "T2",
+          "best_candidate_name": "Trader Joe's San Jose (Coleman Ave)",
+          "one_way_minutes": 35,
+          "one_way_minutes_transit": 35,
+          "one_way_minutes_walk_straight_line": null,
+          "used_straight_line_walk": false,
+          "weekly_weighted_minutes": 70,
+          "path_apartment_to_best": [
+            "the_verdant",
+            "BUS_CASAVERDE_ORCHARD",
+            "BUS_AUTOMATION_N1ST",
+            "BUS_COLEMAN_TAYLOR",
+            "T2"
+          ],
+          "path_apartment_to_best_legs": [
+            {
+              "from": "the_verdant",
+              "to": "BUS_CASAVERDE_ORCHARD",
+              "minutes": 5,
+              "mode": "walk"
+            },
+            {
+              "from": "BUS_CASAVERDE_ORCHARD",
+              "to": "BUS_AUTOMATION_N1ST",
+              "minutes": 10,
+              "mode": "bus"
+            },
+            {
+              "from": "BUS_AUTOMATION_N1ST",
+              "to": "BUS_COLEMAN_TAYLOR",
+              "minutes": 15,
+              "mode": "bus"
+            },
+            {
+              "from": "BUS_COLEMAN_TAYLOR",
+              "to": "T2",
+              "minutes": 5,
+              "mode": "walk"
+            }
+          ],
+          "reachable": true,
+          "candidates_minutes": [
+            {
+              "id": "T1",
+              "minutes": 51,
+              "transit_minutes": 51,
+              "walk_straight_line_minutes": null,
+              "used_straight_line_walk": false
+            },
+            {
+              "id": "T2",
+              "minutes": 35,
+              "transit_minutes": 35,
+              "walk_straight_line_minutes": null,
+              "used_straight_line_walk": false
+            },
+            {
+              "id": "T3",
+              "minutes": 38,
+              "transit_minutes": 38,
+              "walk_straight_line_minutes": 41.951544,
+              "used_straight_line_walk": false
+            },
+            {
+              "id": "T4",
+              "minutes": 56,
+              "transit_minutes": 56,
+              "walk_straight_line_minutes": null,
+              "used_straight_line_walk": false
+            },
+            {
+              "id": "T5",
+              "minutes": 56,
+              "transit_minutes": 56,
+              "walk_straight_line_minutes": null,
+              "used_straight_line_walk": false
+            },
+            {
+              "id": "T6",
+              "minutes": 56,
+              "transit_minutes": 56,
+              "walk_straight_line_minutes": null,
+              "used_straight_line_walk": false
+            }
+          ]
+        },
+        "gym_24hf": {
+          "category_key": "gym_24hf",
+          "weekly_visits": 4,
+          "best_candidate_id": "G3",
+          "best_candidate_name": "24 Hour Fitness San Jose (Crane Ct Super-Sport)",
+          "one_way_minutes": 18,
+          "one_way_minutes_transit": 18,
+          "one_way_minutes_walk_straight_line": 28.58271,
+          "used_straight_line_walk": false,
+          "weekly_weighted_minutes": 72,
+          "path_apartment_to_best": [
+            "the_verdant",
+            "BUS_CASAVERDE_ORCHARD",
+            "BUS_N1ST_CRANECT",
+            "G3"
+          ],
+          "path_apartment_to_best_legs": [
+            {
+              "from": "the_verdant",
+              "to": "BUS_CASAVERDE_ORCHARD",
+              "minutes": 5,
+              "mode": "walk"
+            },
+            {
+              "from": "BUS_CASAVERDE_ORCHARD",
+              "to": "BUS_N1ST_CRANECT",
+              "minutes": 8,
+              "mode": "bus"
+            },
+            {
+              "from": "BUS_N1ST_CRANECT",
+              "to": "G3",
+              "minutes": 5,
+              "mode": "walk"
+            }
+          ],
+          "reachable": true,
+          "candidates_minutes": [
+            {
+              "id": "G1",
+              "minutes": 53,
+              "transit_minutes": 53,
+              "walk_straight_line_minutes": null,
+              "used_straight_line_walk": false
+            },
+            {
+              "id": "G2",
+              "minutes": 57,
+              "transit_minutes": 57,
+              "walk_straight_line_minutes": null,
+              "used_straight_line_walk": false
+            },
+            {
+              "id": "G3",
+              "minutes": 18,
+              "transit_minutes": 18,
+              "walk_straight_line_minutes": 28.58271,
+              "used_straight_line_walk": false
+            },
+            {
+              "id": "G4",
+              "minutes": 41,
+              "transit_minutes": 41,
+              "walk_straight_line_minutes": null,
+              "used_straight_line_walk": false
+            },
+            {
+              "id": "G5",
+              "minutes": 33,
+              "transit_minutes": 33,
+              "walk_straight_line_minutes": null,
+              "used_straight_line_walk": false
+            },
+            {
+              "id": "G6",
+              "minutes": 35,
+              "transit_minutes": 35,
+              "walk_straight_line_minutes": null,
+              "used_straight_line_walk": false
+            }
+          ]
+        }
+      }
+    }
+  ]
+}
