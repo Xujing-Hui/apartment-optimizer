@@ -1,0 +1,50 @@
+
+==============================================================================
+  APARTMENT COMMUTE OPTIMIZER — FINAL RANKING
+==============================================================================
+  Objective: 3×chain + 1×Costco + 2×TJ + 4×Gym  (min/week)
+  Walk fallback cap: 30 min
+
+  #1  Villas on the Boulevard  (Santa Clara)
+       Rent: $3,465   Walk to station: 4 min
+       Chain  (×3=135.6): apt→S2=4.6min + S2→NEU=40.6min = 45.2 min
+       Costco (×1=29.0): C1 — Costco Sunnyvale
+       TJ     (×2=39.2): T1 — Trader Joe's Sunnyvale (El Camino Real)
+       Gym    (×4=18.4): G2 — 24 Hour Fitness Santa Clara (El Camino Real Super-Sport)
+       >>> TOTAL SCORE: 222.2 min/week
+
+  #2  Murphy Station  (Sunnyvale)
+       Rent: $3,817   Walk to station: 8 min
+       Chain  (×3=126.3): apt→S1=6.1min + S1→NEU=36.0min = 42.1 min
+       Costco (×1=18.0): C1 — Costco Sunnyvale
+       TJ     (×2=13.4): T1 — Trader Joe's Sunnyvale (El Camino Real)
+       Gym    (×4=80.4): G2 — 24 Hour Fitness Santa Clara (El Camino Real Super-Sport)
+       >>> TOTAL SCORE: 238.1 min/week
+
+  #3  The Verdant Apartments  (North San Jose)
+       Rent: $3,292   Walk to station: 5 min
+       Chain  (×3=110.1): apt→S4=1.7min + S4→NEU=35.0min = 36.7 min
+       Costco (×1=23.0): C3 — Costco San Jose (Automation Pkwy)
+       TJ     (×2=67.4): T2 — Trader Joe's San Jose (Coleman Ave)
+       Gym    (×4=72.0): G3 — 24 Hour Fitness San Jose (Crane Ct Super-Sport)
+       >>> TOTAL SCORE: 272.5 min/week
+
+  #4  Cannery Park by Windsor  (Downtown San Jose)
+       Rent: $3,359   Walk to station: 5 min
+       Chain  (×3=141.0): apt→S5=19.0min + S5→NEU=28.0min = 47.0 min
+       Costco (×1=29.0): C5 — Costco San Jose (Senter Rd)
+       TJ     (×2=36.0): T2 — Trader Joe's San Jose (Coleman Ave)
+       Gym    (×4=88.0): G3 — 24 Hour Fitness San Jose (Crane Ct Super-Sport)
+       >>> TOTAL SCORE: 294.0 min/week
+
+  #5  The Harlowe  (Milpitas)
+       Rent: $3,300   Walk to station: 7 min
+       Chain  (×3=195.0): apt→S4=30.0min + S4→NEU=35.0min = 65.0 min
+       Costco (×1=45.0): C3 — Costco San Jose (Automation Pkwy)
+       TJ     (×2=26.4): T3 — Trader Joe's Milpitas (Great Mall Pkwy)
+       Gym    (×4=72.0): G5 — 24 Hour Fitness Milpitas (E Calaveras Blvd)
+       >>> TOTAL SCORE: 338.4 min/week
+
+==============================================================================
+  Winner: Villas on the Boulevard  (222.2 min/week)
+==============================================================================
