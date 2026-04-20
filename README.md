@@ -1,268 +1,322 @@
-# NEU Student Apartment Commute Optimizer
+# CS5800 — Apartment Commute Optimizer
+**Group 7 — Xujing Hui, Fanchao Yu, Jiaxin Liu — Spring 2026**
 
-**CS 5800 — Algorithms | Final Project | Spring 2026**
+GitHub: https://github.com/Xujing-Hui/apartment-optimizer
 
-Apartment optimization using Dijkstra's shortest path algorithm on the San Jose VTA Light Rail network.
+---
 
-## Problem
+## What This Project Does
 
-> Among candidate apartments in San Jose, which feasible apartment minimizes total weekly commute time to a fixed set of destinations, while satisfying rent and transit-access constraints?
+Given 5 candidate apartments in the San Jose metropolitan area, this program finds the one that minimizes a student's **total weekly transit commute time** across all habitual destinations: NEU campus (via a Starbucks chain stop), Costco, Trader Joe's, and 24 Hour Fitness.
 
-## How It Works
+The transit network is modeled as a **weighted undirected graph** (66 nodes, ~94 edges) covering Caltrain, VTA bus routes, and Milpitas BART. The primary solver is **Dijkstra's algorithm** with a min-heap. Bellman-Ford is included for cross-validation.
 
-1. **Build Graph** — Apartments, destinations, and VTA Light Rail stations are modeled as nodes in a weighted graph. Walking edges connect apartments/destinations to nearby stations; transit edges connect adjacent stations.
-2. **Run Dijkstra** — For each feasible apartment, compute shortest travel time to every destination using Dijkstra's algorithm with a min-heap.
-3. **Compute Score** — Total weekly commute = Σ (shortest time × weekly visits) across all destinations.
-4. **Rank** — Filter by constraints (rent ≤ $1,700, walk to station ≤ 15 min), sort by score, output ranking.
+---
 
-## Results
+## Requirements
 
-| Rank | Apartment | Rent | Weekly Commute | Best Path to NEU |
-|------|-----------|------|----------------|------------------|
-| #1 | A3 (Tamien) | $1,500 | 126.0 min | A3 → S5 → S4 → S3 → S2 → D1 |
-| #2 | A4 (Capitol) | $1,400 | 139.0 min | A4 → S7 → S6 → S5 → S4 → S3 → S2 → D1 |
-| #3 | A5 (Branham) | $1,350 | 149.2 min | A5 → S8 → S7 → S6 → S5 → S4 → S3 → S2 → D1 |
+- **Python 3.10 or later** (no other version tested)
+- **No external libraries** — standard library only (`heapq`, `math`, `json`, `os`, `sys`)
+- Nothing to install or pip-install
 
-A1 (Downtown, $2,200) and A2 (Japantown, $1,800) were filtered out by the rent constraint.
+---
 
-## Data
+## Quick Start — Run in 3 Steps
 
-- **5 candidate apartments** along the VTA Blue Line (Downtown SJ to Branham)
-- **3 fixed destinations**: NEU Campus (5x/week), Walmart Neighborhood Market (2x/week), Planet Fitness (3x/week)
-- **8 VTA Light Rail stations** (Blue Line, St. James to Branham)
+> All commands assume you are in the **root folder** of the unzipped project
+> (the folder that contains `src/`, `data/`, `pseudocode/`, `results/`, `README.md`).
 
-## Project Structure
+### Step 1 — Unzip the submitted file
 
 ```
-apartment-optimizer/
-├── README.md
+ReportHuiLiuYu.zip
+```
+
+You should see this structure after unzipping:
+
+```
+ReportHuiLiuYu/
 ├── data/
-│   ├── apartments.json         # 5 candidate apartments with coordinates & rent
-│   ├── destinations.json       # 3 destinations with coordinates & visit frequency
-│   └── stations.json           # 8 VTA Blue Line stations
+│   ├── apartments_json.json
+│   ├── destinations_json.json
+│   └── stations_json_v2.json
 ├── src/
-│   ├── utils.py                # Haversine distance & walking time calculation
-│   ├── graph.py                # Graph construction from JSON data
-│   ├── dijkstra.py             # Dijkstra (min-heap) & Bellman-Ford
-│   └── optimizer.py            # Main pipeline: filter → score → rank → output
-├── tests/
-│   ├── test_basic.py           # Dijkstra correctness & distance tests (5 tests)
-│   ├── test_edge_cases.py      # Edge cases: budget, disconnected nodes, walk vs transit (5 tests)
-│   └── test_scale.py           # Dijkstra vs Bellman-Ford performance comparison (5 sizes)
+│   ├── utils.py
+│   ├── graph.py
+│   ├── dijkstra.py
+│   ├── optimizer.py
+│   ├── test_graph.py
+│   ├── test_dijkstra.py
+│   └── test_optimizer.py
+├── pseudocode/
+│   ├── pseudocode_1_build_graph.txt
+│   ├── pseudocode_2_dijkstra.txt
+│   └── pseudocode_3_optimizer.txt
 ├── results/
-│   └── ranking_output.txt      # Program output with ranked apartments & paths
-├── docs/
-│   ├── report1.pdf
-│   └── final_report.pdf
-└── presentation/
-    └── final_presentation.pptx
+│   ├── ranking_output.txt
+│   └── test_output.txt
+└── README.md
 ```
 
-## How to Run
+### Step 2 — Run the optimizer (main result)
 
 ```bash
 cd src
 python optimizer.py
 ```
 
-```bash
-cd tests
-python test_basic.py
-python test_edge_cases.py
-python test_scale.py
+**Expected output:**
+
+```
+==============================================================================
+  APARTMENT COMMUTE OPTIMIZER — FINAL RANKING
+==============================================================================
+  Objective: 3×chain + 1×Costco + 2×TJ + 4×Gym  (min/week)
+  Walk fallback cap: 30 min
+
+  #1  Villas on the Boulevard  (Santa Clara)
+       Rent: $3,465   Walk to station: 4 min
+       Chain  (×3=135.6): apt→S2=4.6min + S2→NEU=40.6min = 45.2 min
+       Costco (×1=29.0): C1 — Costco Sunnyvale
+       TJ     (×2=39.2): T1 — Trader Joe's Sunnyvale (El Camino Real)
+       Gym    (×4=18.4): G2 — 24 Hour Fitness Santa Clara (ECR Super-Sport)
+       >>> TOTAL SCORE: 222.2 min/week
+
+  #2  Murphy Station  (Sunnyvale)
+       ...
+       >>> TOTAL SCORE: 238.1 min/week
+
+  #3  The Verdant Apartments  (North San Jose)
+       ...
+       >>> TOTAL SCORE: 272.5 min/week
+
+  #4  Cannery Park by Windsor  (Downtown San Jose)
+       ...
+       >>> TOTAL SCORE: 294.0 min/week
+
+  #5  The Harlowe  (Milpitas)
+       ...
+       >>> TOTAL SCORE: 338.4 min/week
+
+==============================================================================
+  Winner: Villas on the Boulevard  (222.2 min/week)
+==============================================================================
 ```
 
-Requires Python 3.8+. No external libraries needed.
+The full output (with all paths) is also saved in `results/ranking_output.txt`.
+
+### Step 3 — Run all unit tests (optional but recommended)
+
+```bash
+cd src
+python test_graph.py
+python test_dijkstra.py
+python test_optimizer.py
+```
+
+**Expected output for each file:**
+
+```
+# test_graph.py
+Running 6 graph tests...
+
+PASS  test_node_count  (66 nodes)
+PASS  test_edge_bidirectionality
+PASS  test_walk_fallback_edges_present  (5 pairs)
+PASS  test_walk_fallback_cap_respected  (cap=30.0 min)
+PASS  test_apartments_connected_to_stations
+PASS  test_destinations_connected_to_stations
+
+6/6 tests passed.
+```
+
+```
+# test_dijkstra.py
+Running 8 Dijkstra tests...
+
+PASS  test_source_distance_is_zero
+PASS  test_known_distances_simple_graph
+PASS  test_unreachable_node_is_infinity
+PASS  test_dijkstra_bellman_ford_agree  (5 apartments cross-validated)
+PASS  test_path_reconstruction_correct  (path=['A', 'B', 'C', 'D'], cost=6)
+PASS  test_path_source_to_self
+PASS  test_unreachable_path_is_none
+PASS  test_real_graph_neu_distances
+
+8/8 tests passed.
+```
+
+```
+# test_optimizer.py
+Running 8 optimizer tests...
+
+PASS  test_all_apartments_pass_constraints  (5/5 pass)
+PASS  test_result_count
+PASS  test_winner_is_villas  (score=222.2 min/week)
+PASS  test_last_place_is_harlowe  (score=338.4 min/week)
+PASS  test_scores_strictly_ascending
+PASS  test_expected_scores  (tolerance=0.5 min)
+PASS  test_chain_trip_starbucks_winners
+PASS  test_villas_gym_uses_walk_fallback  (gym=4.6 min)
+
+8/8 tests passed.
+```
+
+**Total: 22/22 tests pass.**
+
+---
+
+## Troubleshooting
+
+**"ModuleNotFoundError" or "No module named X"**
+→ Make sure you are running from inside the `src/` directory:
+```bash
+cd src          # ← required
+python optimizer.py
+```
+
+**"FileNotFoundError: apartments_json.json"**
+→ The data files must be in `../data/` relative to `src/`. Check that `data/` is at the same level as `src/` after unzipping.
+
+**"python: command not found"**
+→ Try `python3` instead of `python`:
+```bash
+python3 optimizer.py
+```
+
+---
+
+## How the Algorithm Works
+
+### 1. Build Graph
+
+Three JSON files are loaded and merged into a single adjacency-list graph:
+
+```
+apartments_json.json   →  5 apartment nodes
+                           each connected by a walk edge to its nearest station
+
+stations_json_v2.json  →  36 transit nodes (Caltrain, VTA bus, BART)
+                           connected by schedule-time edges
+
+destinations_json.json →  25 destination nodes
+                           each connected by a walk edge to its nearest station
+```
+
+An additional **walk-fallback edge** is added between any (apartment, destination) pair where the straight-line walking time ≤ 30 min. This lets Dijkstra choose walking over transit when it is genuinely faster (e.g., Villas on the Boulevard → Gym G2: 4.6 min walk vs. 13 min by bus).
+
+### 2. Run Dijkstra
+
+One Dijkstra run per apartment (5 total) plus one pre-computed run from NEU. Each run returns shortest travel times to all 66 nodes simultaneously.
+
+```
+Time complexity:  O(A × (V+E) log V)   A=5 apartments, V=66 nodes, E≈94 edges
+Space complexity: O(V + E)
+```
+
+Dijkstra is preferred over Bellman-Ford because all edge weights are non-negative (travel times cannot be negative). Bellman-Ford is implemented in `dijkstra.py` for cross-validation only.
+
+### 3. Score Each Apartment
+
+```
+Score(apt) = 3 × chain_cost
+           + 1 × min{ d(apt, Costco_k) }
+           + 2 × min{ d(apt, TJ_k) }
+           + 4 × min{ d(apt, Gym_k) }
+
+chain_cost = min over k { d(apt, Starbucks_k) + d(Starbucks_k, NEU) }
+```
+
+The **chain trip** (Starbucks → NEU) models the real behavior: every school visit starts with a Starbucks stop, so both legs are one journey. The algorithm tries all 6 Starbucks candidates and picks the one that minimizes the combined two-leg time — not necessarily the nearest one.
+
+Visit weights: Chain=3, Costco=1, Trader Joe's=2, Gym=4 (matches weekly_visits in data).
+
+### 4. Rank and Output
+
+Apartments are sorted by score ascending. Lower score = less total weekly transit time.
+
+---
+
+## Final Results
+
+| Rank | Apartment | Area | Rent | Total Score |
+|------|-----------|------|------|-------------|
+| #1 | Villas on the Boulevard | Santa Clara | $3,465 | **222.2 min/week** |
+| #2 | Murphy Station | Sunnyvale | $3,817 | 238.1 min/week |
+| #3 | The Verdant Apartments | North San Jose | $3,292 | 272.5 min/week |
+| #4 | Cannery Park by Windsor | Downtown SJ | $3,359 | 294.0 min/week |
+| #5 | The Harlowe | Milpitas | $3,300 | 338.4 min/week |
+
+Walk-fallback edges used (≤30 min): Villas↔S2 (4.6 min), Villas↔G2 (4.6 min),
+Murphy↔S1 (6.1 min), Murphy↔T1 (6.7 min), Verdant↔S4 (1.7 min).
+
+---
+
+## Source Files
+
+| File | Purpose |
+|------|---------|
+| `src/utils.py` | Haversine great-circle distance; walking time estimate |
+| `src/graph.py` | Loads 3 JSON files; builds weighted adjacency list; adds walk-fallback edges |
+| `src/dijkstra.py` | Dijkstra with min-heap; Bellman-Ford (verification); path reconstruction |
+| `src/optimizer.py` | Main pipeline: constraint filter → chain trip scoring → rank → print |
+| `src/test_graph.py` | 6 unit tests for graph construction |
+| `src/test_dijkstra.py` | 8 unit tests for Dijkstra correctness |
+| `src/test_optimizer.py` | 8 end-to-end optimizer tests |
+
+---
 
 ## Algorithm Complexity
 
 | Component | Time | Space |
 |-----------|------|-------|
-| Dijkstra (single source, min-heap) | O((V+E) log V) | O(V) |
-| Full pipeline (A apartments) | O(A × (V+E) log V) | O(V+E) + O(A×D) |
-| Bellman-Ford (comparison) | O(V × E) | O(V) |
+| Build graph | O(V + E + A×D) | O(V + E) |
+| NEU precompute (1 run) | O((V+E) log V) | O(V) |
+| Dijkstra per apartment | O((V+E) log V) | O(V) |
+| Full pipeline (5 apartments) | O(A × (V+E) log V) | O(V+E) |
+| Bellman-Ford (verification) | O(V × E) | O(V) |
 
-Performance test result (from `test_scale.py`):
-
-| Stations | Nodes | Dijkstra (ms) | Bellman-Ford (ms) | Speedup |
-|----------|-------|---------------|-------------------|---------|
-| 10 | 18 | 0.099 | 0.247 | 2.5x |
-| 50 | 58 | 0.231 | 1.538 | 6.7x |
-| 200 | 208 | 0.725 | 17.486 | 24.1x |
-
-
-## Team & Contributions
-
-**Jiaxin Liu** — Data collection: apartments, destinations, and VTA station coordinates & rent data (`data/` files)
-
-**Xujing Hui** — Algorithm design & core implementation: `optimizer.py`, `graph.py`, `utils.py`; GitHub repo setup
-
-**Fanchao Yu** — Algorithm implementation & testing: `dijkstra.py` (Dijkstra + Bellman-Ford); all test cases (`tests/`)
-
-**Shared** — Report writing, presentation, GitHub management
-
-
-## Repository
-
-https://github.com/Xujing-Hui/apartment-optimizer
+For V=66, E≈94, A=5: all 6 Dijkstra runs complete in **under 10 milliseconds** total.
 
 ---
 
-## Extension: South Bay transit model (Dijkstra v2)
+## Libraries Used
 
-### Why we rebuilt this from scratch
+| Library | Module | Why |
+|---------|--------|-----|
+| `heapq.heappush` / `heapq.heappop` | Python stdlib | Binary min-heap for Dijkstra's priority queue; enables O((V+E) log V) vs O(V²) with a plain array |
+| `math.radians`, `math.sin`, `math.cos`, `math.asin`, `math.sqrt` | Python stdlib | Haversine formula — great-circle distance between two lat/lng coordinates |
+| `json.load` | Python stdlib | Parse the three JSON input data files at startup |
 
-After submitting the initial prototype, we identified three fundamental problems that made the original results largely meaningless as a real decision tool:
-
-1. **Imprecise apartment data.** The first version used rough, manually-estimated coordinates — sometimes just a city centroid — and rent numbers that did not match real listings. Because Haversine walking times and station connectivity depend entirely on exact coordinates, even small position errors caused the graph to connect apartments to the wrong stations and produce unreliable scores.
-
-2. **All five apartments were in the same corridor.** Every candidate in v1 sat along a single VTA Blue Line stretch in downtown San Jose. When the apartments are geographically clustered like this, Dijkstra produces nearly identical scores for all of them. There is no meaningful differentiation, and the algorithm reduces to a tie-breaker rather than an actual decision aid. We needed candidates spread across genuinely different transit corridors.
-
-3. **The transit network was too thin to reflect reality.** The original graph contained only 8 light-rail stations on the Blue Line. Real South Bay commuting involves transfers between Caltrain, multiple VTA bus routes, and BART. A stripped-down rail-only graph systematically underestimates travel time to any destination that requires a bus transfer, which distorts every score.
-
-We addressed all three issues by rebuilding the data layer and the graph model completely. The legacy `src/` and `data/` files are preserved unchanged; everything new lives under `Dijkstra/`, `Data/*_v2.json`, `results_v2/`, and `tests_v2/`.
+No pip-installable packages are required.
 
 ---
 
-### New data layer (`Data/*_v2.json`)
+## Data Sources
 
-We collected all three v2 files from Zillow, Apartments.com, Google Maps, and official transit schedules (April 2026). Every coordinate was verified against a street address rather than estimated.
-
-#### `apartments_json_v2.json` — 5 apartments across distinct South Bay sub-areas
-
-Each apartment entry contains:
-
-| Field | Type | Purpose |
-|---|---|---|
-| `id` | string | Unique node ID used throughout the graph |
-| `name`, `address` | string | Human-readable labels for reports |
-| `lat`, `lng` | float (WGS84) | Exact street-level coordinates for Haversine walk estimates |
-| `monthly_rent` | int (USD) | Verified from current listings; displayed in output |
-| `area` | string | Sub-area label (Sunnyvale / Santa Clara / Downtown SJ / North SJ / Milpitas) |
-| `nearest_station_id` | string | The one transit node this apartment connects to in the graph |
-| `walk_min_to_station` | float | Timed walking minutes; becomes the apartment–station edge weight |
-
-We deliberately spread the five apartments across **different transit corridors**: Sunnyvale (Caltrain-adjacent), Santa Clara (VTA 22/522 corridor), Downtown San Jose (bus hub proximity), North San Jose (VTA 72 / Rapid 500), and Milpitas (VTA 20 / BART). This ensures the graph has to do real work — no two apartments are close enough for Dijkstra to produce trivially similar scores.
-
-Each apartment connects to the graph through exactly **one walk edge** to its `nearest_station_id`. We chose not to add multiple access edges per apartment because the JSON already captures the primary transit access point for each building, and adding more would require subjective cutoff choices we could not verify rigorously.
-
-#### `stations_json_v2.json` — 36 transit nodes across 4 types
-
-| Node type | Count | Why we included it |
-|---|---|---|
-| `caltrain` | 7 | Backbone for Sunnyvale–San Jose express corridors |
-| `bus_stop` | 19 | Local VTA stops serving intermediate destinations |
-| `bus_hub` | 9 | Transfer points (Diridon, Sunnyvale TC, Santa Clara TC, Milpitas BART…) |
-| `bart` | 1 | Milpitas BART — the only intermodal option for The Harlowe apartment |
-
-Each station entry contains:
-
-| Field | Type | Purpose |
-|---|---|---|
-| `id` | string | Node ID, referenced by `nearest_station_id` in apartments and destinations |
-| `name`, `type`, `address` | string | Labels and routing metadata |
-| `lat`, `lng` | float | For sanity-checking; not used as edge weights |
-| `neighbors` | list | Direct connections, each `{ id, travel_min, mode }` |
-
-The `neighbors.mode` field (`caltrain`, `bus`, `bart`, `walk`) is the key design addition over v1. We store mode as the **third element** of every adjacency triple `(neighbor_id, weight, mode)`. This means Dijkstra can still relax edges using only the second element (weight), but `report.py` can later annotate every path leg with how it is actually traveled — not just a raw minute count. Undirected pairs are deduplicated at build time so each edge appears once in the canonical pair set, then both directions are inserted into the adjacency list with the same weight and mode.
-
-#### `destinations_json_v2.json` — 25 destinations across 5 categories
-
-| Category | Candidates | `weekly_visits` | Scoring rule |
-|---|---|---|---|
-| `starbucks_neu_chain` | S1–S6 | 3 | Chain trip: `min_S [dist(apt,S) + dist(S,NEU)]` |
-| `costco` | C1–C6 | 1 | `min` over 6 candidates |
-| `trader_joes` | T1–T6 | 2 | `min` over 6 candidates |
-| `gym_24hf` | G1–G6 | 4 | `min` over 6 candidates |
-| `school_chain_endpoint` | NEU_SV (fixed) | — | Chain endpoint only; never scored standalone |
-
-Each destination entry mirrors the apartment schema (`id`, `lat`, `lng`, `nearest_station_id`, `walk_min_from_station`) so graph construction is symmetric: both apartments and destinations attach to the graph through a single walk edge to their nearest station, and `build_graph` handles both with the same code path.
-
-The `categories` block at the bottom of the file is the **single source of truth** for candidate ID lists and visit counts. `scoring.py` reads it directly, so changing a visit frequency or swapping in a new candidate requires editing only the JSON, not the Python.
-
-The Starbucks category is modeled as a **chain endpoint** rather than a standalone destination. Every trip to NEU starts with a Starbucks stop: `Apartment → S* → NEU`. We score it as `3 × min_S [dist(apt,S) + dist(S,NEU)]` rather than as two independent `3×` terms. This correctly captures the reality that you do not choose the closest Starbucks in isolation — you choose whichever one makes the combined two-leg trip shortest.
+| File | Source | Date |
+|------|--------|------|
+| `apartments_json.json` | Zillow, Apartments.com | March 2026 |
+| `destinations_json.json` | Google Maps, Yelp, official store locators | March 2026 |
+| `stations_json_v2.json` | Caltrain schedule Jan 2026, VTA route map 2025, Google Maps, Moovit | March 2026 |
 
 ---
 
-### Pipeline architecture (`Dijkstra/`)
+## Visualization (by Jiaxin Liu)
+
+Interactive Kepler.gl map — 10 point layers + 5 per-apartment path layers:
 
 ```
-Data/*_v2.json
-      │
-      ▼
-graph_builder.py   walk_estimate.py
-      │                   │
-      └────────┬───────────┘
-               ▼
-        shortest_path.py   (Dijkstra, lookup_edge, path_leg_breakdown)
-               │
-               ▼
-          scoring.py        (NEU Dijkstra + per-apt Dijkstra, chain rule, min per category)
-               │
-               ▼
-          report.py         (scores.json + ranking_report.txt with per-leg modes)
+https://kepler.gl/demo/map?mapUrl=https://dl.dropboxusercontent.com/scl/fi/
+6pxc1x2l7tevax9aa426o/keplergl_18ojc6l.json?rlkey=yqgusvky902iklxy9ib2pp44q&dl=0
 ```
-
-- **`graph_builder.build_graph`** — Produces the adjacency dict as triples. Station–station edges carry the JSON `mode`; apartment and destination walk edges use `"walk"`.
-- **`shortest_path.dijkstra`** — Standard min-heap implementation; ignores the third tuple element during relaxation (only weight matters). `lookup_edge(graph, u, v)` retrieves `(weight, mode)` for any edge; `path_leg_breakdown(graph, path)` turns a list of node IDs into a list of `{from, to, minutes, mode}` dicts.
-- **`walk_estimate`** — Haversine straight-line at 80 m/min, capped at **45 minutes** (`MAX_STRAIGHT_LINE_WALK_MINUTES`). Above the cap the function returns `inf`, preventing a missing transit edge from being masked by an implausible multi-hour walk and producing a fake "reachable" result.
-- **`scoring.compute_apartment_scores`** — Runs one Dijkstra from `NEU_SV` (result reused for all apartments via the undirected property: `dist(NEU,S) = dist(S,NEU)`), then one Dijkstra per apartment. For each leg it takes `min(transit_time, straight_line_walk)` and records which mode was used. Chain scoring iterates over S1–S6 and picks the `S*` that minimizes the combined two-leg time. Path legs are stored as `path_*_legs` lists so the report can display each hop with its mode.
-- **`report`** — Writes `results_v2/scores.json` (machine-readable, `inf` serialized as `null`) and `results_v2/ranking_report.txt` (long-form narrative). The text report prints each path segment as `A → B: 8.0 min (walk)`, `B → C: 13.0 min (caltrain)`, and so on.
-
-### How we run it
-
-From the **repository root** (so `Data/` resolves correctly):
-
-```bash
-python -m Dijkstra
-```
-
-Optional flags: `--apartments`, `--stations`, `--destinations`, `--out-dir`.
-
-`__main__.py` is the glue that ties everything together. It imports `pathlib.Path` for cross-platform path handling, then calls the internal package functions in sequence: `load_json_records` to read the three JSON files, `run_full_pipeline` to build the graph and produce ranked results, `graph_edge_stats` to pull node/edge counts for the report header, and finally `build_scores_document` + `write_scores_json` for the machine-readable output and `format_ranking_report` + `write_ranking_report` for the human-readable text file. None of these are external dependencies — they all live in the `Dijkstra/` package we wrote.
-
-### Tests we added
-
-```bash
-python -m unittest discover -s tests_v2
-```
-
-We cover: Dijkstra correctness on triple-weighted graphs; `lookup_edge` and `path_leg_breakdown`; graph construction from v2-shaped JSON including mode assertions (`x[2] == "bus"` for station edges, `x[2] == "walk"` for apartment/destination edges); the Starbucks–NEU chain rule including the case where the closest Starbucks to the apartment is **not** the chain-optimal choice; Haversine cap behavior (long distances return `inf` by default, finite when cap is disabled); straight-line walk shortcut (same-coordinate pair gives 0 min and overrides expensive transit); and a full integration run on `Data/*_v2.json` verifying all 5 apartments return finite scores with all required JSON keys present.
-
-### Complexity note
-
-The asymptotic cost is **one** Dijkstra from the chain endpoint plus **one** per apartment: **O((V+E) log V × (1 + A))**, where V = 66 nodes (5 apartments + 36 stations + 25 destinations), E = total undirected edges, and A = 5 apartments. This is the same min-heap implementation as in `Dijkstra/shortest_path.py`, unchanged from v1.
 
 ---
 
-## Libraries we used
+## Team
 
-One thing we were actually pretty happy about: this entire project — both the original v1 pipeline and the v2 South Bay model — runs on **pure Python standard library**. We never needed to install anything. Here is what we actually reached for and why.
-
-### `heapq` — [docs.python.org/3/library/heapq.html](https://docs.python.org/3/library/heapq.html)
-
-This is the core of our Dijkstra implementation. Python's `heapq` gives us a min-heap (priority queue) through simple list operations — `heappush` to insert and `heappop` to extract the minimum. Every time we relax an edge and find a shorter path, we push `(new_distance, node)` onto the heap. This keeps the next node to process always at the front of the queue, which is exactly what makes Dijkstra run in O((V+E) log V) rather than O(V²). We use it in both `src/Dijkstra.py` (v1) and `Dijkstra/shortest_path.py` (v2).
-
-### `json` — [docs.python.org/3/library/json.html](https://docs.python.org/3/library/json.html)
-
-All of our data lives in JSON files, so `json` is everywhere. We use `json.load()` in `graph_builder.py` to read the three v2 data files at startup, and `json.dump()` in `report.py` to write `results_v2/scores.json`. One small thing we had to handle: Python's `float('inf')` is not valid JSON, so we wrote a small `_json_safe()` helper that converts any `inf` to `null` before serializing — otherwise the output file would crash any downstream tool that tried to parse it.
-
-### `math` — [docs.python.org/3/library/math.html](https://docs.python.org/3/library/math.html)
-
-We use `math.radians`, `math.sin`, `math.cos`, and `math.atan2` to implement the Haversine formula in `walk_estimate.py`. Given two latitude/longitude pairs, Haversine gives us the great-circle distance in kilometers, which we then divide by our walking speed (80 m/min) to get an estimated straight-line walk time. It is not perfectly accurate for city blocks, but it is a reasonable lower-bound estimate and it does not require any external geocoding service.
-
-### `pathlib` — [docs.python.org/3/library/pathlib.html](https://docs.python.org/3/library/pathlib.html)
-
-We use `pathlib.Path` anywhere we need to work with file paths — loading data files, writing output directories, resolving the repo root from `__file__`. It is a lot cleaner than string concatenation with `os.path.join`, and it handles Windows vs. Unix path separators automatically, which mattered since we were running and testing on different machines.
-
-### `argparse` — [docs.python.org/3/library/argparse.html](https://docs.python.org/3/library/argparse.html)
-
-`__main__.py` uses `argparse` to expose optional CLI flags (`--apartments`, `--stations`, `--destinations`, `--out-dir`) so we can override the default `Data/` paths without editing the source. The defaults point to the v2 JSON files so `python -m Dijkstra` just works from the repo root, but having flags made testing with modified data files much easier.
-
-### `typing` — [docs.python.org/3/library/typing.html](https://docs.python.org/3/library/typing.html)
-
-We used `Dict`, `List`, `Tuple`, `Optional`, `Union`, and `Any` from `typing` throughout the v2 codebase to annotate function signatures. This was partly for clarity — it is a lot easier to understand `Dict[str, List[Tuple[str, float, str]]]` than just `dict` when you are looking at the graph adjacency type — and partly because it helped us catch the places where we had accidentally kept the old two-element tuple format when the rest of the code had already moved to triples.
-
-### `collections.defaultdict` — [docs.python.org/3/library/collections.html](https://docs.python.org/3/library/collections.html)
-
-Only used in the legacy `src/graph.py` (v1). We replaced it with a plain `dict` and an explicit `ensure_node` helper in v2 because `defaultdict` can silently create keys on access, which made it harder to catch missing station IDs early. The explicit check also lets us raise a clear `ValueError` when a `nearest_station_id` does not exist in the stations list.
+| Member | Contributions |
+|--------|--------------|
+| **Xujing Hui** (#002339163) | Dijkstra + Bellman-Ford implementation, algorithm design, pseudocode, complexity analysis, testing |
+| **Jiaxin Liu** (#003169274) | Data collection (all 3 JSON files), graph builder, walk-fallback edges, chain-trip model, Kepler.gl visualization |
+| **Fanchao Yu** (#001601606) | Main optimizer pipeline, scoring, report writing, presentation slides |
