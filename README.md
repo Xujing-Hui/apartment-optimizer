@@ -317,6 +317,6 @@ https://kepler.gl/demo/map?mapUrl=https://dl.dropboxusercontent.com/scl/fi/
 
 | Member | Contributions |
 |--------|--------------|
-| **Xujing Hui** (#002339163) | Dijkstra + Bellman-Ford implementation, algorithm design, pseudocode, complexity analysis, testing |
-| **Jiaxin Liu** (#003169274) | Data collection (all 3 JSON files), graph builder, walk-fallback edges, chain-trip model, Kepler.gl visualization |
-| **Fanchao Yu** (#001601606) | Main optimizer pipeline, scoring, report writing, presentation slides |
+| **Xujing Hui** (#002339163) | Dijkstra + Bellman-Ford implementation, algorithm design, complexity analysis, testing, report writing |
+| **Jiaxin Liu** (#003169274) | Data collection (all 3 JSON files), graph builder, walk-fallback edges, chain-trip model, Kepler.gl visualization, report writing |
+| **Fanchao Yu** (#001601606) | Main optimizer pipeline, scoring, report writing, presentation slides, pseudocode, algorithm design |
