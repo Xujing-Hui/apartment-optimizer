@@ -1,16 +1,14 @@
-=== test_graph.py ===
-Running 6 graph tests
+Running 6 graph tests...
 
 PASS  test_node_count  (66 nodes)
 PASS  test_edge_bidirectionality
-PASS  test_walk_fallback_edges_present  (5 pairs)
+PASS  test_walk_fallback_edges_present  (6 pairs)
 PASS  test_walk_fallback_cap_respected  (cap=30.0 min)
 PASS  test_apartments_connected_to_stations
 PASS  test_destinations_connected_to_stations
 
 6/6 tests passed.
 
-=== test_dijkstra.py ===
 Running 8 Dijkstra tests...
 
 PASS  test_source_distance_is_zero
@@ -24,14 +22,13 @@ PASS  test_real_graph_neu_distances
 
 8/8 tests passed.
 
-=== test_optimizer.py ===
 Running 8 optimizer tests...
 
 PASS  test_all_apartments_pass_constraints  (5/5 pass)
 PASS  test_result_count
-PASS  test_winner_is_villas  (score=222.2 min/week)
-PASS  test_last_place_is_harlowe  (score=338.4 min/week)
-PASS  test_scores_strictly_ascending  (scores=[222.2, 238.1, 272.5, 294.0, 338.4])
+PASS  test_winner_is_villas  (score=220.7 min/week)
+PASS  test_last_place_is_harlowe  (score=292.5 min/week)
+PASS  test_scores_strictly_ascending  (scores=[220.7, 224.1, 236.9, 272.5, 292.5])
 PASS  test_expected_scores  (tolerance=0.5 min)
 PASS  test_chain_trip_starbucks_winners
 PASS  test_villas_gym_uses_walk_fallback  (gym=4.6 min)
