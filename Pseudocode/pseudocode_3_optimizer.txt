@@ -1,0 +1,163 @@
+============================================================
+  PSEUDOCODE 3 — FIND_BEST_APARTMENT  (main pipeline)
+  File: src/optimizer.py  →  run_optimizer()
+============================================================
+
+PURPOSE
+-------
+Score every feasible apartment and return them ranked by
+total weekly commute cost (ascending).
+
+OBJECTIVE FUNCTION
+------------------
+    score(apt) = 3 × chain_cost
+               + 1 × min_k d(apt, Costco_k)
+               + 2 × min_k d(apt, TJ_k)
+               + 4 × min_k d(apt, Gym_k)
+
+    chain_cost = min_k [ d(apt, Starbucks_k) + d(Starbucks_k, NEU) ]
+
+    where d(·,·) is shortest-path travel time in minutes
+    via the multi-modal transit graph.
+
+Visit weights: Chain(NEU+SB)=3  Costco=1  TJ=2  Gym=4
+Unit: minutes per week
+
+KEY DESIGN DECISIONS
+--------------------
+1. Chain trip: Starbucks + NEU are modelled as ONE linked
+   trip (Apt → SB* → NEU), not two independent destinations.
+   S* is the Starbucks that minimises the two-leg total.
+
+2. NEU is precomputed once as a source (Dijkstra from NEU).
+   Because the graph is undirected, dist_neu[Sk] = d(Sk,NEU).
+   This avoids 30 redundant sub-computations.
+
+3. Walk-fallback edges (from BUILD_GRAPH) allow Dijkstra
+   to choose direct walking over transit when it is faster.
+
+------------------------------------------------------------
+INPUT
+-----
+  apartments   : list of apartment dicts
+  destinations : list of destination dicts
+  stations     : list of station dicts
+  constraints  : {max_monthly_rent, max_walk_min_to_station}
+  categories   : {category_name: {weekly_visits, candidates}}
+
+OUTPUT
+------
+  results : list of (apartment, score, breakdown) dicts,
+            sorted by score ascending.
+
+------------------------------------------------------------
+function FIND_BEST_APARTMENT(apartments, destinations,
+                              stations, constraints):
+
+    // ── Step 1: Build the weighted transit graph ─────────
+    G ← BUILD_GRAPH(apartments, destinations, stations)
+        // See pseudocode_1_build_graph.txt
+
+    // ── Step 2: Precompute distances from NEU ────────────
+    //   Runs DIJKSTRA once from the NEU node.
+    //   dist_neu[Sk] = shortest time from Starbucks k to NEU.
+    dist_neu, _ ← DIJKSTRA(G, "NEU_SV")
+
+    results ← empty list
+
+    // ── Step 3: Score each apartment ─────────────────────
+    for each apartment a in apartments:
+
+        // 3a. Apply hard constraints (filter)
+        if a.monthly_rent        > constraints.max_rent:    skip
+        if a.walk_min_to_station > constraints.max_walk:    skip
+
+        // 3b. Single Dijkstra run from this apartment
+        //     Returns shortest time to ALL 66 nodes at once.
+        dist_apt, prev_apt ← DIJKSTRA(G, a.id)
+
+        // 3c. Chain trip — find optimal Starbucks S*
+        //     S* minimises apt→SB + SB→NEU
+        chain_cost ← ∞
+        best_sb    ← None
+        for each Starbucks_k in {S1, S2, S3, S4, S5, S6}:
+            d_apt_sb ← dist_apt[Starbucks_k]
+            d_sb_neu ← dist_neu[Starbucks_k]
+            if d_apt_sb + d_sb_neu < chain_cost:
+                chain_cost ← d_apt_sb + d_sb_neu
+                best_sb    ← Starbucks_k
+
+        // 3d. Independent categories — best of 6 candidates
+        //     (walk-fallback edges already included in G,
+        //      so Dijkstra can choose walking over transit)
+        costco_cost ← min { dist_apt[Ck] | k ∈ {C1..C6} }
+        tj_cost     ← min { dist_apt[Tk] | k ∈ {T1..T6} }
+        gym_cost    ← min { dist_apt[Gk] | k ∈ {G1..G6} }
+
+        // 3e. Weighted score (objective function)
+        score ← 3 × chain_cost
+               + 1 × costco_cost
+               + 2 × tj_cost
+               + 4 × gym_cost
+
+        APPEND (a, score, chain_cost, best_sb,
+                costco_cost, tj_cost, gym_cost) to results
+
+    // ── Step 4: Rank by score ascending ──────────────────
+    SORT results by score ascending
+
+    return results
+
+------------------------------------------------------------
+COMPLEXITY ANALYSIS
+------------------------------------------------------------
+
+Let V = 66 nodes, E ≈ 94 edges, A = 5 apartments,
+    |SB| = 6, |C| = 6, |TJ| = 6, |Gym| = 6.
+
+Component                        Time              Space
+─────────────────────────────── ─────────────────  ──────
+Build graph (Step 1)             O(V + E + A×D)    O(V+E)
+NEU precompute (Step 2)          O((V+E) log V)    O(V)
+Dijkstra per apartment (Step 3b) O((V+E) log V)    O(V)
+Full pipeline: A runs + 1 NEU    O(A·(V+E) log V)  O(V+E)
+Chain trip scoring (Step 3c)     O(A × |SB|)       O(1)
+Category scoring (Step 3d)       O(A × |C|)        O(1)
+Sorting (Step 4)                 O(A log A)        O(A)
+
+TOTAL: O(A · (V+E) log V)  ≈  O((V+E) log V)  for fixed A
+
+For our dataset: all Dijkstra runs complete in < 10 ms total.
+
+------------------------------------------------------------
+EXAMPLE — CHAIN TRIP FOR CANNERY PARK
+------------------------------------------------------------
+
+From Cannery Park, the algorithm evaluates all 6 Starbucks:
+
+  Starbucks     apt→SB   SB→NEU   chain
+  ──────────    ──────   ──────   ─────
+  S1 Sunnyvale   45 min   36 min   81 min
+  S2 SC 3605     48 min   41 min   89 min
+  S3 SC 495      41 min   34 min   75 min
+  S4 Zanker      32 min   35 min   67 min
+  S5 Downtown    19 min   28 min   47 min  ← WINNER
+  S6 Milpitas    54 min   49 min  103 min
+
+S5 wins NOT because it is nearest to Cannery Park,
+but because the SB→NEU leg (28 min) is the shortest
+of all candidates.  This is only discoverable by
+evaluating both legs together — which is the key insight
+of the chain-trip model.
+
+------------------------------------------------------------
+CONSTRAINT FILTER (our dataset)
+------------------------------------------------------------
+
+Constraint                Value       All 5 apts pass?
+────────────────────────  ──────────  ─────────────────
+Monthly rent              ≤ $4,000    YES (max=$3,817)
+Walk to nearest station   ≤ 15 min    YES (max=8 min)
+
+All 5 apartments proceed to the scoring step.
+============================================================

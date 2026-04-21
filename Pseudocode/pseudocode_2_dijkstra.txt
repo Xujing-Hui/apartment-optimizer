@@ -1,0 +1,161 @@
+============================================================
+  PSEUDOCODE 2 — DIJKSTRA  (primary algorithm)
+                BELLMAN_FORD  (verification)
+                RECONSTRUCT_PATH
+  File: src/dijkstra.py
+============================================================
+
+WHY DIJKSTRA?
+-------------
+All edge weights in our graph are non-negative (travel times
+cannot be negative), which satisfies Dijkstra's requirement.
+Dijkstra with a binary min-heap runs in O((V+E) log V), which
+is significantly faster than Bellman-Ford's O(V×E) for our
+graph (V=66, E≈94).
+
+Bellman-Ford is implemented separately and used only to
+cross-validate Dijkstra's results in testing.
+
+------------------------------------------------------------
+ALGORITHM 1 — DIJKSTRA (min-heap)
+------------------------------------------------------------
+
+INPUT
+-----
+  G      : adjacency list  G[u] = [(v, w), ...]
+  source : starting node id
+
+OUTPUT
+------
+  dist : dict   dist[v] = shortest distance from source to v
+                (float('inf') if unreachable)
+  prev : dict   prev[v] = predecessor of v on shortest path
+                (None if v = source or unreachable)
+
+function DIJKSTRA(G, source):
+
+    // Initialise all distances to infinity
+    dist ← {node: ∞  for all nodes in G}
+    prev ← {node: None  for all nodes in G}
+    dist[source] ← 0
+
+    heap ← min-heap                  // priority queue
+    PUSH(heap, (0, source))          // (distance, node)
+    visited ← empty set
+
+    while heap is not empty:
+        (d, u) ← POP_MIN(heap)      // extract cheapest node
+
+        // Lazy deletion: skip if already settled
+        if u ∈ visited:
+            continue
+        visited ← visited ∪ {u}
+
+        // Relax outgoing edges
+        for each (v, w) in G[u]:
+            relaxed ← d + w
+            if relaxed < dist[v]:
+                dist[v] ← relaxed
+                prev[v]  ← u
+                PUSH(heap, (relaxed, v))
+
+    return dist, prev
+
+------------------------------------------------------------
+WHY MIN-HEAP (LAZY DELETION)?
+------------------------------
+A standard heap does not support decreaseKey efficiently in
+Python.  Instead we push a new (dist, node) entry whenever we
+find a shorter path, and skip stale entries when popped.
+This gives O((V + E) log V) time with a simple implementation.
+
+------------------------------------------------------------
+ALGORITHM 2 — BELLMAN-FORD (cross-validation)
+------------------------------------------------------------
+
+function BELLMAN_FORD(G, source):
+
+    dist ← {node: ∞  for all nodes in G}
+    prev ← {node: None  for all nodes in G}
+    dist[source] ← 0
+
+    edges ← flatten G into list of (u, v, w) triples
+    V     ← number of nodes in G
+
+    // Relax all edges V-1 times
+    repeat (V − 1) times:
+        updated ← False
+        for each (u, v, w) in edges:
+            if dist[u] ≠ ∞  and  dist[u] + w < dist[v]:
+                dist[v] ← dist[u] + w
+                prev[v]  ← u
+                updated  ← True
+        if not updated:          // early exit optimisation
+            break
+
+    return dist, prev
+
+// Note: negative-cycle detection step omitted because all
+//       edge weights in our transit graph are non-negative.
+
+------------------------------------------------------------
+ALGORITHM 3 — RECONSTRUCT_PATH
+------------------------------------------------------------
+
+INPUT
+-----
+  prev   : predecessor map from DIJKSTRA or BELLMAN_FORD
+  source : start node id
+  target : end node id
+
+OUTPUT
+------
+  list[str]  — ordered node ids from source to target
+  None       — if target is unreachable from source
+
+function RECONSTRUCT_PATH(prev, source, target):
+    path    ← empty list
+    current ← target
+
+    while current ≠ None:
+        PREPEND current to path
+        current ← prev[current]
+
+    if path is empty  or  path[0] ≠ source:
+        return None          // target was unreachable
+
+    return path
+
+------------------------------------------------------------
+COMPLEXITY SUMMARY
+------------------------------------------------------------
+
+Algorithm       Time            Space
+─────────────── ─────────────── ──────
+Dijkstra        O((V+E) log V)  O(V)
+Bellman-Ford    O(V × E)        O(V)
+Reconstruct     O(V)            O(V)
+
+For our graph (V=66, E≈94):
+  Dijkstra    ≈  66×94×log(66)  ≈ tiny  — runs in < 1 ms
+  Bellman-Ford ≈ 66×94          ≈ 6,204 relaxations per run
+  Full pipeline (5 Dijkstra runs + 1 NEU precompute):  < 10 ms
+
+------------------------------------------------------------
+NEU PRECOMPUTATION (efficiency optimisation)
+------------------------------------------------------------
+
+For the chain trip   (Apt → Starbucks → NEU),  we need
+d(Starbucks_k, NEU) for all k ∈ {S1..S6}.
+
+If we ran Dijkstra FROM each apartment and tried to compute
+the S→NEU leg separately, we would repeat it 5×6 = 30 times.
+
+Instead, we run Dijkstra ONCE from NEU (direction reversed):
+    dist_neu ← DIJKSTRA(G, "NEU_SV")
+
+Because G is undirected:
+    dist_neu[Sk] = d(Sk, NEU)  =  d(NEU, Sk)
+
+This single precomputation serves all 5 apartment runs.
+============================================================

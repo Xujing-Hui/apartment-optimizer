@@ -1,0 +1,125 @@
+============================================================
+  PSEUDOCODE 1 — BUILD_GRAPH
+  File: src/graph.py  →  build_graph()
+============================================================
+
+PURPOSE
+-------
+Construct a weighted, undirected adjacency-list graph G that
+connects apartments, transit stations, and destinations so that
+Dijkstra can find shortest travel times between any two nodes.
+
+INPUT
+-----
+  apartments   : list of apartment dicts
+                 each has: id, lat, lng, nearest_station_id,
+                           walk_min_to_station
+  destinations : list of destination dicts
+                 each has: id, lat, lng, nearest_station_id,
+                           walk_min_from_station
+  stations     : list of transit station dicts
+                 each has: id, neighbors = [{id, travel_min}, ...]
+
+OUTPUT
+------
+  G : adjacency list
+      G[node_id] = [(neighbour_id, weight_minutes), ...]
+
+CONSTANTS
+---------
+  WALK_SPEED   = 80 m/min  (~4.8 km/h)
+  DETOUR       = 1.3       (street path ≈ straight-line × 1.3)
+  FALLBACK_CAP = 30 min    (maximum walk for a fallback edge)
+
+------------------------------------------------------------
+function BUILD_GRAPH(apartments, destinations, stations):
+
+    G ← empty adjacency list
+
+    // ── STEP 1: Station ↔ Station edges ────────────────────
+    //   Source: stations_json_v2.json  "neighbors" arrays
+    //   Weight: travel_min (in-vehicle schedule time)
+    //   All edges are bidirectional.
+
+    for each station s in stations:
+        for each neighbor n in s.neighbors:
+            ADD_EDGE(G, s.id, n.id, n.travel_min)
+
+    // ── STEP 2: Apartment → Nearest Station ────────────────
+    //   Source: apartments_json.json  "walk_min_to_station"
+    //   Connects each apartment to its nearest transit stop.
+
+    for each apartment a in apartments:
+        ADD_EDGE(G, a.id, a.nearest_station_id,
+                 a.walk_min_to_station)
+
+    // ── STEP 3: Destination → Nearest Station ──────────────
+    //   Source: destinations_json.json  "walk_min_from_station"
+    //   Connects each destination to its nearest transit stop.
+
+    for each destination d in destinations:
+        ADD_EDGE(G, d.id, d.nearest_station_id,
+                 d.walk_min_from_station)
+
+    // ── STEP 4: Walk-Fallback Edges ────────────────────────
+    //   Problem: some nearby (apt, dest) pairs have no short
+    //   transit path because no station serves them both.
+    //   Solution: add a direct walk edge when walking is
+    //   faster than any transit route.
+    //
+    //   Formula:
+    //     walk_min = haversine(a, d) × DETOUR / WALK_SPEED
+    //   Cap: only add if walk_min ≤ FALLBACK_CAP (30 min)
+
+    for each apartment a in apartments:
+        for each destination d in destinations:
+            dist_m   ← HAVERSINE_METERS(a.lat, a.lng,
+                                         d.lat, d.lng)
+            walk_min ← (dist_m × DETOUR) / WALK_SPEED
+            if walk_min ≤ FALLBACK_CAP:
+                ADD_EDGE(G, a.id, d.id, walk_min)
+
+    return G
+
+------------------------------------------------------------
+function ADD_EDGE(G, u, v, weight):
+    // Bidirectional: add u→v and v→u
+    // Duplicate edges are silently ignored.
+    if v not in G[u]:  G[u].append((v, weight))
+    if u not in G[v]:  G[v].append((u, weight))
+
+------------------------------------------------------------
+function HAVERSINE_METERS(lat1, lon1, lat2, lon2):
+    // Great-circle distance using the Haversine formula.
+    R    ← 6,371,000 m
+    φ1   ← radians(lat1);   φ2 ← radians(lat2)
+    Δφ   ← radians(lat2 − lat1)
+    Δλ   ← radians(lon2 − lon1)
+    a    ← sin²(Δφ/2) + cos(φ1)·cos(φ2)·sin²(Δλ/2)
+    return 2 · R · arcsin(√a)
+
+------------------------------------------------------------
+COMPLEXITY
+----------
+  Let S = |stations|, A = |apartments|, D = |destinations|,
+  N = S + A + D = total nodes ≈ 66,
+  E = total edges ≈ 94.
+
+  Step 1 : O(S + E)    — iterate neighbors once
+  Step 2 : O(A)
+  Step 3 : O(D)
+  Step 4 : O(A × D)    — 5 × 25 = 125 pair checks
+  Total  : O(N + E + A·D)  ≈ O(N + E)  for our dataset
+
+WALK-FALLBACK PAIRS ACTIVATED (9 in our dataset)
+-------------------------------------------------
+  villas_on_the_blvd ↔ S2   4.6 min   (Starbucks Santa Clara 3605 ECR)
+  villas_on_the_blvd ↔ G2   4.6 min   (24HF Santa Clara ECR)
+  murphy_station     ↔ T1   6.7 min   (Trader Joe's Sunnyvale)
+  murphy_station     ↔ S1   6.1 min   (Starbucks Sunnyvale)
+  cannery_park       ↔ NEU_SV 29.9 min (NEU Campus)
+  cannery_park       ↔ T2  20.1 min   (Trader Joe's Coleman)
+  the_verdant        ↔ S4   1.7 min   (Starbucks Zanker Rd)
+  the_harlowe        ↔ T3  13.2 min   (Trader Joe's Milpitas)
+  the_harlowe        ↔ S6  20.1 min   (Starbucks Milpitas)
+============================================================
