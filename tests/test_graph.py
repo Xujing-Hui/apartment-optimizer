@@ -1,5 +1,7 @@
 """
-tests for graph.py
+test_graph.py
+-------------
+Unit tests for graph.py
 
 Tests cover:
   - Correct node count after loading real data
@@ -51,12 +53,17 @@ def test_edge_bidirectionality():
 
 def test_walk_fallback_edges_present():
     """
-    Known nearby pairs that SHOULD have a walk-fallback edge:
+    Known nearby pairs that SHOULD have a walk-fallback edge.
+
+    Apt ↔ destination pairs (Step 4):
       - villas_on_the_blvd ↔ S2   (~4.6 min)
       - villas_on_the_blvd ↔ G2   (~4.6 min)
       - murphy_station     ↔ S1   (~6.1 min)
       - murphy_station     ↔ T1   (~6.7 min)
       - the_verdant        ↔ S4   (~1.7 min)
+
+    Starbucks ↔ NEU pairs (Step 5):
+      - S5 ↔ NEU_SV        (~4.7 min)  ← Jiaxin's fix: S5 is 286m from NEU
     """
     apartments, destinations, stations, constraints, _ = load_data()
     G = build_graph(apartments, destinations, stations)
@@ -67,11 +74,12 @@ def test_walk_fallback_edges_present():
         ("murphy_station",     "S1"),
         ("murphy_station",     "T1"),
         ("the_verdant",        "S4"),
+        ("S5",                 "NEU_SV"),   # chain-trip SB↔NEU fallback
     ]
-    for apt_id, dest_id in expected:
-        neighbours = [nb for nb, _ in G.get(apt_id, [])]
-        assert dest_id in neighbours, (
-            f"Expected walk-fallback edge {apt_id} ↔ {dest_id} not found"
+    for u, v in expected:
+        neighbours = [nb for nb, _ in G.get(u, [])]
+        assert v in neighbours, (
+            f"Expected walk-fallback edge {u} ↔ {v} not found"
         )
     print(f"PASS  test_walk_fallback_edges_present  ({len(expected)} pairs)")
 
