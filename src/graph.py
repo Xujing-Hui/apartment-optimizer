@@ -38,10 +38,10 @@ import os
 from utils import walk_time_min, WALK_FALLBACK_CAP_MIN
 
 # ── Default data-file paths ───────────────────────────────────────────────────
-_DATA_DIR = os.path.join(os.path.dirname(__file__), "..", "data")
+_DATA_DIR = os.path.join(os.path.dirname(__file__), "..", "Data")
 
-APT_FILE   = os.path.join(_DATA_DIR, "apartments_json.json")
-DEST_FILE  = os.path.join(_DATA_DIR, "destinations_json.json")
+APT_FILE   = os.path.join(_DATA_DIR, "apartments_json_v2.json")
+DEST_FILE  = os.path.join(_DATA_DIR, "destinations_json_v2.json")
 STAT_FILE  = os.path.join(_DATA_DIR, "stations_json_v2.json")
 
 
