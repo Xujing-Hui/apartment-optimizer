@@ -33,8 +33,10 @@ KEY DESIGN DECISIONS
    Because the graph is undirected, dist_neu[Sk] = d(Sk,NEU).
    This avoids 30 redundant sub-computations.
 
-3. Walk-fallback edges (from BUILD_GRAPH) allow Dijkstra
-   to choose direct walking over transit when it is faster.
+3. Walk-fallback edges (from BUILD_GRAPH Steps 4 & 5) allow
+   Dijkstra to choose direct walking over transit when faster.
+   Critically, Step 5 adds a S5↔NEU direct edge (4.7 min),
+   so dist_neu[S5] = 4.7 min instead of 30 min via transit.
 
 ------------------------------------------------------------
 INPUT
@@ -57,10 +59,14 @@ function FIND_BEST_APARTMENT(apartments, destinations,
     // ── Step 1: Build the weighted transit graph ─────────
     G ← BUILD_GRAPH(apartments, destinations, stations)
         // See pseudocode_1_build_graph.txt
+        // G now contains 10 walk-fallback edges (Steps 4+5)
+        // including S5↔NEU at 4.7 min
 
     // ── Step 2: Precompute distances from NEU ────────────
     //   Runs DIJKSTRA once from the NEU node.
     //   dist_neu[Sk] = shortest time from Starbucks k to NEU.
+    //   Because G is undirected and contains the S5↔NEU
+    //   fallback edge, dist_neu[S5] = 4.7 min (not 30 min).
     dist_neu, _ ← DIJKSTRA(G, "NEU_SV")
 
     results ← empty list
@@ -78,6 +84,7 @@ function FIND_BEST_APARTMENT(apartments, destinations,
 
         // 3c. Chain trip — find optimal Starbucks S*
         //     S* minimises apt→SB + SB→NEU
+        //     dist_neu[S5] is now 4.7 min due to Step 5 fix
         chain_cost ← ∞
         best_sb    ← None
         for each Starbucks_k in {S1, S2, S3, S4, S5, S6}:
@@ -112,7 +119,7 @@ function FIND_BEST_APARTMENT(apartments, destinations,
 COMPLEXITY ANALYSIS
 ------------------------------------------------------------
 
-Let V = 66 nodes, E ≈ 94 edges, A = 5 apartments,
+Let V = 66 nodes, E ≈ 95 edges, A = 5 apartments,
     |SB| = 6, |C| = 6, |TJ| = 6, |Gym| = 6.
 
 Component                        Time              Space
@@ -130,10 +137,11 @@ TOTAL: O(A · (V+E) log V)  ≈  O((V+E) log V)  for fixed A
 For our dataset: all Dijkstra runs complete in < 10 ms total.
 
 ------------------------------------------------------------
-EXAMPLE — CHAIN TRIP FOR CANNERY PARK
+EXAMPLE — CHAIN TRIP FOR CANNERY PARK (after Step 5 fix)
 ------------------------------------------------------------
 
-From Cannery Park, the algorithm evaluates all 6 Starbucks:
+From Cannery Park, the algorithm evaluates all 6 Starbucks.
+dist_neu values shown AFTER the S5↔NEU walk-fallback fix:
 
   Starbucks     apt→SB   SB→NEU   chain
   ──────────    ──────   ──────   ─────
@@ -141,14 +149,34 @@ From Cannery Park, the algorithm evaluates all 6 Starbucks:
   S2 SC 3605     48 min   41 min   89 min
   S3 SC 495      41 min   34 min   75 min
   S4 Zanker      32 min   35 min   67 min
-  S5 Downtown    19 min   28 min   47 min  ← WINNER
+  S5 Downtown    19 min    4.7 min  23.7 min  ← WINNER (was 47 min)
   S6 Milpitas    54 min   49 min  103 min
 
-S5 wins NOT because it is nearest to Cannery Park,
-but because the SB→NEU leg (28 min) is the shortest
-of all candidates.  This is only discoverable by
-evaluating both legs together — which is the key insight
-of the chain-trip model.
+Before the fix, dist_neu[S5] = 28 min (transit via 2 stations),
+making S5 the winner at 47 min chain — still #1 among candidates
+but 23.3 min worse than the correct value.
+
+After the fix, dist_neu[S5] = 4.7 min (direct walk, 286 m),
+making the chain cost 23.7 min — a 23.3 min improvement that
+lifted Cannery Park from rank #4 to rank #2 overall.
+
+------------------------------------------------------------
+FINAL RANKING (after all fixes)
+------------------------------------------------------------
+
+  Rank  Apartment                  Score     SB*
+  ────  ─────────────────────────  ────────  ────
+  #1    Villas on the Boulevard    220.7 min  S5
+  #2    Cannery Park by Windsor    224.1 min  S5
+  #3    Murphy Station             236.9 min  S5
+  #4    The Verdant Apartments     272.5 min  S4 (walk-fallback 1.7min)
+  #5    The Harlowe                292.5 min  S5
+
+Note: S4 wins for The Verdant because it has a 1.7-min
+walk-fallback edge (apt↔dest, Step 4). Despite S5→NEU
+being only 4.7 min, the apt→S5 leg is 35 min from Verdant,
+making the S4 chain (1.7 + 35 = 36.7 min) still cheaper
+than the S5 chain (35 + 4.7 = 39.7 min).
 
 ------------------------------------------------------------
 CONSTRAINT FILTER (our dataset)
