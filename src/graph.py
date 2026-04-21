@@ -16,8 +16,12 @@ Edge types
   2. apartment ↔ station : walk_min_to_station from apartments_json.json
   3. destination ↔ station: walk_min_from_station from destinations_json.json
   4. walk-fallback        : direct walk edge added when haversine walk ≤ 30 min
-                            (handles cases where two nearby nodes have no
-                             short transit path between them)
+                            (handles apartment↔destination pairs that are
+                             geographically close despite no short transit link)
+  5. chain walk-fallback  : direct walk edge between each Starbucks candidate
+                            and NEU_SV when haversine walk ≤ 30 min
+                            (e.g. S5 ↔ NEU_SV is only ~286 m / 4.6 min, but
+                             the transit detour through two stations is 30 min)
 
 All edges are bidirectional (undirected graph).
 
@@ -97,6 +101,10 @@ def build_graph(apartments: list, destinations: list,
     3. Destination → nearest-station walk edges.
     4. Walk-fallback edges for (apartment, destination) pairs whose
        estimated walking time does not exceed WALK_FALLBACK_CAP_MIN.
+    5. Chain walk-fallback edges for (Starbucks candidate, NEU_SV) pairs
+       whose estimated walking time does not exceed WALK_FALLBACK_CAP_MIN.
+       Fixes the S5↔NEU_SV case: only 286 m apart (~4.6 min walk) but the
+       transit detour through intermediate stations is 30 min.
 
     Parameters
     ----------
@@ -138,6 +146,17 @@ def build_graph(apartments: list, destinations: list,
             if wt <= WALK_FALLBACK_CAP_MIN:
                 _add_edge(G, apt["id"], dest["id"], wt)
 
+    # ── Step 5: walk-fallback edges (Starbucks candidates ↔ NEU_SV) ──────────
+    starbucks_dests = [d for d in destinations
+                       if d.get("category") == "starbucks_neu_chain"]
+    neu_list        = [d for d in destinations if d["id"] == "NEU_SV"]
+    for neu in neu_list:
+        for sb in starbucks_dests:
+            wt = walk_time_min(sb["lat"], sb["lng"],
+                               neu["lat"], neu["lng"])
+            if wt <= WALK_FALLBACK_CAP_MIN:
+                _add_edge(G, sb["id"], neu["id"], wt)
+
     return G
 
 
@@ -170,3 +189,10 @@ if __name__ == "__main__":
     assert "S2" in villas_nb, "Walk-fallback Villas ↔ S2 missing"
     assert "G2" in villas_nb, "Walk-fallback Villas ↔ G2 missing"
     print("Walk-fallback spot-checks passed.")
+
+    # Spot-check: S5 should connect directly to NEU_SV via chain walk-fallback
+    s5_nb = [nb for nb, _ in G.get("S5", [])]
+    assert "NEU_SV" in s5_nb, "Chain walk-fallback S5 ↔ NEU_SV missing"
+    neu_nb = [nb for nb, _ in G.get("NEU_SV", [])]
+    assert "S5" in neu_nb, "Chain walk-fallback NEU_SV ↔ S5 missing"
+    print("Chain walk-fallback spot-checks passed.")
