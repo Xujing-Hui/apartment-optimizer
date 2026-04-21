@@ -95,7 +95,7 @@ def dijkstra(G: dict, source: str) -> tuple[dict, dict]:
     return dist, prev
 
 
-# ── Bellman-Ford (verification only) ─────────────────────────────────────────
+# ── Bellman-Ford (test only) ─────────────────────────────────────────
 def bellman_ford(G: dict, source: str) -> tuple[dict, dict]:
     """
     Compute single-source shortest paths using the Bellman-Ford algorithm.
