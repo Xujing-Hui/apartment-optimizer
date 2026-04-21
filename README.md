@@ -9,7 +9,7 @@ GitHub: https://github.com/Xujing-Hui/apartment-optimizer
 
 Given 5 candidate apartments in the San Jose metropolitan area, this program finds the one that minimizes a student's **total weekly transit commute time** across all habitual destinations: NEU campus (via a Starbucks chain stop), Costco, Trader Joe's, and 24 Hour Fitness.
 
-The transit network is modeled as a **weighted undirected graph** (66 nodes, ~94 edges) covering Caltrain, VTA bus routes, and Milpitas BART. The primary solver is **Dijkstra's algorithm** with a min-heap. Bellman-Ford is included for cross-validation.
+The transit network is modeled as a **weighted undirected graph** (66 nodes, ~95 edges) covering Caltrain, VTA bus routes, and Milpitas BART. The primary solver is **Dijkstra's algorithm** with a min-heap. Bellman-Ford is included for cross-validation.
 
 ---
 
@@ -45,6 +45,8 @@ ReportHuiLiuYu/
 │   ├── graph.py
 │   ├── dijkstra.py
 │   ├── optimizer.py
+│   └── stations_json_v2.json
+├── tests/
 │   ├── test_graph.py
 │   ├── test_dijkstra.py
 │   └── test_optimizer.py
@@ -74,32 +76,32 @@ python optimizer.py
   Objective: 3×chain + 1×Costco + 2×TJ + 4×Gym  (min/week)
   Walk fallback cap: 30 min
 
-  #1  Villas on the Boulevard  (Santa Clara)
+#1  Villas on the Boulevard  (Santa Clara)
        Rent: $3,465   Walk to station: 4 min
-       Chain  (×3=135.6): apt→S2=4.6min + S2→NEU=40.6min = 45.2 min
+       Chain  (×3=134.1): apt→S5=40.0min + S5→NEU=4.7min = 44.7 min
        Costco (×1=29.0): C1 — Costco Sunnyvale
        TJ     (×2=39.2): T1 — Trader Joe's Sunnyvale (El Camino Real)
        Gym    (×4=18.4): G2 — 24 Hour Fitness Santa Clara (ECR Super-Sport)
-       >>> TOTAL SCORE: 222.2 min/week
+       >>> TOTAL SCORE: 220.7 min/week
 
-  #2  Murphy Station  (Sunnyvale)
+  #2  Cannery Park by Windsor  (Downtown San Jose)
        ...
-       >>> TOTAL SCORE: 238.1 min/week
+       >>> TOTAL SCORE: 224.1 min/week
 
-  #3  The Verdant Apartments  (North San Jose)
+  #3  Murphy Station  (Sunnyvale)
+       ...
+       >>> TOTAL SCORE: 236.9 min/week
+
+  #4  The Verdant Apartments  (North San Jose)
        ...
        >>> TOTAL SCORE: 272.5 min/week
 
-  #4  Cannery Park by Windsor  (Downtown San Jose)
-       ...
-       >>> TOTAL SCORE: 294.0 min/week
-
   #5  The Harlowe  (Milpitas)
        ...
-       >>> TOTAL SCORE: 338.4 min/week
+       >>> TOTAL SCORE: 292.5 min/week
 
 ==============================================================================
-  Winner: Villas on the Boulevard  (222.2 min/week)
+  Winner: Villas on the Boulevard  (220.7 min/week)
 ==============================================================================
 ```
 
@@ -203,7 +205,13 @@ destinations_json.json →  25 destination nodes
                            each connected by a walk edge to its nearest station
 ```
 
-An additional **walk-fallback edge** is added between any (apartment, destination) pair where the straight-line walking time ≤ 30 min. This lets Dijkstra choose walking over transit when it is genuinely faster (e.g., Villas on the Boulevard → Gym G2: 4.6 min walk vs. 13 min by bus).
+
+Two types of **walk-fallback edges** are added for cases where walking is faster than transit:
+
+- **Apartment ↔ Destination**: for any pair where Haversine walking time ≤ 30 min (e.g., Villas → Gym G2: 4.6 min walk vs 13 min by bus).
+- **Starbucks ↔ NEU**: for any Starbucks candidate where Haversine walking time to NEU ≤ 30 min (e.g., S5 Downtown → NEU: 4.7 min walk vs 30 min transit detour). This fixes the case where two destination nodes are geographically close but have no direct transit link.
+
+10 walk-fallback edges are activated in our dataset.
 
 ### 2. Run Dijkstra
 
@@ -241,14 +249,15 @@ Apartments are sorted by score ascending. Lower score = less total weekly transi
 
 | Rank | Apartment | Area | Rent | Total Score |
 |------|-----------|------|------|-------------|
-| #1 | Villas on the Boulevard | Santa Clara | $3,465 | **222.2 min/week** |
-| #2 | Murphy Station | Sunnyvale | $3,817 | 238.1 min/week |
-| #3 | The Verdant Apartments | North San Jose | $3,292 | 272.5 min/week |
-| #4 | Cannery Park by Windsor | Downtown SJ | $3,359 | 294.0 min/week |
-| #5 | The Harlowe | Milpitas | $3,300 | 338.4 min/week |
+| #1 | Villas on the Boulevard | Santa Clara | $3,465 | **220.7 min/week** |
+| #2 | Cannery Park by Windsor | Downtown SJ | $3,359 | 224.1 min/week |
+| #3 | Murphy Station | Sunnyvale | $3,817 | 236.9 min/week |
+| #4 | The Verdant Apartments | North San Jose | $3,292 | 272.5 min/week |
+| #5 | The Harlowe | Milpitas | $3,300 | 292.5 min/week |
 
-Walk-fallback edges used (≤30 min): Villas↔S2 (4.6 min), Villas↔G2 (4.6 min),
-Murphy↔S1 (6.1 min), Murphy↔T1 (6.7 min), Verdant↔S4 (1.7 min).
+Walk-fallback edges activated (≤30 min): Villas↔S2 (4.6), Villas↔G2 (4.6),
+Murphy↔S1 (6.1), Murphy↔T1 (6.7), Verdant↔S4 (1.7), Cannery↔NEU (29.9),
+Cannery↔T2 (20.1), Harlowe↔T3 (13.2), Harlowe↔S6 (20.1), **S5↔NEU (4.7)**.
 
 ---
 
@@ -257,12 +266,12 @@ Murphy↔S1 (6.1 min), Murphy↔T1 (6.7 min), Verdant↔S4 (1.7 min).
 | File | Purpose |
 |------|---------|
 | `src/utils.py` | Haversine great-circle distance; walking time estimate |
-| `src/graph.py` | Loads 3 JSON files; builds weighted adjacency list; adds walk-fallback edges |
+| `src/graph.py` | Loads 3 JSON files; builds weighted adjacency list; adds walk-fallback edges (apt↔dest and Starbucks↔NEU) |
 | `src/dijkstra.py` | Dijkstra with min-heap; Bellman-Ford (verification); path reconstruction |
 | `src/optimizer.py` | Main pipeline: constraint filter → chain trip scoring → rank → print |
-| `src/test_graph.py` | 6 unit tests for graph construction |
-| `src/test_dijkstra.py` | 8 unit tests for Dijkstra correctness |
-| `src/test_optimizer.py` | 8 end-to-end optimizer tests |
+| `tests/test_graph.py` | 6 unit tests for graph construction |
+| `tests/test_dijkstra.py` | 8 unit tests for Dijkstra correctness |
+| `tests/test_optimizer.py` | 8 end-to-end optimizer tests |
 
 ---
 
@@ -276,7 +285,7 @@ Murphy↔S1 (6.1 min), Murphy↔T1 (6.7 min), Verdant↔S4 (1.7 min).
 | Full pipeline (5 apartments) | O(A × (V+E) log V) | O(V+E) |
 | Bellman-Ford (verification) | O(V × E) | O(V) |
 
-For V=66, E≈94, A=5: all 6 Dijkstra runs complete in **under 10 milliseconds** total.
+For V=66, E≈95, A=5: all 6 Dijkstra runs complete in **under 10 milliseconds** total.
 
 ---
 
@@ -296,9 +305,9 @@ No pip-installable packages are required.
 
 | File | Source | Date |
 |------|--------|------|
-| `apartments_json.json` | Zillow, Apartments.com | March 2026 |
-| `destinations_json.json` | Google Maps, Yelp, official store locators | March 2026 |
-| `stations_json_v2.json` | Caltrain schedule Jan 2026, VTA route map 2025, Google Maps, Moovit | March 2026 |
+| `apartments_json_v2.json` | Zillow, Apartments.com | April 2026 |
+| `destinations_json_v2.json` | Google Maps, Yelp, official store locators | April 2026 |
+| `stations_json_v2.json` | Caltrain schedule Jan 2026, VTA route map 2025, Google Maps, Moovit | April 2026 |
 
 ---
 
@@ -307,8 +316,7 @@ No pip-installable packages are required.
 Interactive Kepler.gl map — 10 point layers + 5 per-apartment path layers:
 
 ```
-https://kepler.gl/demo/map?mapUrl=https://dl.dropboxusercontent.com/scl/fi/
-6pxc1x2l7tevax9aa426o/keplergl_18ojc6l.json?rlkey=yqgusvky902iklxy9ib2pp44q&dl=0
+https://kepler.gl/demo/map?mapUrl=https://dl.dropboxusercontent.com/scl/fi/6dz0llcai3wgc89lnszwv/keplergl_0oipsu.json?rlkey=hlwg3cytliqb7mdwada5330rb&dl=0
 ```
 
 ---
