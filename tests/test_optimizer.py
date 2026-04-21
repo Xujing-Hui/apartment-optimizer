@@ -1,5 +1,7 @@
 """
-tests for optimizer.py
+test_optimizer.py
+-----------------
+End-to-end tests for optimizer.py
 
 Tests cover:
   - All 5 apartments pass constraints (no filtering for our dataset)
@@ -47,7 +49,7 @@ def test_winner_is_villas():
 
 
 def test_last_place_is_harlowe():
-    """The Harlowe must rank last (#5)."""
+    """The Harlowe must rank last (#5) after the S5↔NEU fix."""
     results = run_optimizer(verbose=False)
     last_id = results[-1]["apt"]["id"]
     assert last_id == "the_harlowe", (
@@ -70,19 +72,19 @@ def test_scores_strictly_ascending():
 def test_expected_scores():
     """
     Verify computed scores match expected values within tolerance.
-    Expected (our v2 algorithm with walk-fallback cap=30 min):
-      #1 Villas    222.2
-      #2 Murphy    238.1
-      #3 Verdant   272.5
-      #4 Cannery   294.0
-      #5 Harlowe   338.4
+    Expected (v2 algorithm + S5↔NEU walk-fallback fix by Jiaxin Liu):
+      #1 Villas    220.7
+      #2 Cannery   224.1
+      #3 Murphy    236.9
+      #4 Harlowe   292.5
+      #5 Verdant   272.5
     """
     expected = {
-        "villas_on_the_blvd": 222.2,
-        "murphy_station"    : 238.1,
+        "villas_on_the_blvd": 220.7,
+        "cannery_park"      : 224.1,
+        "murphy_station"    : 236.9,
+        "the_harlowe"       : 292.5,
         "the_verdant"       : 272.5,
-        "cannery_park"      : 294.0,
-        "the_harlowe"       : 338.4,
     }
     results = run_optimizer(verbose=False)
     for r in results:
@@ -98,21 +100,22 @@ def test_expected_scores():
 
 def test_chain_trip_starbucks_winners():
     """
-    Verify the algorithm selects the expected optimal Starbucks
-    for each apartment's chain trip.
+    Verify the algorithm selects the expected optimal Starbucks.
+    After the S5↔NEU walk-fallback fix (4.7 min), S5 becomes cheapest
+    for the S→NEU leg for most apartments.
     Expected:
-      villas_on_the_blvd → S2  (walk-fallback 4.6 min, then to NEU)
-      murphy_station     → S1  (walk-fallback 6.1 min)
-      the_verdant        → S4  (walk-fallback 1.7 min)
-      cannery_park       → S5  (Downtown SJ, nearest to NEU)
-      the_harlowe        → S4  (best available)
+      villas_on_the_blvd → S5  (S5→NEU now 4.7 min via walk-fallback)
+      murphy_station     → S5
+      the_verdant        → S4  (walk-fallback to S4=1.7min still wins overall)
+      cannery_park       → S5
+      the_harlowe        → S5
     """
     expected_sb = {
-        "villas_on_the_blvd": "S2",
-        "murphy_station"    : "S1",
+        "villas_on_the_blvd": "S5",
+        "murphy_station"    : "S5",
         "the_verdant"       : "S4",
         "cannery_park"      : "S5",
-        "the_harlowe"       : "S4",
+        "the_harlowe"       : "S5",
     }
     results = run_optimizer(verbose=False)
     for r in results:
